@@ -1,43 +1,183 @@
 
-<!DOCTYPE html>
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <title>Introducción al lenguaje Python &#8212; documentación de Cursos - 1.0</title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/translations.js"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introducción al lenguaje Python &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
     <link rel="next" title="Variables y Tipos de datos" href="02-variables-y-tipos-de-datos.html" />
     <link rel="prev" title="Bienvenido al curso de introducción a la ciencia de datos con Python" href="../index.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navegación</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="Índice General"
-             accesskey="I">índice</a></li>
-        <li class="right" >
-          <a href="02-variables-y-tipos-de-datos.html" title="Variables y Tipos de datos"
-             accesskey="N">siguiente</a> |</li>
-        <li class="right" >
-          <a href="../index.html" title="Bienvenido al curso de introducción a la ciencia de datos con Python"
-             accesskey="P">anterior</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">documentación de Cursos - 1.0</a> &#187;</li> 
-      </ul>
-    </div>  
+</head>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introducción al lenguaje Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#acerca-de-python">Acerca de Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-source">Open source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aplicaciones">Aplicaciones</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#caracteristicas">Características</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instalacion-de-anaconda">Instalación de Anaconda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#por-que-instalar-python-y-anaconda-en-mi-ordenador">¿Por qué instalar Python y Anaconda en mi ordenador?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paso-1-descargar-anaconda">Paso 1 – Descargar Anaconda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paso-2-instalar-anaconda">Paso 2 – Instalar Anaconda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paso-3-iniciar-y-actualizar-anaconda">Paso 3 – Iniciar y Actualizar Anaconda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#material-complementario">Material complementario</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tu-primer-programa">Tu primer programa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hola-mundo">¡Hola, Mundo!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sintaxis">Sintaxis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#indentacion">Indentación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comentarios">Comentarios</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ayudas">Ayudas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#documentacion-de-la-libreria">Documentación de la librería</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python-como-calculadora">Python como calculadora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buenas-practicas-de-programacion-de-python">Buenas prácticas de programación de Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02-variables-y-tipos-de-datos.html">Variables y Tipos de datos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introducción al lenguaje Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/introduccion_a_la_ciencia_de_datos/01-Introducción-a-Python.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="introduccion-al-lenguaje-python">
 <h1>Introducción al lenguaje Python<a class="headerlink" href="#introduccion-al-lenguaje-python" title="Enlazar permanentemente con este título">¶</a></h1>
@@ -389,72 +529,52 @@ Python</a>.</p>
 </div>
 
 
+           </div>
+           
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h3><a href="../index.html">Tabla de contenido</a></h3>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introducción al lenguaje Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#acerca-de-python">Acerca de Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#caracteristicas">Características</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#instalacion-de-anaconda">Instalación de Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tu-primer-programa">Tu primer programa</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sintaxis">Sintaxis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ayudas">Ayudas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python-como-calculadora">Python como calculadora</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#buenas-practicas-de-programacion-de-python">Buenas prácticas de programación de Python</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="02-variables-y-tipos-de-datos.html">Variables y Tipos de datos</a></li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="02-variables-y-tipos-de-datos.html" class="btn btn-neutral float-right" title="Variables y Tipos de datos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Bienvenido al curso de introducción a la ciencia de datos con Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <h4>Tema anterior</h4>
-  <p class="topless"><a href="../index.html"
-                        title="capítulo anterior">Bienvenido al curso de introducción a la ciencia de datos con Python</a></p>
-  <h4>Próximo tema</h4>
-  <p class="topless"><a href="02-variables-y-tipos-de-datos.html"
-                        title="próximo capítulo">Variables y Tipos de datos</a></p>
-  <div role="note" aria-label="source link">
-    <h3>Esta página</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/introduccion_a_la_ciencia_de_datos/01-Introducción-a-Python.rst.txt"
-            rel="nofollow">Mostrar el código</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Búsqueda rápida</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Ir a" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navegación</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="Índice General"
-             >índice</a></li>
-        <li class="right" >
-          <a href="02-variables-y-tipos-de-datos.html" title="Variables y Tipos de datos"
-             >siguiente</a> |</li>
-        <li class="right" >
-          <a href="../index.html" title="Bienvenido al curso de introducción a la ciencia de datos con Python"
-             >anterior</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">documentación de Cursos - 1.0</a> &#187;</li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Derechos de autor 2020, Dubadier Najar.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>
