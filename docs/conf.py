@@ -36,6 +36,7 @@ extensions = ['sphinx.ext.autodoc',
         'sphinx.ext.mathjax',
         'sphinx.ext.napoleon',
         'sphinx.ext.autosummary', # solamente si se la quiere usar
+        'sphinx.ext.githubpages',
         'sphinx.ext.viewcode']
 
 autosummary_generate = True
