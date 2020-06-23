@@ -1,0 +1,371 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Práctica 03 - Estructuras de Control\n",
+    "\n",
+    "Para entender un poco la sentencia ```if``` y ```else```, eche un vistazo a este ejemplo de código:\n",
+    "\n",
+    "```python\n",
+    "area = 10.0  \n",
+    "if(area < 9) :  \n",
+    "    print(\"small\")  \n",
+    "elif(area < 12) :  \n",
+    "    print(\"medium\")  \n",
+    "else :  \n",
+    "    print(\"large\")\n",
+    "```\n",
+    "\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "¿Cuál será el resultado si ejecuta este fragmento de código?\n",
+    "\n",
+    "**Respuestas posibles**\n",
+    "* small\n",
+    "* medium\n",
+    "* large\n",
+    "* La sintaxis es incorrecta; Este código producirá un error."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# evalúe sus respuestas\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## if\n",
+    "\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "Crea un programa que solicite un número al usuario y devuelva el siguiente mensaje:\n",
+    "\n",
+    "* Si es mayor que 0: ```\"Es un número positivo.\"```  \n",
+    "* Si es igual a 0: ```\"Es igual a cero.\"```  \n",
+    "* Si es menor que 0: ```\"Es un número negativo.\"```  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# cree aquí el programa\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Es hora de mirar más de cerca en su casa.\n",
+    "\n",
+    "En el código de muestra se definen dos variables: ```room``` un string que le indica qué habitación de la casa estamos viendo y *area* el área de esa habitación.\n",
+    "\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Examine la declaración ```if``` que imprime ```\"mirar alrededor en la cocina.\"``` si ```room``` es igual a ```\"kit\"```.\n",
+    "* Escriba otra declaración ```if``` que imprima ```\"¡gran lugar!\"``` si ```area``` es mayor que ```15```."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Define variables\n",
+    "room = \"kit\"\n",
+    "area = 14.0\n",
+    "\n",
+    "# if statement for room\n",
+    "\n",
+    "\n",
+    "\n",
+    "# if statement for area\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Agregue else\n",
+    "\n",
+    "La declaración de ```if``` para ```room``` se ha ampliado con una declaración ```else``` para que ```\"mirar a otro lado\"```. se imprime si la condición se evalúa ```room == \"kit\"``` como ```False```.\n",
+    "\n",
+    "¿Puedes hacer algo similar para agregar más funcionalidad a la declaración ```if``` ```area```?\n",
+    "\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "* Agregue una declaración ```else``` a la segunda estructura de control para que sea ```\"bastante pequeña\".``` se imprime si se evalúa ```area > 15``` como ```False```.\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Define variables\n",
+    "room = \"kit\"\n",
+    "area = 14.0\n",
+    "\n",
+    "# if-else construct for room\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "# if-else construct for area\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Personalizar más: elif\n",
+    "\n",
+    "También es posible echar un vistazo en la habitación. El código de muestra contiene una parte *elif* que comprueba si *room* es igual a \"cama\". En ese caso, \"mirar alrededor en el dormitorio\". está impreso\n",
+    "\n",
+    "¡Depende de ti ahora! Haga una adición similar a la segunda estructura de control para personalizar aún más los mensajes para diferentes valores de *area*.\n",
+    "\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Agregue un ```elif``` a la segunda estructura de control de modo que \"¡tamaño mediano, bonito!\" se imprime si ```area``` es mayor que 10."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Define variables\n",
+    "room = \"bed\"\n",
+    "area = 14.0\n",
+    "\n",
+    "# if-elif-else construct for room\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "# if-elif-else construct for area\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Bucle while básico\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "¿Puedes decir cuántas impresiones hará ```while``` el siguiente ciclo?\n",
+    "\n",
+    "```python\n",
+    "x = 1  \n",
+    "while x < 4 :  \n",
+    "    print(x)  \n",
+    "    x = x + 1\n",
+    "```\n",
+    "**Respuestas posibles**\n",
+    "\n",
+    "* 0 \n",
+    "* 1  \n",
+    "* 2  \n",
+    "* 3  \n",
+    "* 4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# evalue sus respuestas\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Bucle while básico\n",
+    "\n",
+    "A continuación la variable error, inicialmente igual a 50.0, se divide por 4 y se imprime en cada ejecución:\n",
+    "\n",
+    "```python\n",
+    "error = 50.0  \n",
+    "while error > 1 :  \n",
+    "    error = error / 4  \n",
+    "    print(error)\n",
+    "```\n",
+    "    \n",
+    "¡Este ejemplo será útil, porque es hora de construir un ciclo while usted mismo! Vamos a codificar un bucle *while* que implementa un sistema de control muy básico para un péndulo invertido. Si hay un desplazamiento por estar perfectamente erguido, el bucle *while* solucionará gradualmente este desplazamiento.\n",
+    "\n",
+    "Tenga en cuenta que si su ciclo ```while``` tarda demasiado en ejecutarse, es posible que haya cometido un error. En particular, recuerde indentar el contenido del bucle!\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Cree la variable ```offset``` con un valor inicial de ```8```.\n",
+    "* Codifique un bucle *while* que siga ejecutándose mientras ```offset``` no sea igual a ```0```. Dentro del bucle ```while```:\n",
+    "    * Imprime la palabra \"correcting...\".\n",
+    "    * Luego, disminuya el valor de ```offset``` en ```1```. Puede hacer esto con ```offset = offset - 1```.\n",
+    "    * Finalmente, aún dentro de su ciclo, imprima ```offset``` para que pueda ver cómo cambia."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Initialize offset\n",
+    "\n",
+    "\n",
+    "# Code the while loop\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Agregar condicionales\n",
+    "\n",
+    "El ciclo while que corrige ```offset``` es un buen comienzo, pero ¿y si ```offset``` es negativo? Puede intentar ejecutar el siguiente código donde ```offset``` se inicializa para ```-6```:\n",
+    "\n",
+    "```python\n",
+    "# Initialize offset  \n",
+    "offset = -6\n",
+    "\n",
+    "# Code the while loop  \n",
+    "while offset != 0 :  \n",
+    "    print(\"correcting...\")  \n",
+    "    offset = offset - 1  \n",
+    "    print(offset)\n",
+    "```\n",
+    "\n",
+    "pero tu sesión se desconectará. El bucle while nunca dejará de ejecutarse, porque ```offset``` se reducirá aún más en cada ejecución. Por lo tanto, ```offset != 0``` nunca se convertirá ```False``` y el ciclo while continúa para siempre.\n",
+    "\n",
+    "Arregle las cosas poniendo una declaración ```if - else``` dentro del ciclo ```while```. Si su código aún tarda demasiado en ejecutarse, ¡probablemente haya cometido un error!\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* **Dentro** del bucle ```while```, complete la declaración ```if - else```:\n",
+    "    * Si ```offset``` es mayor que cero, debe disminuir ```offset``` en 1.\n",
+    "    * De lo contrario, deberías aumentar ```offset``` en 1.\n",
+    "* Si ha codificado las cosas correctamente, ejecutar debería funcionar esta vez.\n",
+    "* Si su código todavía tarda demasiado en ejecutarse (o su sesión está caducando), probablemente cometió un error. ¡Verifique su código y asegúrese de que la declaración ```offset != 0``` eventualmente se evalúe ```FALSE!```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Initialize offset\n",
+    "\n",
+    "\n",
+    "\n",
+    "# Code the while loop\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

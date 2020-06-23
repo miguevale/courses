@@ -1,0 +1,4 @@
+Repositorio
+===================================================================
+ 
+ Descargue/clone las practicas del `repositorio <https://github.com/dnajarm/Python-for-data-science>`_

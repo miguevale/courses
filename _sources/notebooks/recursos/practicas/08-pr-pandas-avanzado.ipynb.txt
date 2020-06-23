@@ -1,0 +1,593 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Practica 08 - Pandas avanzado"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Driving right (1)\n",
+    "\n",
+    "¿Recuerda el dataset *cars* que contiene los automóviles por cada 1000 personas (cars_per_cap) y si las personas conducen correctamente (drives_right) para diferentes países (country)? El código que importa estos datos en formato CSV en Python como DataFrame está disponible.\n",
+    "\n",
+    "Comencemos de manera simple e intentemos encontrar todas las observaciones en *cars* donde *drives_right* son *True*.\n",
+    "\n",
+    "*drives_right* es una columna booleana, por lo que tendrá que extraerla como una Serie y luego usar esta Serie booleana para seleccionar observaciones *cars*.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Extraiga la columna *drives_right* como una serie de pandas y guárdela como *dr*.\n",
+    "* Utilice *dr*, una serie booleana, para subconjugar el DataFrame *cars*. Almacene la selección resultante en *sel*.\n",
+    "* Imprima *sel* y afirme que *drives_right* son *True* para todas las observaciones.\n",
+    "\n",
+    "Respuesta:\n",
+    "\n",
+    "         cars_per_cap        country  drives_right\n",
+    "    US            809  United States          True\n",
+    "    RU            200         Russia          True\n",
+    "    MOR            70        Morocco          True\n",
+    "    EG             45          Egypt          True"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Import cars data\n",
+    "import pandas as pd\n",
+    "cars = pd.read_csv('data/cars.csv', sep =';', index_col=0)\n",
+    "\n",
+    "# Extract drives_right column as Series: dr\n",
+    "\n",
+    "\n",
+    "# Use dr to subset cars: sel\n",
+    "\n",
+    "\n",
+    "# Print sel\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Driving right (2)\n",
+    "\n",
+    "El código en el ejemplo anterior funcionó bien, pero en realidad creó innecesariamente una nueva variable *dr*. Puede lograr el mismo resultado sin esta variable intermedia. Ponga el código que computa *dr* directamente entre corchetes que seleccionan las observaciones *cars*.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "Convierta el código en una línea que calcule la variable *sel* como antes.\n",
+    "\n",
+    "Respuesta:\n",
+    "\n",
+    "         cars_per_cap        country  drives_right\n",
+    "    US            809  United States          True\n",
+    "    RU            200         Russia          True\n",
+    "    MOR            70        Morocco          True\n",
+    "    EG             45          Egypt          True"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "     cars_per_cap        country  drives_right\n",
+      "US            809  United States          True\n",
+      "RU            200         Russia          True\n",
+      "MOR            70        Morocco          True\n",
+      "EG             45          Egypt          True\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Import cars data\n",
+    "import pandas as pd\n",
+    "cars = pd.read_csv('data/cars.csv', sep =';', index_col=0)\n",
+    "\n",
+    "# Convert code to a one-liner\n",
+    "\n",
+    "# Print sel\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Cars per capita (1)\n",
+    "\n",
+    "Sigamos con los datos *cars* un poco más. Esta vez, desea saber qué países tienen una cifra alta de automóviles per cápita . En otras palabras, en qué países muchas personas tienen un automóvil, o tal vez varios automóviles.\n",
+    "\n",
+    "De manera similar al ejemplo anterior, querrá construir una Serie booleana, que luego puede usar para subconjugar el DataFrame *cars* para seleccionar ciertas observaciones. Si quieres hacer esto de una sola vez, ¡está perfectamente bien!\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Seleccione la columna *cars_per_cap* de *cars* como Serie de pandas y guárdela como *cpc*.\n",
+    "* Use *cpc* en combinación con un operador de comparación y 500. ¿Quieres terminar con una serie booleana que *True* es si el país correspondiente tiene más de 500 *cars_per_cap* y *False* de lo contrario. Almacene esta serie booleana como *many_cars*.\n",
+    "* Use *many_cars* para subconjunto *cars*, similar a lo que hizo antes. Almacene el resultado como *car_maniac*.\n",
+    "* Imprima *car_maniac* para ver si lo hizo bien.\n",
+    "\n",
+    "Respuesta:\n",
+    "\n",
+    "         cars_per_cap        country  drives_right\n",
+    "    US            809  United States          True\n",
+    "    AUS           731      Australia         False\n",
+    "    JPN           588          Japan         False"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Import cars data\n",
+    "import pandas as pd\n",
+    "cars = pd.read_csv('data/cars.csv', sep =';', index_col=0)\n",
+    "\n",
+    "# Extract cars_per_cap column as Series: cpc\n",
+    "\n",
+    "\n",
+    "# observations that have a cars_per_cap over 500: many_cars\n",
+    "\n",
+    "\n",
+    "# Create car_maniac: observations that have a cars_per_cap over 500\n",
+    "\n",
+    "\n",
+    "# Print car_maniac\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Cars per capita (2)\n",
+    "\n",
+    "Recuerdan los *np.logical_and(), np.logical_or() y np.logical_not()*, las operadores variantes de Numpy para and, or y not? También puede usarlos en Pandas Series para realizar operaciones de filtrado más avanzadas.\n",
+    "\n",
+    "Tome este ejemplo que selecciona las observaciones que tienen *cars_per_cap* entre 10 y 80. Pruebe estas líneas de código paso a paso para ver qué está sucediendo.\n",
+    "\n",
+    "```python\n",
+    "cpc = cars['cars_per_cap']  \n",
+    "between = np.logical_and(cpc > 10, cpc < 80)  \n",
+    "medium = cars[between]\n",
+    "```\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Utilice el ejemplo de código anterior para crear un DataFrame *medium*, que incluye todas las observaciones de *cars* que tienen un intervalo *cars_per_cap* entre *100* y *500*.\n",
+    "* Imprimir *medium*.\n",
+    "\n",
+    "Respuesta:\n",
+    "\n",
+    "        cars_per_cap country  drives_right\n",
+    "    RU           200  Russia          True"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "    cars_per_cap country  drives_right\n",
+      "RU           200  Russia          True\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Import cars data\n",
+    "import pandas as pd\n",
+    "cars = pd.read_csv('data/cars.csv', sep =';', index_col=0)\n",
+    "\n",
+    "# Import numpy, you'll need this\n",
+    "import numpy as np\n",
+    "\n",
+    "# Create medium: observations with cars_per_cap between 100 and 500\n",
+    "\n",
+    "\n",
+    "# Print medium\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Bucle sobre DataFrame (1)\n",
+    "\n",
+    "Iterar sobre un Pandas DataFrame generalmente se realiza con el método **iterrows()**. Utilizado en un bucle *for*, cada observación se repite una y otra vez, la etiqueta de la fila y el contenido real de la fila están disponibles:\n",
+    "\n",
+    "```python\n",
+    "for lab, row in brics.iterrows() :\n",
+    "    ...\n",
+    "```    \n",
+    "En este y en los siguientes ejercicios trabajará con el DataFrame *cars*. Contiene información sobre los automóviles per cápita y si las personas conducen hacia la derecha o hacia la izquierda en siete países del mundo.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "+ Escriba un bucle *for* que itera sobre las filas de *cars* y en cada iteración realice dos llamadas **print()**: una para imprimir la etiqueta de la fila y otra para imprimir todos los contenidos de las filas.\n",
+    "\n",
+    "Respuesta:\n",
+    "\n",
+    "    US\n",
+    "    cars_per_cap              809\n",
+    "    country         United States\n",
+    "    drives_right             True\n",
+    "    Name: US, dtype: object\n",
+    "    AUS\n",
+    "    cars_per_cap          731\n",
+    "    country         Australia\n",
+    "    drives_right        False\n",
+    "    Name: AUS, dtype: object\n",
+    "    JPN\n",
+    "    cars_per_cap      588\n",
+    "    country         Japan\n",
+    "    drives_right    False\n",
+    "    Name: JPN, dtype: object\n",
+    "    IN\n",
+    "    cars_per_cap       18\n",
+    "    country         India\n",
+    "    drives_right    False\n",
+    "    Name: IN, dtype: object\n",
+    "    RU\n",
+    "    cars_per_cap       200\n",
+    "    country         Russia\n",
+    "    drives_right      True\n",
+    "    Name: RU, dtype: object\n",
+    "    MOR\n",
+    "    cars_per_cap         70\n",
+    "    country         Morocco\n",
+    "    drives_right       True\n",
+    "    Name: MOR, dtype: object\n",
+    "    EG\n",
+    "    cars_per_cap       45\n",
+    "    country         Egypt\n",
+    "    drives_right     True\n",
+    "    Name: EG, dtype: object"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "US\n",
+      "cars_per_cap              809\n",
+      "country         United States\n",
+      "drives_right             True\n",
+      "Name: US, dtype: object\n",
+      "AUS\n",
+      "cars_per_cap          731\n",
+      "country         Australia\n",
+      "drives_right        False\n",
+      "Name: AUS, dtype: object\n",
+      "JPN\n",
+      "cars_per_cap      588\n",
+      "country         Japan\n",
+      "drives_right    False\n",
+      "Name: JPN, dtype: object\n",
+      "IN\n",
+      "cars_per_cap       18\n",
+      "country         India\n",
+      "drives_right    False\n",
+      "Name: IN, dtype: object\n",
+      "RU\n",
+      "cars_per_cap       200\n",
+      "country         Russia\n",
+      "drives_right      True\n",
+      "Name: RU, dtype: object\n",
+      "MOR\n",
+      "cars_per_cap         70\n",
+      "country         Morocco\n",
+      "drives_right       True\n",
+      "Name: MOR, dtype: object\n",
+      "EG\n",
+      "cars_per_cap       45\n",
+      "country         Egypt\n",
+      "drives_right     True\n",
+      "Name: EG, dtype: object\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Import cars data\n",
+    "import pandas as pd\n",
+    "cars = pd.read_csv('data/cars.csv', sep =';', index_col=0)\n",
+    "\n",
+    "# Iterate over rows of cars\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Bucle sobre DataFrame (2)\n",
+    "\n",
+    "Los datos de fila generados por cada ejecución de **iterrows()** son una serie de Pandas. Este formato no es muy conveniente para imprimir. Afortunadamente, puede seleccionar fácilmente variables de la Serie Pandas usando corchetes:\n",
+    "\n",
+    "```python\n",
+    "for lab, row in brics.iterrows():  \n",
+    "    print(row['country'])\n",
+    "```\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Usando los iteradores *lab* y *row*, adapte el código en el bucle for de modo que se imprima la primera iteración \"*US: 809*\", la segunda iteración \"*AUS: 731*\", etc.\n",
+    "* La salida debe estar en el formulario \"*country: cars_per_cap*\". Asegúrese de imprimir esta cadena exacta (con el espacio correcto).\n",
+    "* Puede usar *str()* para convertir sus datos enteros en una cadena para poder imprimirlos junto con la etiqueta del país.\n",
+    "\n",
+    "Respuesta: \n",
+    "\n",
+    "    US: 809\n",
+    "    AUS: 731\n",
+    "    JPN: 588\n",
+    "    IN: 18\n",
+    "    RU: 200\n",
+    "    MOR: 70\n",
+    "    EG: 45"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "cars_per_cap              809\n",
+      "country         United States\n",
+      "drives_right             True\n",
+      "Name: US, dtype: object\n",
+      "cars_per_cap          731\n",
+      "country         Australia\n",
+      "drives_right        False\n",
+      "Name: AUS, dtype: object\n",
+      "cars_per_cap      588\n",
+      "country         Japan\n",
+      "drives_right    False\n",
+      "Name: JPN, dtype: object\n",
+      "cars_per_cap       18\n",
+      "country         India\n",
+      "drives_right    False\n",
+      "Name: IN, dtype: object\n",
+      "cars_per_cap       200\n",
+      "country         Russia\n",
+      "drives_right      True\n",
+      "Name: RU, dtype: object\n",
+      "cars_per_cap         70\n",
+      "country         Morocco\n",
+      "drives_right       True\n",
+      "Name: MOR, dtype: object\n",
+      "cars_per_cap       45\n",
+      "country         Egypt\n",
+      "drives_right     True\n",
+      "Name: EG, dtype: object\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Import cars data\n",
+    "import pandas as pd\n",
+    "cars = pd.read_csv('data/cars.csv', sep =';', index_col=0)\n",
+    "\n",
+    "# Adapt for loop\n",
+    "for lab, row in cars.iterrows() :\n",
+    "    print(row)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Agregar columna (1)\n",
+    "\n",
+    "En el siguiente ejemplo, se agregará la longitud de los nombres del país en el DataFrame *brics* en una nueva columna:\n",
+    "\n",
+    "```python\n",
+    "for lab, row in brics.iterrows() :  \n",
+    "    brics.loc[lab, \"name_length\"] = len(row[\"country\"])\n",
+    "```    \n",
+    "Puede hacer cosas similares en el DataFrame *cars*.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Use un bucle *for* para agregar una nueva columna, llamada *COUNTRY*, que contenga una versión en mayúscula de los nombres de países en la columna \"*country*\". Puede usar el método de string **upper()** para esto.\n",
+    "* Para ver si su código funcionó, imprima *cars*. No indente este código para que no forme parte del bucle *for*.\n",
+    "\n",
+    "Respuesta:\n",
+    "\n",
+    "         cars_per_cap        country  drives_right        COUNTRY\n",
+    "    US            809  United States          True  UNITED STATES\n",
+    "    AUS           731      Australia         False      AUSTRALIA\n",
+    "    JPN           588          Japan         False          JAPAN\n",
+    "    IN             18          India         False          INDIA\n",
+    "    RU            200         Russia          True         RUSSIA\n",
+    "    MOR            70        Morocco          True        MOROCCO\n",
+    "    EG             45          Egypt          True          EGYPT"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "     cars_per_cap        country  drives_right        COUNTRY\n",
+      "US            809  United States          True  UNITED STATES\n",
+      "AUS           731      Australia         False      AUSTRALIA\n",
+      "JPN           588          Japan         False          JAPAN\n",
+      "IN             18          India         False          INDIA\n",
+      "RU            200         Russia          True         RUSSIA\n",
+      "MOR            70        Morocco          True        MOROCCO\n",
+      "EG             45          Egypt          True          EGYPT\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Import cars data\n",
+    "import pandas as pd\n",
+    "cars = pd.read_csv('data/cars.csv', sep =';', index_col=0)\n",
+    "\n",
+    "# Code for loop that adds COUNTRY column\n",
+    "for lab, row in cars.iterrows():\n",
+    "    \n",
+    "\n",
+    "# Print cars\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Agregar columna (2)\n",
+    "--\n",
+    "\n",
+    "Usar **iterrows()** para iterar sobre cada observación de un Pandas DataFrame es fácil de entender, pero no muy eficiente. En cada iteración, estás creando una nueva serie Pandas.\n",
+    "\n",
+    "Si desea agregar una columna a un DataFrame llamando a una función en otra columna, el método **iterrows()** en combinación con un bucle *for* no es la mejor opción. En cambio, querrás usar **apply()**.\n",
+    "\n",
+    "Compare la versión **iterrows()** con la versión **apply()** para obtener el mismo resultado en el DataFrame *brics*:\n",
+    "\n",
+    "```python\n",
+    "for lab, row in brics.iterrows() :  \n",
+    "    brics.loc[lab, \"name_length\"] = len(row[\"country\"])\n",
+    "\n",
+    "brics[\"name_length\"] = brics[\"country\"].apply(len)\n",
+    "```\n",
+    "Podemos hacer algo similar para llamar al método **upper()** en cada nombre de la columna *country*. Sin embargo, **upper()** es un método, por lo que necesitaremos un enfoque ligeramente diferente:\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Reemplace el bucle *for* con una línea que usa **.apply(str.upper)**. La llamada debe dar el mismo resultado: se debe agregar una columna *COUNTRY* en mayúscula de los nombres de los países contenida en *cars*.\n",
+    "* Como de costumbre, imprima para *cars ver los frutos de su arduo trabajo.\n",
+    "\n",
+    "Respuesta:\n",
+    "\n",
+    "         cars_per_cap        country  drives_right        COUNTRY\n",
+    "    US            809  United States          True  UNITED STATES\n",
+    "    AUS           731      Australia         False      AUSTRALIA\n",
+    "    JPN           588          Japan         False          JAPAN\n",
+    "    IN             18          India         False          INDIA\n",
+    "    RU            200         Russia          True         RUSSIA\n",
+    "    MOR            70        Morocco          True        MOROCCO\n",
+    "    EG             45          Egypt          True          EGYPT"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "     cars_per_cap        country  drives_right        COUNTRY\n",
+      "US            809  United States          True  UNITED STATES\n",
+      "AUS           731      Australia         False      AUSTRALIA\n",
+      "JPN           588          Japan         False          JAPAN\n",
+      "IN             18          India         False          INDIA\n",
+      "RU            200         Russia          True         RUSSIA\n",
+      "MOR            70        Morocco          True        MOROCCO\n",
+      "EG             45          Egypt          True          EGYPT\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Import cars data\n",
+    "import pandas as pd\n",
+    "cars = pd.read_csv('data/cars.csv', sep =';', index_col=0)\n",
+    "\n",
+    "# Use .apply(str.upper)\n",
+    "for lab, row in cars.iterrows():\n",
+    "    \n",
+    "# Print cars\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

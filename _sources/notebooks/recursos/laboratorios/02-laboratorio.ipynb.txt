@@ -1,0 +1,456 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Laboratorio-02"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Ya has avanzado bastante hasta este punto, vamos a probar el conocimiento adquirido con los siguientes problemas."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problema 01"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Dada la siguiente lista ```[12, 23, 5, 29, 92, 64]``` realiza las siguientes operaciones e imprima la lista resultante:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Defina la lista\n",
+    "lista = [12, 23, 5, 29, 92, 64]\n",
+    "\n",
+    "# Elimina el último número y añádelo al principio.\n",
+    "\n",
+    "\n",
+    "# Print lista\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Mueve el segundo elemento a la última posición.\n",
+    "\n",
+    "\n",
+    "# Print lista\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Añade el número 14 al comienzo de la lista.\n",
+    "\n",
+    "\n",
+    "# Print lista\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Suma todos los números de la lista y añade el resultado al final de la lista.\n",
+    "\n",
+    "\n",
+    "# Print lista\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Combina la lista actual con la siguiente: [4, 11, 32]\n",
+    "\n",
+    "\n",
+    "# Print lista\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Elimina todos los números impares de la lista.\n",
+    "\n",
+    "\n",
+    "# Print lista\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Ordena los números de la lista de forma ascendente.\n",
+    "\n",
+    "\n",
+    "# Print lista\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Vacía la lista.\n",
+    "\n",
+    "\n",
+    "# Print lista\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problema 02"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Crea un programa que solicite al usuario 5 números y los guarde en una lista. A continuación el programa pedirá otros 5 números al usuario almacenándolos en una segunda lista. El programa mostrará al usuario una lista que contenga los números que tienen en común las dos listas anteriores.\n",
+    "\n",
+    "Ejemplo: ```Lista_1 = [6,14,11,78,5]``` y ```Lista_2 = [3,14,22,78,9]```  \n",
+    "Resultado: ```[14, 78]```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Defina la list_1 y list_2 vacias\n",
+    "\n",
+    "\n",
+    "\n",
+    "# Defina el ciclo primer ciclo con el input, almacene la entrada en lista_1\n",
+    "\n",
+    "\n",
+    "\n",
+    "# Print list_1\n",
+    "\n",
+    "\n",
+    "# Defina el ciclo segundo ciclo con el input, almacene la entrada en lista_1\n",
+    "\n",
+    "\n",
+    "\n",
+    "# Print list_1\n",
+    "\n",
+    "\n",
+    "# cree los ciclos anidados que comparen las 2 listas: comun \n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "# Print comun\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(set(comun))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problema 03\n",
+    "Crea un programa que recorra una lista y cree un diccionario que contenga el número de veces que aparece cada número en la lista.\n",
+    "\n",
+    "**Lista**: ```list = [12, 23, 5, 12, 92, 5,12, 5, 29, 92, 64,23]```   \n",
+    "**Resultado**: ```{12: 3, 23: 2, 5: 3, 92: 2, 29: 1, 64: 1}```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Defina la lista\n",
+    "\n",
+    "\n",
+    "# Defina el diccionario vacio \n",
+    "\n",
+    "\n",
+    "# Cree el cliclo que recorra la lista y agregue los valores al diccionario\n",
+    "for i in lista:\n",
+    "    # Agregue la tupla al diccionario si no existe\n",
+    "\n",
+    "\n",
+    "# Imprima el diccionario\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problema 04"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Recorre un diccionario y crea una lista solo con los valores que contiene, sin añadir valores duplicados.   \n",
+    "**Diccionario**: {'Mikel': 3, 'Ane': 8, 'Amaia': 12, 'Unai': 5, 'Jon': 8, 'Ainhoa': 7, 'Maite': 5}       \n",
+    "**Resultado**: [3, 8, 12, 5, 7]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Defina el diccionario\n",
+    "diccionario = {'Mikel': 3, 'Ane': 8, 'Amaia': 12, 'Unai': 5, 'Jon': 8, 'Ainhoa': 7, 'Maite': 5}\n",
+    "\n",
+    "# Defina las lista vacia\n",
+    "\n",
+    "\n",
+    "# Cree el cliclo que recorra el diccionario por los values\n",
+    "\n",
+    "    # Cree el condicional que valide que el valor está en la lista, sino está lo agrega\n",
+    "\n",
+    "    \n",
+    "\n",
+    "# Imprima la lista\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problema 05"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Crea una programa de Login que compruebe el usuario y contraseña en el diccionario a continuación:\n",
+    "\n",
+    "```python\n",
+    "usuarios = {\n",
+    "        \"abc\": {\n",
+    "            \"nombre\": \"Albert\",\n",
+    "            \"apellido\": \"Bc\",\n",
+    "            \"password\": \"123\"\n",
+    "           },\n",
+    "        \"def\": {\n",
+    "            \"nombre\": \"Diego\",\n",
+    "            \"apellido\": \"Ef\",\n",
+    "            \"password\": \"456\"\n",
+    "            },\n",
+    "        \"fgh\": {\n",
+    "            \"nombre\": \"Gabian\",\n",
+    "            \"apellido\": \"Gh\",\n",
+    "            \"password\": \"789\"\n",
+    "            }\n",
+    "    }```\n",
+    "\n",
+    "El usuario tendrá un máximo de 3 intentos, y al acceder correctamente se mostrará el nombre y apellido del usuario."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Defina el diccionario\n",
+    "usuarios = {\n",
+    "        \"abc\": {\n",
+    "            \"nombre\": \"Albert\",\n",
+    "            \"apellido\": \"Bc\",\n",
+    "            \"password\": \"123\"\n",
+    "           },\n",
+    "        \"def\": {\n",
+    "            \"nombre\": \"Diego\",\n",
+    "            \"apellido\": \"Ef\",\n",
+    "            \"password\": \"456\"\n",
+    "            },\n",
+    "        \"fgh\": {\n",
+    "            \"nombre\": \"Gabian\",\n",
+    "            \"apellido\": \"Gh\",\n",
+    "            \"password\": \"789\"\n",
+    "            }\n",
+    "    }\n",
+    "\n",
+    "# Cree el cliclo que vaya hasta 3\n",
+    "\n",
+    "    # Cree las variables user y password para que almacenen los input\n",
+    "    user = input(\"Ingrese usuario: \" )\n",
+    "    password = input(\"Ingrese contraseña: \" )\n",
+    "    \n",
+    "    # Cree el condicional que valide que el usuario está en el las claves del diccionario\n",
+    "    if user in usuarios.keys():\n",
+    "        # Cree el condicional que compare el password ingresado con los del diccionario\n",
+    "\n",
+    "        \n",
+    "        \n",
+    "            \n",
+    "        # Print mensaje de contraseña incorrecta\n",
+    "        else:\n",
+    "\n",
+    "\n",
+    "    else:\n",
+    "        # Print mensaje de usuario incorrecto\n",
+    "\n",
+    "\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problema 06"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Crea un programa que determine si un número es primo o no. Deberás crear la función es **primo()** que reciba como parámetro un número y devuelva **True** o **False** indicando si *el número es primo o no*."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Defina la función\n",
+    "def primo(num):\n",
+    "    \n",
+    "    # Construya el cuerpo del código\n",
+    "\n",
+    "    \n",
+    "    \n",
+    "    \n",
+    "    \n",
+    "    \n",
+    "    \n",
+    "    \n",
+    "\n",
+    "# Imprima la función con el número\n",
+    "print(primo(2))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Problema 07"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Crea un programa que genere un número aleatorio del 1 al 10. El usuario tendrá que adivinarlo, y el programa tras cada intento le indicará al usuario si el número es más alto, bajo o si ha acertado.   \n",
+    "La lógica para dar la respuesta al usuario deberá estar incluida en una función a la que se llamará tras cada intento.\n",
+    "\n",
+    "Respuesta ejemplo:\n",
+    "\n",
+    "    5\n",
+    "    bajo\n",
+    "    6\n",
+    "    bajo\n",
+    "    7\n",
+    "    acertado"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# De random importa randint\n",
+    "from random import randint\n",
+    "\n",
+    "# Defina la función\n",
+    "def adivinansa(aleatorio):\n",
+    "    # Construya el cuerpo del código\n",
+    "    num = int(input())\n",
+    "    if num == aleatorio:\n",
+    "        print(\"acertado\")\n",
+    "    elif num < aleatorio:\n",
+    "        print(\"bajo\")\n",
+    "        adivinansa(aleatorio)\n",
+    "    else:\n",
+    "        print(\"alto\")\n",
+    "        adivinansa(aleatorio)\n",
+    "        \n",
+    "aleatorio = randint(1,10)\n",
+    "\n",
+    "adivinansa(aleatorio)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
