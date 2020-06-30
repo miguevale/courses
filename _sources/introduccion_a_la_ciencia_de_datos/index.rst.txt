@@ -151,3 +151,26 @@ Sesión 08 - Pandas avanzado
 
    /notebooks/recursos/practicas/08-pr-pandas-avanzado
 
+Sesión 09 - Visualización con matplotlib
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/09-visualizacion-con-matplotlib
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/09-pr-visualizacion-con-matplotlib
+
+Laboratorio 03
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/laboratorios/03-laboratorio
