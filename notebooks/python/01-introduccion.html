@@ -1,0 +1,1411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introducción al lenguaje Python &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Práctica 1 - Calentamiento" href="../recursos/practicas/01-pr-introduccion.html" />
+    <link rel="prev" title="Repositorio" href="../../introduccion_a_la_ciencia_de_datos/repositorio.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/repositorio.html">Repositorio</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-01-introduccion">Sesión 01 - Introducción</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Introducción al lenguaje Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Acerca-de-Python">Acerca de Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Características">Características</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Instalación-de-Anaconda">Instalación de Anaconda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Tu-primer-programa">Tu primer programa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Sintaxis">Sintaxis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Ayudas">Ayudas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#La-librería-estándar-de-Python">La librería estándar de Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Instalando-módulos-de-terceros">Instalando módulos de terceros</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Buenas-prácticas-de-programación-de-Python">Buenas prácticas de programación de Python</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Operadores-y-expresiones">Operadores y expresiones</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Operadores-aritméticos">Operadores aritméticos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Operadores-lógicos">Operadores lógicos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Python-como-calculadora">Python como calculadora</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../recursos/practicas/01-pr-introduccion.html">Práctica 1 - Calentamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-01">Laboratorio 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-05-diccionarios">Sesión 05 - Diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-06-funciones">Sesión 06 - Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-02">Laboratorio 02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-03">Laboratorio 03</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a> &raquo;</li>
+        
+      <li>Introducción al lenguaje Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/notebooks/python/01-introduccion.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Introducción-al-lenguaje-Python">
+<h1>Introducción al lenguaje Python<a class="headerlink" href="#Introducción-al-lenguaje-Python" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>90 min | Última modificación: Junio 07, 2020.</p>
+<div class="section" id="Acerca-de-Python">
+<h2>Acerca de Python<a class="headerlink" href="#Acerca-de-Python" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Python es sin duda alguna uno de los lenguajes de programación más populares que existen hoy en día. En comparación con otros lenguajes de programación, Python presume de tener una curva de aprendizaje pequeña y un gran potencial, ya que hablamos de un lenguaje con el que es posible realizar tareas de todo tipo, como por ejemplo:</p>
+<ul class="simple">
+<li><p>Desarrollo de aplicaciones web</p></li>
+<li><p>Inteligencia artificial</p></li>
+<li><p>Automatización de tareas</p></li>
+<li><p>Análisis avanzado de datos</p></li>
+</ul>
+<div align="center"><p><img alt="Drawing" src="../../_images/Python_logo.png" /></p>
+</div><div style="text-align: center"><p>Lenguaje de programación Python</p>
+</div><div class="line-block">
+<div class="line">Este lenguaje fue creado a principios de los noventa por Guido van Rossum en los Países Bajos.</div>
+<div class="line">Es relativamente joven (Fortran 1957, Pascal 1970, C 1972, Modula-2 1978, Java 1991).</div>
+<div class="line">Es software libre, y está implementado en todas las plataformas y sistemas operativos habituales.</div>
+</div>
+<div align="center"><p><img alt="Drawing" src="../../_images/Guido_van_Rossum.jpg" /></p>
+</div><div style="text-align: center"><p>Guido van Rossum en 2006</p>
+</div><div class="section" id="Open-source">
+<h3>Open source<a class="headerlink" href="#Open-source" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="line-block">
+<div class="line">Python se desarrolla bajo una licencia de Open source o código abierto aprobada por OSI, por lo que se puede usar y distribuir libremente, incluso para uso comercial.</div>
+<div class="line">La licencia de Python es administrada por Python Software Foundation.</div>
+</div>
+</div>
+<div class="section" id="Aplicaciones">
+<h3>Aplicaciones<a class="headerlink" href="#Aplicaciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El Python Package Index (PyPI) o en español significa Índice de paquetes de Python alberga miles de módulos de terceros para Python.</p>
+<p>Tanto la biblioteca estándar de Python como los módulos aportados por la comunidad permiten infinitas posibilidades.</p>
+<ul class="simple">
+<li><p>Desarrollo web e Internet.</p></li>
+<li><p>Científico y numérico.</p></li>
+<li><p>Educación.</p></li>
+<li><p>Desarrollo de software</p></li>
+<li><p>Aplicaciones de negocio.</p></li>
+</ul>
+<p><a class="reference external" href="https://www.python.org/about/apps/">Ver mas</a></p>
+</div>
+</div>
+<div class="section" id="Características">
+<h2>Características<a class="headerlink" href="#Características" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Se trata de un lenguaje open source en el que destaca su legibilidad. El código es limpio y ordenado, lo cual convierte a Python en un lenguaje cómodo de leer y escribir. En definitiva: <strong>un lenguaje de programación fácil de entender y aprender</strong>.</p>
+<p>Al contrario que otros lenguajes de programación como C o Java, <strong>Python es un lenguaje interpretado</strong>, lo que significa que no es necesario compilar el código de Python antes de ejecutarlo. El intérprete irá analizando y ejecutando el código línea por línea.</p>
+<p>Otra de las principales características de Python es que es que es un <strong>lenguaje de programación dinámicamente tipado</strong>, es decir, el programador no tiene que declarar el tipo de las variables si no que este se deduce automáticamente en el tiempo de ejecución.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># La variable &quot;edad&quot; guarda el valor como integer</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La variable &#39;edad&#39; es de tipo: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">edad</span><span class="p">)))</span>
+<span class="c1"># Ahora &quot;edad&quot; guarda un string</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="s2">&quot;Tengo 25 años&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La variable &#39;edad&#39; es de tipo: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">edad</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Por último, comentar que una de las mayores ventajas de este lenguaje de programación orientado a objetos es la extensa variedad de liberías y frameworks disponibles para cualquier propósito, lo cual hace que Python sea la opción perfecta para el desarrollo de aplicaciones de cualquier tipo.</p>
+</div>
+<div class="section" id="Instalación-de-Anaconda">
+<h2>Instalación de Anaconda<a class="headerlink" href="#Instalación-de-Anaconda" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para el desarrollo del curso de introducción a la ciencia de datos necesitarás tener listo tu ambiente de desarrollo local, en tu computadora de escritorio o portátil. En este tutorial explicaremos una manera sencilla de configurar Anaconda Navigator para poder utilizar los Jupyter Notebook como ambiente de aprendizaje de programación como un Científico de Datos.</p>
+<div align="center"><p><img alt="Drawing" src="../../_images/logo.png" /></p>
+</div><div class="section" id="¿Por-qué-instalar-Python-y-Anaconda-en-mi-ordenador?">
+<h3>¿Por qué instalar Python y Anaconda en mi ordenador?<a class="headerlink" href="#¿Por-qué-instalar-Python-y-Anaconda-en-mi-ordenador?" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Python es un lenguaje sencillo, rápido y liviano y es ideal para aprender, experimentar, practicar y trabajar en ciencia de datos.</p>
+<p>Utilizaremos la Suite de Anaconda que nos facilitará la tarea de instalar el ambiente e incluirá las Jupyter Notebooks, que es una aplicación que nos ayudará a hacer paso a paso ejercicios de ciencia de datos, crear visualizaciones de datos y escribir comentarios tal como si se tratase de un cuaderno de notas del colegio o la universidad.</p>
+<p>Esta Suite es multiplataforma y se puede utilizar para Windows, Linux y Macintosh. En mi caso descargaré la versión para Windows, pero para otro sistema operativo será similar.</p>
+</div>
+<div class="section" id="Paso-1-–-Descargar-Anaconda">
+<h3>Paso 1 – Descargar Anaconda<a class="headerlink" href="#Paso-1-–-Descargar-Anaconda" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><em>En este paso veremos como descargar anaconda a nuestro disco y obtener esta suite científica de Python</em></p>
+<p>Nos dirigimos a la <a class="reference external" href="https://www.youtube.com/watch?edufilter=NULL&amp;v=9qYoCbkd9cY">Home de Anaconda</a> e iremos a la sección de <a class="reference external" href="https://www.anaconda.com/products/individual">Download</a> (descargas)</p>
+<p>Elegimos nuestra plataforma: Windows, Mac o Linux (en mi caso seleccionaré la de Windows)</p>
+<div align="center"><p><img alt="Drawing" src="../../_images/anaconda.jpg" /></p>
+</div><p>Atención: Elegir la versión de Python 3.7 (<strong>y no la de 2.7</strong>) y seleccionar el instalador Gráfico (Graphical Installer)</p>
+<p>Con esto guardaremos en nuestro disco duro un archivo con el nombre similar a <em>Anaconda3-2020.02-Windows-x86_64.exe</em></p>
+</div>
+<div class="section" id="Paso-2-–-Instalar-Anaconda">
+<h3>Paso 2 – Instalar Anaconda<a class="headerlink" href="#Paso-2-–-Instalar-Anaconda" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>En este paso instalaremos la app en nuestro sistema. &gt; <em>Deberá tener permisos de Administrador si instala para todos los usuarios. De lo contrario, la instalación quedará solo para el usuario</em>.</p></li>
+<li><p>Ejecutamos el archivo que descargamos haciendo doble click.</p></li>
+<li><p>Se abrirá un «Típico Wizard» de instalación <a class="reference external" href="https://www.youtube.com/watch?edufilter=NULL&amp;v=9qYoCbkd9cY">Ver Video tutorial de instalación</a>.</p></li>
+</ul>
+<div align="center"><p><img alt="Drawing" src="../../_images/instalacion_1.jpg" /></p>
+</div><ul class="simple">
+<li><p>Seguiremos los pasos, podemos seleccionar instalación sólo para nuestro usuario, seleccionar la ruta en disco donde instalaremos y listo.</p></li>
+<li><p>Al instalarse el tamaño total podrá superar 1Gb en disco.</p></li>
+</ul>
+</div>
+<div class="section" id="Paso-3-–-Iniciar-y-Actualizar-Anaconda">
+<h3>Paso 3 – Iniciar y Actualizar Anaconda<a class="headerlink" href="#Paso-3-–-Iniciar-y-Actualizar-Anaconda" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En este paso comprobaremos que se haya instalado correctamente y verificar tener la versión más reciente.</p>
+<p>Anaconda viene con una suite de herramientas gráficas llamada «Anaconda Navigator». Iniciemos la aplicación y veremos una pantalla como esta:</p>
+<div align="center"><p><img alt="Drawing" src="../../_images/inicio_anaconda.jpg" /></p>
+</div></div>
+<div class="section" id="Material-complementario">
+<h3>Material complementario<a class="headerlink" href="#Material-complementario" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.anaconda.com/anaconda/install/">Installation</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="Tu-primer-programa">
+<h2>Tu primer programa<a class="headerlink" href="#Tu-primer-programa" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En informática, un programa <strong>Hola Mundo</strong> es el que imprime el texto <em>«¡Hola, Mundo!»</em> en un dispositivo de visualización, en la mayoría de los casos una pantalla de monitor. Este programa suele ser usado como introducción al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se lo considera fundamental desde el punto de vista didáctico.</p>
+<p>El <em>Hola Mundo</em> se caracteriza por su sencillez, especialmente cuando se ejecuta en una interfaz de línea de comandos. En interfaces gráficas la creación de este programa requiere de más pasos.</p>
+<p>El programa <em>Hola Mundo</em> también puede ser útil como prueba de configuración para asegurar que el compilador, el entorno de desarrollo y el entorno de ejecución estén instalados correctamente y funcionando.</p>
+<div class="section" id="¡Hola,-Mundo!">
+<h3>¡Hola, Mundo!<a class="headerlink" href="#¡Hola,-Mundo!" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola Mundo&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Hola Mundo
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Sintaxis">
+<h2>Sintaxis<a class="headerlink" href="#Sintaxis" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="Indentación">
+<h3>Indentación<a class="headerlink" href="#Indentación" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Un aspecto muy importante a mencionar antes de comenzar a programar en Python es el hecho de que Python utiliza la indentación (también conocida como sangría, tabulación o espaciado) para delimitar los bloques de código. La indentación estándar de Python requiere una tabulación de 4 espacios:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="c1"># tabulación de 4 espacios</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor de x es 5.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+El valor de x es 5.
+</pre></div></div>
+</div>
+<p>En caso contrario, al ejecutar nuestro código recibiremos un error como el siguiente</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ne">IndentationError</span><span class="p">:</span> <span class="n">expected</span> <span class="n">an</span> <span class="n">indented</span> <span class="n">block</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Comentarios">
+<h3>Comentarios<a class="headerlink" href="#Comentarios" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Es posible agregar comentarios a sus scripts de Python. Los comentarios son importantes para asegurarse que usted y otros puedan entender de qué se trata su código.</p>
+<p>Para agregar comentarios a su script Python, puede usar la <strong>#</strong> etiqueta. Estos comentarios no se ejecutan como código Python, por lo que no influirán en su resultado. Como ejemplo, tome el comentario en la celda abajo <strong># Division</strong>; se ignora por completo durante la ejecución.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Division</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.5
+</pre></div></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Encima</span> <span class="k">del</span>  <span class="nb">print</span><span class="p">(</span><span class="mi">7</span> <span class="o">+</span> <span class="mi">10</span><span class="p">),</span> <span class="n">agregue</span> <span class="n">el</span> <span class="n">comentario</span> <span class="c1"># Suma</span>
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Suma</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">7</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+17
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Ayudas">
+<h2>Ayudas<a class="headerlink" href="#Ayudas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Puede solicitar la ayudar del interprete de Python, ejecutando:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">help</span><span class="p">(</span><span class="n">pd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Help on package pandas:
+
+NAME
+    pandas
+
+DESCRIPTION
+    pandas - a powerful data analysis and manipulation library for Python
+    =====================================================================
+
+    **pandas** is a Python package providing fast, flexible, and expressive data
+    structures designed to make working with &#34;relational&#34; or &#34;labeled&#34; data both
+    easy and intuitive. It aims to be the fundamental high-level building block for
+    doing practical, **real world** data analysis in Python. Additionally, it has
+    the broader goal of becoming **the most powerful and flexible open source data
+    analysis / manipulation tool available in any language**. It is already well on
+    its way toward this goal.
+
+    Main Features
+    -------------
+    Here are just a few of the things that pandas does well:
+
+      - Easy handling of missing data in floating point as well as non-floating
+        point data.
+      - Size mutability: columns can be inserted and deleted from DataFrame and
+        higher dimensional objects
+      - Automatic and explicit data alignment: objects can be explicitly aligned
+        to a set of labels, or the user can simply ignore the labels and let
+        `Series`, `DataFrame`, etc. automatically align the data for you in
+        computations.
+      - Powerful, flexible group by functionality to perform split-apply-combine
+        operations on data sets, for both aggregating and transforming data.
+      - Make it easy to convert ragged, differently-indexed data in other Python
+        and NumPy data structures into DataFrame objects.
+      - Intelligent label-based slicing, fancy indexing, and subsetting of large
+        data sets.
+      - Intuitive merging and joining data sets.
+      - Flexible reshaping and pivoting of data sets.
+      - Hierarchical labeling of axes (possible to have multiple labels per tick).
+      - Robust IO tools for loading data from flat files (CSV and delimited),
+        Excel files, databases, and saving/loading data from the ultrafast HDF5
+        format.
+      - Time series-specific functionality: date range generation and frequency
+        conversion, moving window statistics, date shifting and lagging.
+
+PACKAGE CONTENTS
+    _config (package)
+    _libs (package)
+    _testing
+    _typing
+    _version
+    api (package)
+    arrays (package)
+    compat (package)
+    conftest
+    core (package)
+    errors (package)
+    io (package)
+    plotting (package)
+    stats (package)
+    testing
+    tests (package)
+    tseries (package)
+    util (package)
+
+SUBMODULES
+    _hashtable
+    _lib
+    _tslib
+    offsets
+
+CLASSES
+    builtins.object
+        Panel
+        SparseDataFrame
+        SparseSeries
+        __DatetimeSub
+        __SparseArraySub
+
+    class Panel(builtins.object)
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+    SparseArray = class __SparseArraySub(builtins.object)
+     |  Methods defined here:
+     |
+     |  emit_warning(dummy=0)
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(cls, *args, **kwargs)
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+    class SparseDataFrame(builtins.object)
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+    class SparseSeries(builtins.object)
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+    datetime = class __DatetimeSub(builtins.object)
+     |  Methods defined here:
+     |
+     |  emit_warning(dummy=0)
+     |
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |
+     |  __new__(cls, *args, **kwargs)
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+
+DATA
+    IndexSlice = &lt;pandas.core.indexing._IndexSlice object&gt;
+    NA = &lt;NA&gt;
+    NaT = NaT
+    __docformat__ = &#39;restructuredtext&#39;
+    __git_version__ = &#39;3adf3340453d6704d4a2cb47058214cc697a7d29&#39;
+    describe_option = &lt;pandas._config.config.CallableDynamicDoc object&gt;
+    get_option = &lt;pandas._config.config.CallableDynamicDoc object&gt;
+    np = &lt;pandas.__numpy object&gt;
+    options = &lt;pandas._config.config.DictWrapper object&gt;
+    reset_option = &lt;pandas._config.config.CallableDynamicDoc object&gt;
+    set_option = &lt;pandas._config.config.CallableDynamicDoc object&gt;
+
+VERSION
+    1.0.3
+
+FILE
+    c:\users\dnaja\anaconda3\lib\site-packages\pandas\__init__.py
+
+
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+C:\Users\dnaja\Anaconda3\lib\inspect.py:441: FutureWarning: The pandas.datetime class is deprecated and will be removed from pandas in a future version. Import from datetime instead.
+  srch_obj = srch_cls.__getattr__(cls, name)
+C:\Users\dnaja\Anaconda3\lib\pydoc.py:216: FutureWarning: The pandas.datetime class is deprecated and will be removed from pandas in a future version. Import from datetime instead.
+  fields = getattr(object, &#39;_fields&#39;, [])
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+pd<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<p>Puede consultar los detalles acerca del ‘objeto’ para esto use como ejemplo la librería pd ejecutando el siguiente comando:</p>
+<div class="section" id="Documentación-de-la-librería">
+<h3>Documentación de la librería<a class="headerlink" href="#Documentación-de-la-librería" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Escriba la librería pd. y luego escribe dos underscore y presione dos veces la tecla tabular para usar la completado automático del interprete al estilo de completación de lineas de comandos en el shell UNIX/Linux para ayudar a la introspección del lenguaje y sus librerías.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+pandas - a powerful data analysis and manipulation library for Python
+=====================================================================
+
+**pandas** is a Python package providing fast, flexible, and expressive data
+structures designed to make working with &#34;relational&#34; or &#34;labeled&#34; data both
+easy and intuitive. It aims to be the fundamental high-level building block for
+doing practical, **real world** data analysis in Python. Additionally, it has
+the broader goal of becoming **the most powerful and flexible open source data
+analysis / manipulation tool available in any language**. It is already well on
+its way toward this goal.
+
+Main Features
+-------------
+Here are just a few of the things that pandas does well:
+
+  - Easy handling of missing data in floating point as well as non-floating
+    point data.
+  - Size mutability: columns can be inserted and deleted from DataFrame and
+    higher dimensional objects
+  - Automatic and explicit data alignment: objects can be explicitly aligned
+    to a set of labels, or the user can simply ignore the labels and let
+    `Series`, `DataFrame`, etc. automatically align the data for you in
+    computations.
+  - Powerful, flexible group by functionality to perform split-apply-combine
+    operations on data sets, for both aggregating and transforming data.
+  - Make it easy to convert ragged, differently-indexed data in other Python
+    and NumPy data structures into DataFrame objects.
+  - Intelligent label-based slicing, fancy indexing, and subsetting of large
+    data sets.
+  - Intuitive merging and joining data sets.
+  - Flexible reshaping and pivoting of data sets.
+  - Hierarchical labeling of axes (possible to have multiple labels per tick).
+  - Robust IO tools for loading data from flat files (CSV and delimited),
+    Excel files, databases, and saving/loading data from the ultrafast HDF5
+    format.
+  - Time series-specific functionality: date range generation and frequency
+    conversion, moving window statistics, date shifting and lagging.
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+pandas
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="La-librería-estándar-de-Python">
+<h2>La librería estándar de Python<a class="headerlink" href="#La-librería-estándar-de-Python" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La librería estándar es un conjunto de módulos y paquetes que se distribuyen junto con Python. Muchas de las operaciones más comúnes de la programación diaria ya están implementadas en ella, de modo que podemos concentrarnos en lo que realmente nos ocupa. Encontrarás la lista de todos los módulos y paquetes junto con su documentación en <a class="reference external" href="https://docs.python.org/3/library/">The Python Standard Library</a></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="c1"># Raíz cuadrada.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+4.0
+</pre></div></div>
+</div>
+<p>O bien random, que implementa funciones para trabajar con números aleatorios.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">choice</span>
+
+<span class="c1"># Número aleatorio entre 1 y 10.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="c1"># Retorna un elemento aleatorio de la lista.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;C++&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+4
+Java
+</pre></div></div>
+</div>
+<p><strong>Modulos Python más usados</strong> * os * datetime * time * sys * math * random * pandas * numpy</p>
+</div>
+<div class="section" id="Instalando-módulos-de-terceros">
+<h2>Instalando módulos de terceros<a class="headerlink" href="#Instalando-módulos-de-terceros" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La colección de módulos y paquetes desarrollados por la enorme comunidad de programadores de Python en todo el mundo está alojada en <a class="reference external" href="https://pypi.org/">PyPI</a> (Python Package Index).</p>
+<p>Cada uno de estos paquetes está identificado por un nombre. Para instalar alguno de ellos, utilizaremos una herramienta llamada pip que se incluye con la instalación de Python. El comando es el siguiente.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">paquete</span>
+</pre></div>
+</div>
+</div>
+<p>Por ejemplo, para instalar pandas, el paquete más famoso de Python que permite interactuar con DataFrame:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+</pre></div>
+</div>
+</div>
+<p>Por último confirma que el paquete se ha instalado correctamente desde la consola interactiva.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Buenas-prácticas-de-programación-de-Python">
+<h2>Buenas prácticas de programación de Python<a class="headerlink" href="#Buenas-prácticas-de-programación-de-Python" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si programas con Python o estás aprendiendo el lenguage de programación Python estos mandamientos te van a ser muy útiles:</p>
+<ol class="arabic simple">
+<li><p>Los nombres de los ficheros deben escribirse en minúscula. Ejemplo:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hola</span><span class="o">.</span><span class="n">py</span> <span class="n">calculadora</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Las llamadas a funciones se escriben en minúscula. Ejemplo:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span> <span class="nb">input</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Las variables se escriben en minúscula y, de estar formadas por varias palabras, éstas van unidas por guiones bajos. Ejemplo:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">balones</span> <span class="n">piezas_de_repuesto</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Los tipos de dato se escriben en minúscula. Ejemplo:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span>    <span class="nb">int</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Pon un espacio después de cada coma. Ejemplo:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tienes&#39;</span><span class="p">,</span> <span class="n">num_zapatos</span><span class="p">,</span> <span class="s1">&#39;zapatos y&#39;</span><span class="p">,</span> <span class="n">num_blusas</span><span class="p">,</span> <span class="s1">&#39;blusas.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Pon un espacio antes y después de cada operador. Ejemplo:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">8</span> <span class="o">+</span> <span class="mi">2</span> <span class="n">total</span> <span class="o">+=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Indenta con 4 espacios; nunca uses el tabulador. Ejemplo:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">nombre</span> <span class="o">==</span> <span class="s1">&#39;Ángel&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">,</span> <span class="n">nombre</span><span class="p">)</span>
+<span class="mi">1234</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Escribe abundantes comentarios en tu código, describiendo cada detalle, para hacer que sea lo más claro y legible posible.</p></li>
+</ol>
+<p>Algunas de las recomendaciones respecto a los estilos de programación de python están recogidas en la <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">Guía oficial de Estilos PEP8 de Python</a>.</p>
+</div>
+</div>
+<div class="section" id="Operadores-y-expresiones">
+<h1>Operadores y expresiones<a class="headerlink" href="#Operadores-y-expresiones" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Los operadores son símbolos especiales que permiten realizar operaciones aritméticas o lógicas.</p>
+<div class="section" id="Operadores-aritméticos">
+<h2>Operadores aritméticos<a class="headerlink" href="#Operadores-aritméticos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los operadores aritméticos se utilizan para realizar operaciones matemáticas (suma, resta, multiplicación,…). La tabla siguiente contiene todos los operadores aritméticos permitidos por Python:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operador</p></th>
+<th class="head"><p>Ejemplo</p></th>
+<th class="head"><p>Significado</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>a + b</p></td>
+<td><p>Suma</p></td>
+</tr>
+<tr class="row-odd"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>a - b</p></td>
+<td><p>Resta</p></td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>-a</p></td>
+<td><p>Negación (asignar valor negativo)</p></td>
+</tr>
+<tr class="row-odd"><td><p>*</p></td>
+<td><p>a * b</p></td>
+<td><p>Multiplicación</p></td>
+</tr>
+<tr class="row-even"><td><p>/</p></td>
+<td><p>a / b</p></td>
+<td><p>División</p></td>
+</tr>
+<tr class="row-odd"><td><p>%</p></td>
+<td><p>a % b</p></td>
+<td><p>Módulo (resto de la división)</p></td>
+</tr>
+<tr class="row-even"><td><p>//</p></td>
+<td><p>a // b</p></td>
+<td><p>División entera</p></td>
+</tr>
+<tr class="row-odd"><td><p>**</p></td>
+<td><p>a ** b</p></td>
+<td><p>Exponente</p></td>
+</tr>
+</tbody>
+</table>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># 7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># 2.5</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+7
+3
+10
+2.5
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Operadores-lógicos">
+<h2>Operadores lógicos<a class="headerlink" href="#Operadores-lógicos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los operadores lógicos <code class="docutils literal notranslate"><span class="pre">and,</span> <span class="pre">or,</span></code> y <code class="docutils literal notranslate"><span class="pre">not</span></code> evalúan valores devolviendo también True o False como resultado:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 21%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operador</p></th>
+<th class="head"><p>Ejemplo</p></th>
+<th class="head"><p>Significado</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>and</p></td>
+<td><p>a and b</p></td>
+<td><p>True si a y b son True</p></td>
+</tr>
+<tr class="row-odd"><td><p>or</p></td>
+<td><p>a or b</p></td>
+<td><p>True si a o b son true</p></td>
+</tr>
+<tr class="row-even"><td><p>not</p></td>
+<td><p>not b</p></td>
+<td><p>True si b es falso</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="Python-como-calculadora">
+<h2>Python como calculadora<a class="headerlink" href="#Python-como-calculadora" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Python es perfectamente adecuado para hacer cálculos básicos. Además de la suma, resta, multiplicación y división, también hay soporte para operaciones más avanzadas como:</p>
+<ul class="simple">
+<li><p><strong>Exponenciación</strong>: (<strong>**</strong>). Este operador eleva el número a su izquierda a la potencia del número a su derecha. Por ejemplo 4**2 dará 16.</p></li>
+<li><p><strong>Modulo</strong>: (<strong>%</strong>). Este operador devuelve el residuo de la división del número a la izquierda por el número a su derecha. Por ejemplo 18 % 7 igual 4.</p></li>
+</ul>
+<p>El código en la celda de abajo da algunos ejemplos.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Addition, subtraction</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Multiplication, division, modulo, and exponentiation</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">18</span> <span class="o">%</span> <span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+10
+0
+15
+5.0
+4
+16
+</pre></div></div>
+</div>
+<div class="line-block">
+<div class="line">Suponga que tiene $ 100, que puede invertir con un rendimiento del 10 % anual.</div>
+<div class="line">Después de un año, es (<strong>100 1.1 = 110</strong><em>) dólares, y después de dos años es (</em><strong>100 * 1.1 * 1.1 = 121</strong><em>). Agregue código para calcular cuánto dinero obtiene después de 7 años e imprima el resultado.
+***100 × 1.1 = 110*</em>* dólares, y después de dos años es</div>
+<div class="line"><strong>100 × 1.1 × 1.1 = 121</strong>.</div>
+</div>
+<p><strong>Agregue código para calcular cuánto dinero obtiene después de 7 años e imprima el resultado.</strong></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="mf">1.1</span><span class="o">**</span><span class="mi">7</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+194.87171000000012
+</pre></div></div>
+</div>
+<p>Un caracter de subrayado _ se usa para indicar el resultado del calculo anterior. Dos caracteres __ indican el penúltimo resultado; tres caracteres _ indican el antepenúltimo resultado. Igualmente, se puede usan In[1] para obtener el contenido de la primera celda, In[2] para la segunda y así sucesivamente. De igual forma, los resultados pueden obtenerse como Out[1], Out[2], etc.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="mf">1.1</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1.1
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="mf">1.1</span> <span class="o">+</span> <span class="n">_</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2.2
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="mf">1.1</span> <span class="o">+</span> <span class="n">_</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3.3000000000000003
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">round</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3.3
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1.1
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;1.1 + _&#39;
+</pre></div></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../recursos/practicas/01-pr-introduccion.html" class="btn btn-neutral float-right" title="Práctica 1 - Calentamiento" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../introduccion_a_la_ciencia_de_datos/repositorio.html" class="btn btn-neutral float-left" title="Repositorio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

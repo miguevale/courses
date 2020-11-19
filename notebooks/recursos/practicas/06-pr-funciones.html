@@ -1,0 +1,927 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Practica 06 - Funciones de usuario &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+    <link rel="next" title="Laboratorio-02" href="../laboratorios/02-laboratorio.html" />
+    <link rel="prev" title="Funciones de usuario - básicas" href="../../python/06-funciones.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/repositorio.html">Repositorio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-01-introduccion">Sesión 01 - Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-01">Laboratorio 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-05-diccionarios">Sesión 05 - Diccionarios</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-06-funciones">Sesión 06 - Funciones</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../python/06-funciones.html">Funciones de usuario - básicas</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Practica 06 - Funciones de usuario</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Funciones-de-un-solo-parámetro">Funciones de un solo parámetro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funciones-que-devuelven-valores-únicos">Funciones que devuelven valores únicos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funciones-con-múltiples-parámetros">Funciones con múltiples parámetros</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funciones-que-devuelven-varios-valores">Funciones que devuelven varios valores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funciones-con-un-argumento-predeterminado">Funciones con un argumento predeterminado</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funciones-con-varios-argumentos-predeterminados">Funciones con varios argumentos predeterminados</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#La-palabra-clave-global">La palabra clave global</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-02">Laboratorio 02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-03">Laboratorio 03</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a> &raquo;</li>
+        
+      <li>Practica 06 - Funciones de usuario</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/notebooks/recursos/practicas/06-pr-funciones.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Practica-06---Funciones-de-usuario">
+<h1>Practica 06 - Funciones de usuario<a class="headerlink" href="#Practica-06---Funciones-de-usuario" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Defina una función, , que simplemente imprime una cadena con tres signos de exclamación al final ‘!!!’. A continuación se presenta un ejemplo de código. Puede utilizarlo como patrón para definir shout().</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">():</span>
+    <span class="n">new_value</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">new_value</span>
+</pre></div>
+</div>
+<p>Tenga en cuenta que el cuerpo de la función tiene una identación de 4 espacios.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Defina la función <strong>mi_funcion()</strong>.</p></li>
+<li><p>En el cuerpo de la función coóm un concatenado de “<em>Felicitaciones</em>” y » <em>mi primera función</em>» y asignela a la variable <strong>my_word</strong>.</p></li>
+<li><p>Imprima el valor de <strong>my_word</strong>.</p></li>
+<li><p>Llame la función <strong>mi_funcion()</strong>.</p></li>
+</ul>
+<p>Respuesta: Felicitaciones mi primera función</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Defina la función mi_funcion</span>
+
+    <span class="sd">&quot;&quot;&quot;Imprime un string&quot;&quot;&quot;</span>
+    <span class="c1"># Concatene los strings: my_word</span>
+
+
+    <span class="c1"># Print my_word</span>
+
+
+<span class="c1"># llame mi_funcion</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Imprime un string&#39;
+</pre></div></div>
+</div>
+<div class="section" id="Funciones-de-un-solo-parámetro">
+<h2>Funciones de un solo parámetro<a class="headerlink" href="#Funciones-de-un-solo-parámetro" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En el ejercicio anterior, definió y llamó a la función que imprimió una cadena concatenada. Ahora se actualizará agregando un parámetro para que pueda aceptar y procesar cualquier argumento de cadena que se le pase.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Complete el encabezado de la función agregando el nombre del parámetro <strong>word</strong>.</p></li>
+<li><p>Asigne el resultado de concatenar <em>word</em> con ’ <em>mi primera función</em>’ a <strong>my_word</strong></p></li>
+<li><p>Imprima el valor de <strong>my_word</strong>.</p></li>
+<li><p>Llame la función <strong>mi_funcion()</strong>, pasándole el string ‘<em>Felicitaciones</em>’.</p></li>
+</ul>
+<p>Respuesta: Felicitaciones mi primera función</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Defina mi_funcion con el parametro, word</span>
+<span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Imprime un string&quot;&quot;&quot;</span>
+    <span class="c1"># Concatene los strings: my_word</span>
+    <span class="n">my_word</span> <span class="o">=</span>
+
+    <span class="c1"># Print my_word</span>
+
+
+<span class="c1"># Llame mi_funcion con el string &#39;Felicitaciones&#39;</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-2-1c175ee41435&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">5</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    my_word =</span>
+<span class="ansi-white-intense-fg ansi-bold">              ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Funciones-que-devuelven-valores-únicos">
+<h2>Funciones que devuelven valores únicos<a class="headerlink" href="#Funciones-que-devuelven-valores-únicos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Pruebe otra modificación de la función para que ahora devuelva un solo valor en lugar de imprimir dentro de la función.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>En el cuerpo de la función, concatenar el string word con ’ <em>mi primera función</em>’ y asignarla a <strong>my_word</strong>.</p></li>
+<li><p>Reemplace la función <strong>print()</strong> por <strong>return</strong>.</p></li>
+<li><p>Llame la función <strong>mi_funcion()</strong>, pasándole el string ‘<em>Felicitaciones</em>’ y asignandola a la variable <strong>my_result</strong>.</p></li>
+<li><p>Imprima <strong>my_result</strong> para comprobar que tiene un valor.</p></li>
+</ul>
+<p>Respuesta: Felicitaciones mi primera función</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Defina mi_funcion con el parametro, word</span>
+<span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Imprime un string&quot;&quot;&quot;</span>
+     <span class="c1"># Concatene los strings: my_word</span>
+    <span class="n">my_word</span> <span class="o">=</span>
+
+    <span class="c1"># Reemplace print por return</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_word</span><span class="p">)</span>
+
+<span class="c1"># Pase &#39;Felicitaciones&#39; a mi_funcion: my_result</span>
+
+
+<span class="c1"># Print my_result</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-3-bab6a8be4323&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">5</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    my_word =</span>
+<span class="ansi-white-intense-fg ansi-bold">             ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Funciones-con-múltiples-parámetros">
+<h2>Funciones con múltiples parámetros<a class="headerlink" href="#Funciones-con-múltiples-parámetros" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Aquí modificará la función para aceptar dos argumentos. Se muestran partes de la función, que escribió anteriormente.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Modifique el encabezado de la función de modo que acepte dos parámetros <strong>word1</strong> y <strong>word2</strong> en ese orden.</p></li>
+<li><p>Concatenar cada una de las variables <strong>word1</strong> y <strong>word2</strong> con ’ <em>mi primera función</em>’ y asignarlas respectivamente a <strong>my_word1</strong> y <strong>my_word2</strong>.</p></li>
+<li><p>Asigne a <strong>my_new_word</strong> el contatenado de <strong>my_word1</strong> y <strong>my_word2</strong>.</p></li>
+<li><p>Llame la función <strong>mi_funcion()</strong> con los parámetros ‘<em>Felicitaciones</em>’ y ‘<em>que bien</em>’, en ese orden, y asigne el valor devuelto a <strong>my_result</strong></p></li>
+</ul>
+<p>Respuesta: Felicitaciones mi primera funciónque bien mi primera función</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Defina mi_funcion con los parametros, word1 y word2</span>
+<span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">(</span><span class="n">word1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Concatena strings y los retorna&quot;&quot;&quot;</span>
+    <span class="c1"># Concatene word1 con &#39; mi primera función&#39;: my_word1</span>
+    <span class="n">my_word1</span> <span class="o">=</span>
+
+    <span class="c1"># Concatene word2 con &#39; mi primera función&#39;: my_word2</span>
+    <span class="n">my_word2</span> <span class="o">=</span>
+
+    <span class="c1"># Concatene my_word1 con my_word2: my_new_word</span>
+    <span class="n">my_new_word</span> <span class="o">=</span>
+
+    <span class="c1"># Return my_result</span>
+    <span class="k">return</span> <span class="n">my_new_word</span>
+
+<span class="c1"># Pase &#39;Felicitaciones&#39; y &#39;que bien&#39; to mi_funcion(): my_result</span>
+<span class="n">my_result</span> <span class="o">=</span> <span class="n">mi_funcion</span><span class="p">()</span>
+
+<span class="c1"># Print yell</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-4-658b70377cf2&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">5</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    my_word1 =</span>
+<span class="ansi-white-intense-fg ansi-bold">               ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Funciones-que-devuelven-varios-valores">
+<h2>Funciones que devuelven varios valores<a class="headerlink" href="#Funciones-que-devuelven-varios-valores" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Aquí devolverá varios valores de una función mediante tuplas. Ahora vamos a actualizar nuestra función para devolver varios valores. En lugar de devolver solo una cadena, devolveremos dos cadenas!!!</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Modifique el encabezado de la función de modo que el nombre de la función sea <strong>mi_funcion_completa</strong> y que acepte dos parámetros <strong>word1</strong> y <strong>word2</strong> en ese orden.</p></li>
+<li><p>Concatenar cada una de las variables <strong>word1</strong> y <strong>word2</strong> con ’ <em>mi primera función</em>’ y asignarlas respectivamente a <strong>my_word1</strong> y <strong>my_word2</strong>.</p></li>
+<li><p>Construya la tupla <strong>my_new_word</strong>, compuesta de <strong>my_word1</strong> y <strong>my_word2</strong>.</p></li>
+<li><p>Llame la función <strong>mi_funcion_completa()</strong> con los string ‘<em>Felicitaciones</em>’ y ‘<em>que bien</em>’ como parámetros. Asigne el resultado a <strong>my_result1</strong> y <strong>my_result2</strong> (recuerde que <strong>mi_funcion_completa()</strong>, devuelve 2 variables).</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">Felicitaciones mi primera función que bien mi primera función</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Defina mi_funcion_completa con los parametros, word1 y word2</span>
+<span class="k">def</span> <span class="nf">mi_funcion_completa</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Concatena strings y los retorna&quot;&quot;&quot;</span>
+    <span class="c1"># Concatene word1 con &#39; mi primera función&#39;: my_word1</span>
+    <span class="n">my_word1</span> <span class="o">=</span>
+
+    <span class="c1"># Concatene word2 con &#39; mi primera función&#39;: my_word2</span>
+    <span class="n">my_word2</span> <span class="o">=</span>
+
+    <span class="c1"># Construya una tuple con my_word1 y my_word2: my_new_word</span>
+    <span class="n">my_new_word</span> <span class="o">=</span>
+
+    <span class="c1"># Return my_new_word</span>
+    <span class="k">return</span> <span class="n">my_new_word</span>
+
+<span class="c1"># Pase &#39;Felicitaciones&#39; y &#39;que bien&#39; to mi_funcion_completa(): my_result1, my_result2</span>
+<span class="n">my_result1</span><span class="p">,</span> <span class="n">my_result2</span> <span class="o">=</span>
+
+<span class="c1"># Print my_result1 y my_result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_result1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_result2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-5-75da590e5e91&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">5</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    my_word1 =</span>
+<span class="ansi-white-intense-fg ansi-bold">               ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Funciones-con-un-argumento-predeterminado">
+<h2>Funciones con un argumento predeterminado<a class="headerlink" href="#Funciones-con-un-argumento-predeterminado" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Has aquí usted ha aprendido a definir funciones con más de un parámetro, pasando el número necesario de argumentos. En este ejercicio usted practicará esa habilidad escribiendo una función que use un argumento predeterminado.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Complete el encabezado de la función con el nombre <strong>mi_funcion()</strong>. Acepta un argumento <strong>word1</strong> y un argumento predeterminado <strong>echo</strong> con el valor predeterminado de 1 en ese orden.</p></li>
+<li><p>En el cuerpo de la función utilice el operador concatenar para unir <strong>word1</strong> con <strong>echo</strong>. Asigne el resultado a <strong>echo_word</strong></p></li>
+<li><p>Llame la función <strong>mi_funcion()</strong> solo con el string “<em>Hey</em>” cómo argumento. Asigne el resultado a <strong>no_echo</strong>.</p></li>
+<li><p>Llame la función <strong>mi_funcion()</strong> con el string “<em>Hey</em>” en el primer argumento <strong>word1</strong> y para el argumento predeterminado <strong>echo</strong> el valor de <em>5</em>. Asigne el resultado a <strong>with_echo</strong>.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Resultado:</div>
+<div class="line">Hey!!!</div>
+<div class="line">HeyHeyHeyHeyHey!!!</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Define mi_funcion</span>
+<span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Concatenate echo copies of word1 and three</span>
+<span class="sd">     exclamation marks at the end of the string.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Concatene echo con word1 usando * para crear copias: echo_word</span>
+    <span class="n">echo_word</span> <span class="o">=</span>
+
+    <span class="c1"># Concatene &#39;!!!&#39; a echo_word: my_word</span>
+    <span class="n">my_word</span> <span class="o">=</span> <span class="n">echo_word</span> <span class="o">+</span> <span class="s1">&#39;!!!&#39;</span>
+
+    <span class="c1"># Return my_word</span>
+    <span class="k">return</span> <span class="n">my_word</span>
+
+<span class="c1"># Llame mi_funcion() con el string &quot;Hey&quot;: no_echo</span>
+
+
+<span class="c1"># Call mi_funcion() con el string &quot;Hey&quot; y echo=5: with_echo</span>
+
+
+<span class="c1"># Print no_echo y with_echo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">no_echo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">with_echo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-6-da62d7e854a0&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">7</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    echo_word =</span>
+<span class="ansi-white-intense-fg ansi-bold">                ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Funciones-con-varios-argumentos-predeterminados">
+<h2>Funciones con varios argumentos predeterminados<a class="headerlink" href="#Funciones-con-varios-argumentos-predeterminados" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Ahora intentará definir una función con más de un argumento predeterminado y luego llamará a esta función de varias maneras.</p>
+<p>Después de definir la función, la llamará proporcionando valores a todos los argumentos predeterminados de la función.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Complete el encabezado de la función con el nombre de la función. Acepta un argumento word1, un argumento predeterminado echo con valor predeterminado de 1 y un argumento predeterminado intense con valor predeterminado False, en ese orden.</p></li>
+<li><p>En el cuerpo de la instrucción <strong>if</strong>, convierta en mayúscula el objeto string aplicando el método <strong>echo_word.upper()</strong>.</p></li>
+<li><p>Llamela función <strong>mi_funcion()</strong> con el string <strong>word1 = “Hey”, echo = 5, intense = True</strong>. Asigne el resultado a “<strong>with_big_echo</strong>”.</p></li>
+<li><p>Llame la función <strong>mi_funcion()</strong> con el sring <strong>word1 = “Hey”</strong>, <strong>intense = True</strong>. Asigne el resultado a <strong>big_no_echo</strong>.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Resultado:</div>
+<div class="line">HEYHEYHEYHEYHEY!!!</div>
+<div class="line">HEY!!!</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Define mi_funcion</span>
+<span class="k">def</span> <span class="nf">mi_funcion</span><span class="p">(</span><span class="n">word1</span><span class="p">,</span> <span class="n">echo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">intense</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Concatenate echo copies of word1 and three</span>
+<span class="sd">    exclamation marks at the end of the string.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Concatenate echo copies of word1 using *: echo_word</span>
+    <span class="n">echo_word</span> <span class="o">=</span> <span class="n">word1</span> <span class="o">*</span> <span class="n">echo</span>
+
+    <span class="c1"># Make echo_word uppercase if intense is True</span>
+    <span class="k">if</span> <span class="n">intense</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1"># Make uppercase and concatenate &#39;!!!&#39;: echo_word_new</span>
+        <span class="n">echo_word_new</span> <span class="o">=</span> <span class="n">echo_word</span> <span class="o">+</span> <span class="s1">&#39;!!!&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Concatenate &#39;!!!&#39; to echo_word: echo_word_new</span>
+        <span class="n">echo_word_new</span> <span class="o">=</span> <span class="n">echo_word</span> <span class="o">+</span> <span class="s1">&#39;!!!&#39;</span>
+
+    <span class="c1"># Return echo_word_new</span>
+    <span class="k">return</span> <span class="n">echo_word_new</span>
+
+<span class="c1"># Call mi_funcion() with &quot;Hey&quot;, echo=5 and intense=True: with_big_echo</span>
+
+
+<span class="c1"># Call mi_funcion() with &quot;Hey&quot; and intense=True: big_no_echo</span>
+
+
+<span class="c1"># Print values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">with_big_echo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">big_no_echo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-7-aad698f71f23&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">     25</span>
+<span class="ansi-green-fg">     26</span> <span class="ansi-red-intense-fg ansi-bold"># Print values</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 27</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print<span class="ansi-yellow-intense-fg ansi-bold">(</span>with_big_echo<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     28</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span>big_no_echo<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;with_big_echo&#39; is not defined
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="La-palabra-clave-global">
+<h2>La palabra clave global<a class="headerlink" href="#La-palabra-clave-global" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Trabajemos más en su dominio del alcance. En este ejercicio, usará la palabra clave <strong>global</strong> dentro de una función para modificar el valor de una variable definida en el ámbito global.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Utilice la palabra clave <strong>global</strong> para modificar el objeto <strong>team</strong> en el ámbito global en el cuerpo de la función.</p></li>
+<li><p>Cambie el valor de <strong>team</strong> en el ámbito global a la cadena “<em>justice league</em>”. Asigne el resultado a <strong>team</strong>.</p></li>
+<li><p>Ejecute la función <strong>change_team()</strong> para ver como cambia el valor de <strong>team</strong>.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Resultado:</div>
+<div class="line">teen titans</div>
+<div class="line">justice league</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Crea el string: team</span>
+<span class="n">team</span> <span class="o">=</span> <span class="s2">&quot;teen titans&quot;</span>
+
+<span class="c1"># Defina change_team()</span>
+<span class="k">def</span> <span class="nf">change_team</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Change the value of the global variable team.&quot;&quot;&quot;</span>
+
+    <span class="c1"># Use team en global scope</span>
+
+
+    <span class="c1"># Cambie el valor de team en global: team</span>
+
+<span class="c1"># Print team</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">team</span><span class="p">)</span>
+
+<span class="c1"># LLame change_team()</span>
+<span class="n">change_team</span><span class="p">()</span>
+
+<span class="c1"># Print team</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">team</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+teen titans
+teen titans
+</pre></div></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../laboratorios/02-laboratorio.html" class="btn btn-neutral float-right" title="Laboratorio-02" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../python/06-funciones.html" class="btn btn-neutral float-left" title="Funciones de usuario - básicas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

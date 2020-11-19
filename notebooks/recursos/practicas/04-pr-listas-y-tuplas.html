@@ -1,0 +1,1384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Practica 04 - Listas y tuplas &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+    <link rel="next" title="Diccionarios" href="../../python/05-diccionarios.html" />
+    <link rel="prev" title="Listas y tuplas" href="../../python/04-listas-y-tuplas.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/repositorio.html">Repositorio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-01-introduccion">Sesión 01 - Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-01">Laboratorio 01</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../python/04-listas-y-tuplas.html">Listas y tuplas</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Practica 04 - Listas y tuplas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Listas">Listas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Índices-y-valores-(2)">Índices y valores (2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Recorrer-la-lista-de-listas">Recorrer la lista de listas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Ordenar-lista">Ordenar lista</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Métodos-de-lista">Métodos de lista</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Métodos-de-lista-(2)">Métodos de lista (2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Tuplas">Tuplas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-05-diccionarios">Sesión 05 - Diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-06-funciones">Sesión 06 - Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-02">Laboratorio 02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-03">Laboratorio 03</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a> &raquo;</li>
+        
+      <li>Practica 04 - Listas y tuplas</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/notebooks/recursos/practicas/04-pr-listas-y-tuplas.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Practica-04---Listas-y-tuplas">
+<h1>Practica 04 - Listas y tuplas<a class="headerlink" href="#Practica-04---Listas-y-tuplas" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="Listas">
+<h2>Listas<a class="headerlink" href="#Listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="Crear-una-lista">
+<h3>Crear una lista<a class="headerlink" href="#Crear-una-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A diferencia de los tipos de datos <em>int</em>, <em>bool</em>, etc., una lista es un tipo de datos compuesto; dónde puedes agrupar valores:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;is&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;nice&quot;</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;my&quot;</span><span class="p">,</span> <span class="s2">&quot;list&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Después de medir la altura de su familia, decide recopilar información sobre la casa en la que vive. Las áreas de las diferentes partes de su casa se almacenan en variables separadas por ahora, como se muestra arriba.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Cree una lista llamada <code class="docutils literal notranslate"><span class="pre">areas</span></code> que contenga el área del pasillo (hall), la cocina (kit), la sala de estar (liv), el dormitorio (bed) y el baño (bath), en este orden. Utiliza las variables predefinidas.</p></li>
+<li><p>Imprime <code class="docutils literal notranslate"><span class="pre">areas</span></code> con la función print().</p></li>
+</ul>
+<p>Respuesta: [11.25, 18.0, 20.0, 10.75, 9.5]</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># variables de area (en metros cuadrados)</span>
+<span class="n">hall</span> <span class="o">=</span> <span class="mf">11.25</span>
+<span class="n">kit</span> <span class="o">=</span> <span class="mf">18.0</span>
+<span class="n">liv</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">bed</span> <span class="o">=</span> <span class="mf">10.75</span>
+<span class="n">bath</span> <span class="o">=</span> <span class="mf">9.50</span>
+
+<span class="c1"># Crea lista de areas</span>
+
+
+<span class="c1"># Imprime areas</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[11.25, 18.0, 20.0, 10.75, 9.5]
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Crea-una-lista-con-diferentes-tipos">
+<h3>Crea una lista con diferentes tipos<a class="headerlink" href="#Crea-una-lista-con-diferentes-tipos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Una lista puede contener cualquier tipo de dato de Python. Aunque no es realmente común, una lista también puede contener una combinación de tipos de datos de Python que incluyen cadenas, flotantes, booleanos, etc.</p>
+<p>La impresión del ejercicio anterior no fue realmente satisfactoria. Es solo una lista de números que representan las áreas, pero no puede saber qué área corresponde a qué parte de su casa.</p>
+<p>El código de abajo es el comienzo de una solución. Para algunas de las áreas, el nombre de la habitación correspondiente ya se encuentra al frente. ¡Presta atención aquí! “bathroom”es una cadena, mientras que bath una variable que representa el flotante 9.50 que especificó anteriormente.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Termine la línea de código que crea la lista de areas. Cree la lista de modo que primero contenga el nombre de cada habitación como una cadena y luego su área. En otras palabras, añadir los strings “hallway”, “kitchen” y “bedroom” en los lugares apropiados.</p></li>
+<li><p>Imprimir de nuevo <code class="docutils literal notranslate"><span class="pre">areas</span></code>; ¿Es la impresión más informativa esta vez?</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># area variables (in square meters)</span>
+<span class="n">hall</span> <span class="o">=</span> <span class="mf">11.25</span>
+<span class="n">kit</span> <span class="o">=</span> <span class="mf">18.0</span>
+<span class="n">liv</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">bed</span> <span class="o">=</span> <span class="mf">10.75</span>
+<span class="n">bath</span> <span class="o">=</span> <span class="mf">9.50</span>
+
+<span class="c1"># Adapt list areas</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[,</span> <span class="n">hall</span><span class="p">,</span> <span class="p">,</span> <span class="n">kit</span><span class="p">,</span> <span class="s2">&quot;living room&quot;</span><span class="p">,</span> <span class="n">liv</span><span class="p">,</span> <span class="s2">&quot;bedroom&quot;</span><span class="p">,</span> <span class="n">bed</span><span class="p">,</span> <span class="p">,</span> <span class="n">bath</span><span class="p">]</span>
+
+<span class="c1"># Print areas</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-5-379188c0d3e6&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">9</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    areas = [, hall, , kit, &#34;living room&#34;, liv, &#34;bedroom&#34;, bed, , bath]</span>
+<span class="ansi-white-intense-fg ansi-bold">             ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Selecciona-la-lista-válida">
+<h3>Selecciona la lista válida<a class="headerlink" href="#Selecciona-la-lista-válida" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Una lista puede contener cualquier tipo de Python. Pero una lista en sí también es de tipo Python. ¡Eso significa que una lista también puede contener una lista! Python se está volviendo cada vez más funky, pero no temas, solo recuerda la sintaxis de la lista:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">el1</span><span class="p">,</span> <span class="n">el2</span><span class="p">,</span> <span class="n">el3</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>Prube las siguientes líneas de código Python y concluya si son formas validas de lista</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">2]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">7]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[1</span> <span class="pre">+</span> <span class="pre">2,</span> <span class="pre">&quot;a&quot;</span> <span class="pre">*</span> <span class="pre">5,</span> <span class="pre">3]</span></code></p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Evalúe su respuestas</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Lista-de-listas">
+<h3>Lista de listas<a class="headerlink" href="#Lista-de-listas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Como científico de datos, a menudo estará tratando con muchos datos, y tendrá sentido agrupar algunos de estos datos.</p>
+<p>En lugar de crear una lista plana que contenga cadenas y flotantes, que represente los nombres y áreas de las habitaciones de su casa, puede crear una lista de listas.</p>
+<p>No se confunda aquí: “hallway”es una cadena, mientras que halles una variable que representa el flotante 11.25 que especificó anteriormente.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Termine la lista de listas para que también contenga los datos del dormitorio y el baño. ¡Asegúrese de ingresarlos en orden!</p></li>
+<li><p>Imprimir house; ¿Tiene más sentido esta forma de estructurar sus datos?</p></li>
+<li><p>Imprime el tipo de house. ¿Sigues lidiando con una lista?</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta: [[‘hallway’, 11.25], [‘kitchen’, 18.0], [‘living room’, 20.0], [‘bedroom’, 10.75], [‘bathroom’, 9.50]]</div>
+<div class="line">Respuesta: &lt;class ‘list’&gt;</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># area variables (in square meters)</span>
+<span class="n">hall</span> <span class="o">=</span> <span class="mf">11.25</span>
+<span class="n">kit</span> <span class="o">=</span> <span class="mf">18.0</span>
+<span class="n">liv</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">bed</span> <span class="o">=</span> <span class="mf">10.75</span>
+<span class="n">bath</span> <span class="o">=</span> <span class="mf">9.50</span>
+
+<span class="c1"># house information as list of lists</span>
+<span class="n">house</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span> <span class="n">hall</span><span class="p">],</span>
+         <span class="p">[</span><span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="n">kit</span><span class="p">],</span>
+         <span class="p">[</span><span class="s2">&quot;living room&quot;</span><span class="p">,</span> <span class="n">liv</span><span class="p">]]</span>
+
+<span class="c1"># Print out house</span>
+
+
+<span class="c1"># Print out the type of house</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Subconjunto-de-listas">
+<h3>Subconjunto de listas<a class="headerlink" href="#Subconjunto-de-listas" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="Subconjunto">
+<h4>Subconjunto<a class="headerlink" href="#Subconjunto" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Subconjunto de listas de Python es pan comido. Tome el ejemplo de código a continuación, que crea una lista x y luego selecciona “b”. Recuerde que este es el segundo elemento, por lo que tiene el índice 1. También puede usar la indexación negativa.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># same result!</span>
+</pre></div>
+</div>
+<p>¿Recuerdas la areaslista de antes, que contiene cadenas y flotantes? Su definición ya está en el guión. ¿Puedes agregar el código correcto para hacer algunos subconjuntos de Python?</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Imprima el segundo elemento de la lista <code class="docutils literal notranslate"><span class="pre">areas</span></code> (tiene el valor 11.25).</p></li>
+<li><p>Subconjunto e imprime el último elemento de areas, ser 9.50. ¡Usar un índice negativo tiene sentido aquí!</p></li>
+<li><p>Seleccione el número que representa el área de la sala de estar ( 20.0) e imprímalo.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">11.25</div>
+<div class="line">9.5</div>
+<div class="line">20.0</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create the areas list</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span> <span class="mf">11.25</span><span class="p">,</span> <span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="s2">&quot;living room&quot;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;bedroom&quot;</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="s2">&quot;bathroom&quot;</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Print out second element from areas</span>
+
+
+<span class="c1"># Print out last element from areas</span>
+
+
+<span class="c1"># Print out the area of the living room</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+11.25
+9.5
+20.0
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Subconjunto-y-calcular">
+<h4>Subconjunto y calcular<a class="headerlink" href="#Subconjunto-y-calcular" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Después de extraer los valores de una lista, puede usarlos para realizar cálculos adicionales. Tome este ejemplo, donde de x se extrae el segundo y cuarto elemento de una lista. Las cadenas que resultan se unen usando el operador + :</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+bd
+</pre></div></div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Usando una combinación de subconjunto de listas y asignación de variables, cree una nueva variable eat_sleep_areaque contenga la suma del área de la cocina y el área del dormitorio.</p></li>
+<li><p>Imprime la nueva variable eat_sleep_area.</p></li>
+</ul>
+<p>Respuesta: 28.75</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create the areas list</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span> <span class="mf">11.25</span><span class="p">,</span> <span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="s2">&quot;living room&quot;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;bedroom&quot;</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="s2">&quot;bathroom&quot;</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Sum of kitchen and bedroom area: eat_sleep_area</span>
+
+
+<span class="c1"># Print the variable eat_sleep_area</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Subconjunto-de-lista">
+<h4>Subconjunto de lista<a class="headerlink" href="#Subconjunto-de-lista" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Use la siguiente sintaxis:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>El índice inicio se incluirá, mientras que el índice fin no.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Use la sublistas para crear una lista downstairs que contenga los primeros 6 elementos de areas.</p></li>
+<li><p>Haga algo similar para crear una nueva variable upstairs, que contenga los últimos 4 elementos de areas.</p></li>
+<li><p>Imprime ambos downstairsy upstairsusando print().</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">[‘hallway’, 11.25, ‘kitchen’, 18.0, ‘living room’, 20.0]</div>
+<div class="line">[‘bedroom’, 10.75, ‘bathroom’, 9.5]</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create the areas list</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span> <span class="mf">11.25</span><span class="p">,</span> <span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="s2">&quot;living room&quot;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;bedroom&quot;</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="s2">&quot;bathroom&quot;</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Use slicing to create downstairs</span>
+
+
+<span class="c1"># Use slicing to create upstairs</span>
+
+
+<span class="c1"># Print out downstairs and upstairs</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Crear de nuevo downstairs, como los primeros 6 elementos de areas. Esta vez, simplifique el corte omitiendo el iníndice inicio.</p></li>
+<li><p>Crear de nuevo upstairs, como los últimos 4 elementos de areas. Esta vez, simplifique el corte omitiendo el índice fin.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create the areas list</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span> <span class="mf">11.25</span><span class="p">,</span> <span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="s2">&quot;living room&quot;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;bedroom&quot;</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="s2">&quot;bathroom&quot;</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Alternative slicing to create downstairs</span>
+<span class="n">downstairs</span> <span class="o">=</span> <span class="n">areas</span><span class="p">[:</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="c1"># Alternative slicing to create upstairs</span>
+<span class="n">upstairs</span> <span class="o">=</span> <span class="n">areas</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Subconjunto-de-lista-de-listas">
+<h4>Subconjunto de lista de listas<a class="headerlink" href="#Subconjunto-de-lista-de-listas" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>¿Qué tipo de datos volverá house[-1][1]?, la lista de listas que creó anteriormente.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Evalúe su respuesta con type()</span>
+
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+20.0
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Reemplazar-elementos-de-la-lista">
+<h3>Reemplazar elementos de la lista<a class="headerlink" href="#Reemplazar-elementos-de-la-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Reemplazar elementos de la lista es bastante fácil. Simplemente subconjunte la lista y asigne nuevos valores al subconjunto. Puede seleccionar elementos individuales o puede cambiar secciones enteras de la lista a la vez.</p>
+<p>Use las celdas de jupyter para experimentar con los siguientes comandos. ¿Puedes decir qué está pasando y por qué?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Para este y los siguientes ejercicios, continuará trabajando en la lista <strong>areas</strong> que contiene los nombres y áreas de las diferentes habitaciones de una casa.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Actualice el área del baño para que sea 10.50 metros cuadrados en lugar de 9.50.</p></li>
+<li><p>¡Haz que la lista areas sea más moderna! Cambiar “living room”a “chill zone”.</p></li>
+</ul>
+<p>Respuesta: [‘hallway’, 11.25, ‘kitchen’, 18.0, ‘chill zone’, 20.0, ‘bedroom’, 10.75, ‘bathroom’, 10.5]</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create the areas list</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span> <span class="mf">11.25</span><span class="p">,</span> <span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="s2">&quot;living room&quot;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;bedroom&quot;</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="s2">&quot;bathroom&quot;</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Correct the bathroom area</span>
+
+
+<span class="c1"># Change &quot;living room&quot; to &quot;chill zone&quot;</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Ampliar-una-lista">
+<h3>Ampliar una lista<a class="headerlink" href="#Ampliar-una-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Si puede cambiar elementos en una lista, seguramente desea poder agregarle elementos, ¿verdad? Puedes usar el operador <strong>+</strong> o list.extend(otra_lista) :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>¡Acabas de ganar la lotería, increíble! Decides construir una casa de la piscina y un garaje. ¿Puedes agregar la información a la lista <strong>areas</strong>?</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Use el operador <strong>+</strong> o list.extend(otra_lista) para pegar la <code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">[&quot;poolhouse&quot;,</span> <span class="pre">24.5]</span></code> al final de la lista <em>areas</em>. Almacene la lista resultante como <em>areas_1</em>.</p></li>
+<li><p>Amplíe aún más <em>areas_1</em> agregando datos en su garaje. Agrega el string “garage” y valor 15.45. Nombra la lista resultante <em>areas_2</em>.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">[‘hallway’, 11.25, ‘kitchen’, 18.0, ‘chill zone’, 20.0, ‘bedroom’, 10.75, ‘bathroom’, 10.5, ‘poolhouse’, 24.5]</div>
+<div class="line">[‘hallway’, 11.25, ‘kitchen’, 18.0, ‘chill zone’, 20.0, ‘bedroom’, 10.75, ‘bathroom’, 10.5, ‘poolhouse’, 24.5, ‘garage’, 15.45]</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create the areas list and make some changes</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span> <span class="mf">11.25</span><span class="p">,</span> <span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="s2">&quot;chill zone&quot;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span>
+         <span class="s2">&quot;bedroom&quot;</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="s2">&quot;bathroom&quot;</span><span class="p">,</span> <span class="mf">10.50</span><span class="p">]</span>
+
+<span class="c1"># Add poolhouse data to areas, new list is areas_1</span>
+
+
+
+<span class="c1"># Add garage data to areas_1, new list is areas_2</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Eliminar-elementos-de-la-lista">
+<h3>Eliminar elementos de la lista<a class="headerlink" href="#Eliminar-elementos-de-la-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Finalmente, también puede eliminar elementos de su lista. Puede hacer esto con la declaración <em>del</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<span class="k">del</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Preste atención aquí: tan pronto como elimine un elemento de una lista, ¡los índices de los elementos que vienen después del elemento eliminado cambian todos!</p>
+<p>La versión actualizada y extendida de la areasque ha creado en los ejercicios anteriores se codifica a continuación. Puede copiar y pegar esto en las celdas de jupyter para jugar con el resultado.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span> <span class="mf">11.25</span><span class="p">,</span> <span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span>
+            <span class="s2">&quot;chill zone&quot;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;bedroom&quot;</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span>
+             <span class="s2">&quot;bathroom&quot;</span><span class="p">,</span> <span class="mf">10.50</span><span class="p">,</span> <span class="s2">&quot;poolhouse&quot;</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span>
+             <span class="s2">&quot;garage&quot;</span><span class="p">,</span> <span class="mf">15.45</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>¡Hubo un error! La cantidad que ganó con la lotería no es tan grande después de todo y parece que el área de la piscina no va a suceder. Decide eliminar la cadena y el flotante correspondiente de la lista <em>areas</em>.</p>
+<p>El signo <code class="docutils literal notranslate"><span class="pre">;</span></code> se usa para colocar comandos en la misma línea. Los siguientes dos fragmentos de código son equivalentes:</p>
+<div class="line-block">
+<div class="line"><strong>Misma linea</strong></div>
+<div class="line">command1; command2</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Lineas separadas</strong></div>
+<div class="line">command1</div>
+<div class="line">command2</div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>¿Cuál de los fragmentos de código hará el trabajo por nosotros?</p>
+<p>Respuestas posibles</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="k">del</span><span class="p">(</span><span class="n">areas</span><span class="p">[</span><span class="mi">10</span><span class="p">]);</span> <span class="k">del</span><span class="p">(</span><span class="n">areas</span><span class="p">[</span><span class="mi">11</span><span class="p">])</span>
+<span class="o">*</span> <span class="k">del</span><span class="p">(</span><span class="n">areas</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">11</span><span class="p">])</span>
+<span class="o">*</span> <span class="k">del</span><span class="p">(</span><span class="n">areas</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="o">*</span> <span class="k">del</span><span class="p">(</span><span class="n">areas</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]);</span> <span class="k">del</span><span class="p">(</span><span class="n">areas</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Evalúe su respuesta</span>
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Funcionamiento-interno-de-listas">
+<h3>Funcionamiento interno de listas<a class="headerlink" href="#Funcionamiento-interno-de-listas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El código Python en el script ya crea una lista con el nombre areas y una copia nombrada <em>areas_copy</em>. A continuación, <em>areas_copy</em> se cambia el primer elemento de la lista y se imprime la lista <em>areas</em>. Al ejecutar el código verá que aunque ha cambiado <em>areas_copy</em>, el cambio también tiene efecto en la lista <em>areas</em>. Eso es porque <em>areas</em> y <em>areas_copy</em> apuntan a la misma lista.</p>
+<p>Si desea evitar que los cambios <em>areas_copy</em> también surtan efecto <em>areas</em>, tendrá que hacer una copia más explícita de la lista <em>areas</em>. Puede hacer esto con list.copy().</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>Cambie el segundo comando, que crea la variable <em>areas_copy</em>, de modo que <em>areas_copy</em> sea una copia explícita de <em>areas</em>. Después de su edición, los cambios realizados en <em>areas_copy</em> no deberían afectar <em>areas</em>.</p>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">[11.25, 18.0, 20.0, 10.75, 9.5]</div>
+<div class="line">[5.0, 18.0, 20.0, 10.75, 9.5]</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create list areas</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">11.25</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Create areas_copy</span>
+<span class="n">areas_copy</span> <span class="o">=</span> <span class="n">areas</span>
+
+<span class="c1"># Change areas_copy</span>
+<span class="n">areas_copy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">5.0</span>
+
+<span class="c1"># Print areas</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">areas</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">areas_copy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[5.0, 18.0, 20.0, 10.75, 9.5]
+[5.0, 18.0, 20.0, 10.75, 9.5]
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Recorrer-una-lista">
+<h3>Recorrer una lista<a class="headerlink" href="#Recorrer-una-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fam</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.73</span><span class="p">,</span> <span class="mf">1.68</span><span class="p">,</span> <span class="mf">1.71</span><span class="p">,</span> <span class="mf">1.89</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">height</span> <span class="ow">in</span> <span class="n">fam</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Como de costumbre, simplemente tiene que indentar el código con 4 espacios para indicarle a Python qué código debe ejecutarse en el bucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">areas</span></code>, que contiene el área de diferentes habitaciones en su casa, ya está definida.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Escriba un bucle for que repita todos los elementos de la lista <code class="docutils literal notranslate"><span class="pre">areas</span></code> e imprima cada elemento por separado.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">11.25</div>
+<div class="line">18.0</div>
+<div class="line">20.0</div>
+<div class="line">10.75</div>
+<div class="line">9.50</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># areas list</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">11.25</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Code the for loop</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Índices-y-valores-(1)">
+<h3>Índices y valores (1)<a class="headerlink" href="#Índices-y-valores-(1)" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El uso de un bucle for para iterar sobre una lista solo le da acceso a cada elemento de la lista en cada ejecución, uno tras otro. Si también desea acceder a la información del índice, puede ubicar el elemento de la lista sobre el que está iterando enumerate().</p>
+<p>Como ejemplo, eche un vistazo a cómo forse convirtió el bucle del video:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fam</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.73</span><span class="p">,</span> <span class="mf">1.68</span><span class="p">,</span> <span class="mf">1.71</span><span class="p">,</span> <span class="mf">1.89</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">height</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fam</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;person &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">height</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Tome el resultado del ejercicio anterior y adapte el bucle <code class="docutils literal notranslate"><span class="pre">for</span></code> con el código del ejemplo para usar <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> y utilice dos variables iteradoras.</p></li>
+<li><p>Actualice la declaración <code class="docutils literal notranslate"><span class="pre">print()</span></code> para que en cada ejecución, “<code class="docutils literal notranslate"><span class="pre">room</span> <span class="pre">a:</span> <span class="pre">b</span></code>” se imprima una línea del formulario , donde <code class="docutils literal notranslate"><span class="pre">a</span></code> es el índice del elemento de la lista y <code class="docutils literal notranslate"><span class="pre">b</span></code> es el elemento de la lista real, es decir, el área. Asegúrese de imprimir esta cadena exacta, con el espacio correcto.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">room 0: 11.25</div>
+<div class="line">room 1: 18.0</div>
+<div class="line">room 2: 20.0</div>
+<div class="line">room 3: 10.75</div>
+<div class="line">room 4: 9.5</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># areas list</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">11.25</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Change for loop to use enumerate() and update print()</span>
+<span class="k">for</span> <span class="n">room</span> <span class="ow">in</span> <span class="n">areas</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">room</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+11.25
+18.0
+20.0
+10.75
+9.5
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Índices-y-valores-(2)">
+<h2>Índices y valores (2)<a class="headerlink" href="#Índices-y-valores-(2)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para los no programadores, <code class="docutils literal notranslate"><span class="pre">room</span> <span class="pre">0:</span> <span class="pre">11.25</span></code> es extraño. ¿No sería mejor si el conteo comenzara en 1?</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Adapte la función <code class="docutils literal notranslate"><span class="pre">print()</span></code> en el bucle <code class="docutils literal notranslate"><span class="pre">for</span></code> para que la primera impresión se convierta “<code class="docutils literal notranslate"><span class="pre">room</span> <span class="pre">1:</span> <span class="pre">11.25</span></code>”, la segunda “<code class="docutils literal notranslate"><span class="pre">room</span> <span class="pre">2:</span> <span class="pre">18.0</span></code>” y así sucesivamente.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">room 1: 11.25</div>
+<div class="line">room 2: 18.0</div>
+<div class="line">room 3: 20.0</div>
+<div class="line">room 4: 10.75</div>
+<div class="line">room 5: 9.5</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># areas list</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">11.25</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Code the for loop</span>
+<span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">areas</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;room &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+room 0: 11.25
+room 1: 18.0
+room 2: 20.0
+room 3: 10.75
+room 4: 9.5
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Recorrer-la-lista-de-listas">
+<h2>Recorrer la lista de listas<a class="headerlink" href="#Recorrer-la-lista-de-listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La variable house básicamente es una lista de listas, donde cada sublista contiene el nombre y el área de una habitación en su casa.</p>
+<p>¡Depende de usted construir un bucle for desde cero esta vez!</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Escriba un bucle <code class="docutils literal notranslate"><span class="pre">for</span></code> que pase por cada sublista de <code class="docutils literal notranslate"><span class="pre">house</span></code> e imprima <code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">x</span> <span class="pre">is</span> <span class="pre">y</span> <span class="pre">sqm</span></code>, donde <code class="docutils literal notranslate"><span class="pre">x</span></code> es el nombre de la habitación e <code class="docutils literal notranslate"><span class="pre">y</span></code> es el área de la habitación.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">the hallway is 11.25 sqm</div>
+<div class="line">the kitchen is 18.0 sqm</div>
+<div class="line">the living room is 20.0 sqm</div>
+<div class="line">the bedroom is 10.75 sqm</div>
+<div class="line">the bathroom is 9.5 sqm</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># house list of lists</span>
+<span class="n">house</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span> <span class="mf">11.25</span><span class="p">],</span>
+         <span class="p">[</span><span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">],</span>
+         <span class="p">[</span><span class="s2">&quot;living room&quot;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">],</span>
+         <span class="p">[</span><span class="s2">&quot;bedroom&quot;</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">],</span>
+         <span class="p">[</span><span class="s2">&quot;bathroom&quot;</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]]</span>
+
+<span class="c1"># Build a for loop from scratch</span>
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Ordenar-lista">
+<h2>Ordenar lista<a class="headerlink" href="#Ordenar-lista" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En el ejercicio anterior, los corchetes imagen la documentación nos mostraron que el imagargumento es opcional. Pero Python también usa una forma diferente de decirle a los usuarios que los argumentos son opcionales.</p>
+<p>Eche un vistazo a la documentación de sorted()escribiendo help(sorted)el Shell de IPython.</p>
+<p>Verá que sorted()toma tres argumentos: iterable, keyy reverse.</p>
+<p>key=Nonesignifica que si no especificas el keyargumento, lo será None. reverse=Falsesignifica que si no especificas el reverseargumento, lo será False.</p>
+<p>En este ejercicio, solo tendrá que especificar iterabley reverse, no key. La primera entrada que pases sorted()coincidirá con el iterableargumento, pero ¿qué pasa con la segunda entrada? Para decirle a Python que desea especificar reversesin cambiar nada key, puede usar =:</p>
+<p>sorted(<strong>, reverse =</strong>) Se han creado dos listas para usted a la derecha. ¿Puedes pegarlos y ordenarlos en orden descendente?</p>
+<p>Nota: Por ahora, podemos entender que un iterable es cualquier colección de objetos, por ejemplo, una Lista.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Utilizar <strong>+</strong> para combinar los contenidos de <em>first</em> y second en una nueva lista: <em>full</em>.</p></li>
+<li><p>Llamar <strong>sorted()</strong> en <em>full</em> y especifique el argumento <em>reverse</em> sea <em>True</em>. Guarde la lista ordenada como <em>full_sorted</em>.</p></li>
+<li><p>Termine imprimiendo <em>full_sorted</em>.</p></li>
+</ul>
+<p>Respuesta: [20.0, 18.0, 11.25, 10.75, 9.5]</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create lists first and second</span>
+<span class="n">first</span> <span class="o">=</span> <span class="p">[</span><span class="mf">11.25</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">]</span>
+<span class="n">second</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.75</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Paste together first and second: full</span>
+
+
+<span class="c1"># Sort full in descending order: full_sorted</span>
+
+
+<span class="c1"># Print out full_sorted</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Métodos-de-lista">
+<h2>Métodos de lista<a class="headerlink" href="#Métodos-de-lista" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las cadenas no son los únicos tipos de Python que tienen métodos asociados con ellas. Las listas, flotantes, enteros y booleanos también son tipos que vienen empaquetados con un montón de métodos útiles. En este ejercicio, experimentarás con:</p>
+<p>index(), para obtener el índice del primer elemento de una lista que coincide con su entrada y count(), para obtener el número de veces que aparece un elemento en una lista. Que va a trabajar en la lista con el área de las diferentes partes de una casa: areas.</p>
+<p><strong>Actividad</strong> * Use el <em>index()</em> método para obtener el índice del elemento areasque es igual a <strong>20.0</strong>. Imprime este índice. * Llamar <em>count()</em> en <em>areas</em> averiguar cuántas veces <strong>9.50</strong> aparece en la lista. Nuevamente imprima este número.</p>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">2</div>
+<div class="line">1</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create list areas</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">11.25</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Print out the index of the element 20.0</span>
+
+
+<span class="c1"># Print out how often 9.50 appears in areas</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Métodos-de-lista-(2)">
+<h2>Métodos de lista (2)<a class="headerlink" href="#Métodos-de-lista-(2)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La mayoría de los métodos de lista cambiarán la lista a la que están llamados. Ejemplos son:</p>
+<ul class="simple">
+<li><p><strong>append()</strong>, que agrega un elemento a la lista en la que se invoca,</p></li>
+<li><p><strong>remove()</strong>, que elimina el primer elemento de una lista que coincide con la entrada, y</p></li>
+<li><p><strong>reverse()</strong>, que invierte el orden de los elementos en la lista a la que se llama.</p></li>
+</ul>
+<p>Que va a trabajar en la lista con el área de diferentes partes de la casa: <em>areas</em>.</p>
+<p><strong>Actividad</strong></p>
+<ul class="simple">
+<li><p>Use <strong>append()</strong> dos veces para agregar nuevamente el tamaño de la casa de la piscina y el garaje: <strong>24.5</strong> y <strong>15.45</strong>, respectivamente. Asegúrese de agregarlos en este orden.</p></li>
+<li><p>Imprimir <em>areas</em></p></li>
+<li><p>Use el método <strong>reverse()</strong> para invertir el orden de los elementos en areas.</p></li>
+<li><p>Imprime <em>areas</em> una vez más.</p></li>
+</ul>
+<div class="line-block">
+<div class="line">Respuesta:</div>
+<div class="line">[11.25, 18.0, 20.0, 10.75, 9.5, 24.5, 15.45]</div>
+<div class="line">[15.45, 24.5, 9.5, 10.75, 20.0, 18.0, 11.25]</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create list areas</span>
+<span class="n">areas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">11.25</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">9.50</span><span class="p">]</span>
+
+<span class="c1"># Use append twice to add poolhouse and garage size</span>
+
+
+
+<span class="c1"># Print out areas</span>
+
+
+<span class="c1"># Reverse the orders of the elements in areas</span>
+
+
+<span class="c1"># Print out areas</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Tuplas">
+<h2>Tuplas<a class="headerlink" href="#Tuplas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si a una variable se le asigna una secuencia de valores separados por comas, el valor de esa variable será la tupla formada por todos los valores asignados. A esta operación se la denomina empaquetado de tuplas.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>¿Cuál es la longitud de (89766, &quot;Alicia&quot;, &quot;Hacker&quot;, (9, &quot;Julio&quot;, 1988))?
+</pre></div>
+</div>
+<p>Respuesta: 4</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Evalúe su respuesta</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>Crea una tupla con los meses del año, pide números al usuario, si el numero esta entre 1 y la longitud máxima de la tupla, muestra el contenido de esa posición sino muestra un mensaje de error.</p>
+<p>El programa termina cuando el usuario introduce un cero.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Desarrolle su respuesta</span>
+
+
+
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>Crea una tupla con números 7,6,5,4,3,2,3,4,5,1,4,3, pide un numero por teclado e indica cuantas veces se repite.</p>
+<div class="line-block">
+<div class="line">Respuesta ejemplo:</div>
+<div class="line">Dame un numero: 2</div>
+<div class="line">Numero de repeticiones: 1</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">numeros</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dame un numero: &quot;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numero de repeticiones: &quot;</span><span class="p">,</span><span class="n">numeros</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">numero</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Dame un numero: 2
+Numero de repeticiones:  1
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../python/05-diccionarios.html" class="btn btn-neutral float-right" title="Diccionarios" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../python/04-listas-y-tuplas.html" class="btn btn-neutral float-left" title="Listas y tuplas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

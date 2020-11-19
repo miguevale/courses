@@ -1,0 +1,176 @@
+Introducción a la ciencia de datos con Python
+====================================================================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /introduccion_a_la_ciencia_de_datos/course-info
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /introduccion_a_la_ciencia_de_datos/repositorio
+   
+Sesión 01 - Introducción
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/01-introduccion
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/01-pr-introduccion
+
+Sesión 02 - Manejo de variables y tipos
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/02-variables-y-tipos
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/02-pr-variables-y-tipos
+
+Sesión 03 - Estructuras de control
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/03-estructuras-de-control
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/03-pr-estructuras-de-control-flujo
+
+Laboratorio 01
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/laboratorios/01-laboratorio
+   
+Sesión 04 - Listas y tuplas
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/04-listas-y-tuplas
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/04-pr-listas-y-tuplas
+   
+Sesión 05 - Diccionarios
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/05-diccionarios
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/05-pr-diccionarios
+      
+Sesión 06 - Funciones
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/06-funciones
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/06-pr-funciones     
+
+Laboratorio 02
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/laboratorios/02-laboratorio
+
+Sesión 07 - Pandas básico
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/07-pandas-basics
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/07-pr-pandas-basics 
+
+Sesión 08 - Pandas avanzado
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/08-pandas-avanzado
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/08-pr-pandas-avanzado
+
+Sesión 09 - Visualización con matplotlib
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   /notebooks/python/09-visualizacion-con-matplotlib
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/practicas/09-pr-visualizacion-con-matplotlib
+
+Laboratorio 03
+--------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   /notebooks/recursos/laboratorios/03-laboratorio

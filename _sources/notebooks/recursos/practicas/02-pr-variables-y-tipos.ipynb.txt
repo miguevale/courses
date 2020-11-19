@@ -1,0 +1,470 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Práctica 02 - Asignación de Variable"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "En Python, una variable le permite hacer referencia a un valor con un nombre. Para crear un uso variable **=**, como este ejemplo:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Ahora puede utilizar el nombre de esta variable, **x** en lugar del valor real **5**.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "\n",
+    "Nota \n",
+    "    \n",
+    "**=** en Python significa asignación, ¡no prueba la igualdad!\n",
+    "\n",
+    "</div>\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "* Cree la variable **ahorro** con el valor de *100*.\n",
+    "* Echa un vistazo a esta variable escribiendo **print(ahorro)**.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Crea la variable ahorro\n",
+    "\n",
+    "\n",
+    "# Imprimir ahorro\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Cálculos con variables"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "¿Recuerda cómo calculó el dinero con el que terminó después de 7 años de invertir $ 100? Hiciste algo como esto:\n",
+    "\n",
+    "```python\n",
+    "100 * 1.1 ** 7\n",
+    "```\n",
+    "\n",
+    "En lugar de calcular con los valores reales, puede usar variables en su lugar. La variable ahorro que ha creado en el ejercicio anterior representa los $ 100 con los que comenzó. ¡Depende de usted crear una nueva variable para representar 1.1 y luego rehacer los cálculos!\n",
+    "\n",
+    "    \n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "* Cree la variable factor_crecimiento **igual** a 1.1.\n",
+    "\n",
+    "* Cree la variable resultado **igual** a la cantidad de dinero que ahorró después de 7años.\n",
+    "\n",
+    "* Imprima el valor de resultado.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# crea la variable ahorro\n",
+    "ahorro = 100\n",
+    "\n",
+    "# Crea la variable factor_crecimiento\n",
+    "\n",
+    "\n",
+    "# Calcula el resultado\n",
+    "\n",
+    "\n",
+    "# Imprime el resultado\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Otros tipos de variables\n",
+    "\n",
+    "En el ejercicio anterior, trabajó con dos tipos de datos de Python:\n",
+    "\n",
+    "* **int o entero**: un número sin una parte fraccionaria. ahorro, con el valor 100, es un ejemplo de un entero.\n",
+    "* **float o coma flotante**: un número que tiene una parte entera y una fracción, separadas por un punto. factor_crecimiento, con el valor 1.1, es un ejemplo de flotante.\n",
+    "\n",
+    "Además de los tipos de datos numéricos, hay otros dos tipos de datos muy comunes:\n",
+    "\n",
+    "* **str o cadena**: un tipo para representar texto. Puede usar comillas simples o dobles para construir una cadena.\n",
+    "* **bool o boolean**: un tipo para representar valores lógicos. Solo puede ser ***True o False*** (¡la capitalización es importante!).\n",
+    "\n",
+    "\n",
+    "    \n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "* Cree una nueva variable *desc* con el valor \"interes compuesto\".\n",
+    "* Cree una nueva variable *utilidad* con el valor True.\n",
+    "    \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create a variable desc\n",
+    "\n",
+    "\n",
+    "# Create a variable utilidad\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Adivina el tipo\n",
+    "\n",
+    "Para averiguar el tipo de un valor o una variable que se refiere a ese valor, puede usar la función type(). Supongamos que ha definido una variable **a**, pero se nos olvidó el tipo de esta variable. Para determinar el tipo de a, simplemente ejecute:\n",
+    "\n",
+    "**type(a)**\n",
+    "\n",
+    "\n",
+    "    \n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "¿Cuál es el tipo de dato para cada una de las siguientes variables:\n",
+    "* ahorro\n",
+    "* factor_crecimiento\n",
+    "* desc\n",
+    "* utilidad\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Imprime el tipo de ahorro\n",
+    "\n",
+    "\n",
+    "# Imprime el tipo de facto_crecimiento\n",
+    "\n",
+    "\n",
+    "# Imprime el tipo de desc\n",
+    "\n",
+    "\n",
+    "# Imprime el tipo de utilidad\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Operaciones con otros tipos\n",
+    "\n",
+    "Los diferentes tipos de datos se comportan de manera diferente en Python.\n",
+    "\n",
+    "Cuando suma dos cadenas, por ejemplo, obtendrá un comportamiento diferente que cuando suma dos enteros o dos booleanos.\n",
+    "\n",
+    "En la celda ya se han creado algunas variables con diferentes tipos. Depende de usted usarlos.\n",
+    "\n",
+    "\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "* Calcule el producto de ahorro y factor_crecimiento. Almacene el resultado en *year1*.\n",
+    "* ¿Cuál crees que será el tipo resultante? Descúbrelo imprimiendo el tipo de year1.\n",
+    "* Calcule la suma de desc y desc, almacene el resultado en una nueva variable *dobledesc*.\n",
+    "* Imprimir dobledesc. ¿Esperabas esto?\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ahorro = 100\n",
+    "factor_crecimiento = 1.1\n",
+    "desc = \"interes compuesto\"\n",
+    "\n",
+    "# Asigna el producto de ahorro y factor_crecimiento a year1\n",
+    "\n",
+    "\n",
+    "# Imprime el tipo de year1\n",
+    "\n",
+    "\n",
+    "# Asigna la suma de desc y desc a dobledesc\n",
+    "\n",
+    "\n",
+    "# Imprime dobledesc\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Conversión de tipo\n",
+    "\n",
+    "Usar el operador *+*  para pegar dos cadenas puede ser muy útil en la creación de mensajes personalizados.\n",
+    "\n",
+    "Supongamos, por ejemplo, que ha calculado el rendimiento de su inversión y desea resumir los resultados en una cadena. Suponiendo que la variable tipo entero *ahorro* y el flotante *resultado* están definidos, puede intentar algo como esto:\n",
+    "```python\n",
+    "print(\"Yo empecé con $\" + ahorro + \" y ahora tengo \" + resultado + \". Increíble!\")\n",
+    "```\n",
+    "Sin embargo, esto no funcionará, ya que no puede simplemente sumar cadenas y enteros / flotantes.\n",
+    "\n",
+    "Para corregir el error, deberá convertir explícitamente los tipos de datos de sus variables. Más específicamente, necesitará convertir un número en una cadena con ayuda de la función str().Por ejemplo,  str(ahorro) convertirá la variable *ahorro* de tipo entero en una cadena.\n",
+    "\n",
+    "Funciones similares como ```int(), float() y bool()``` te ayudarán a convertir los valores de Python en cualquier tipo.\n",
+    "\n",
+    "\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "* Presione Run Code para ejecutar el código. Intenta entender el mensaje de error.\n",
+    "* Arregle el código de modo que la impresión se ejecute sin errores; use la función str() para convertir las variables en cadenas.\n",
+    "* Convierta la variable pi_string a un flotante y almacene este flotante como una nueva variable, pi_float.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Definicion de ahorro y resultado\n",
+    "ahorro = 100\n",
+    "resultado = 100 * 1.10 ** 7\n",
+    "\n",
+    "# Arregla la impresión\n",
+    "print(\"Yo empecé con $\" + ahorro + \" y ahora tengo \" + resultado + \". Increíble!\")\n",
+    "\n",
+    "# Definicion de pi_string\n",
+    "pi_string = \"3.1415926\"\n",
+    "\n",
+    "# Convierte pi_string en un flotante: pi_float\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## ¿Puede Python manejar todo?\n",
+    "\n",
+    "Ahora que sabe algo más sobre la combinación de diferentes fuentes de información, eche un vistazo a las cuatro expresiones de Python a continuación. \n",
+    "\n",
+    "\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "    \n",
+    "¿Cuál de estos arrojará un error? ¡Siempre puede copiar y pegar cada código en las celdas de Jupyter para averiguarlo!\n",
+    " \n",
+    "\n",
+    "* \"Puedo agregar enteros, como \" + str(5) + \" a strings.\"\n",
+    "    \n",
+    "* \"Digo \" + (\"Hey \" * 2) + \"Hey!\"\n",
+    "\n",
+    "* \"La respuesta correcta a este ejercicio de opción múltiple es el número de respuest \" + 2\n",
+    "\n",
+    "* True + False\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Evalúe su respuesta\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Funciones integradas\n",
+    "\n",
+    "Python ofrece un montón de funciones integradas para facilitarle la vida como científico de datos. Ya conoce dos de estas funciones: `print()` y `type()`. También ha utilizado las funciones `str()`, `int()`, `bool()` y `float()` para cambiar entre los tipos de datos. Estas son funciones integradas también.\n",
+    "\n",
+    "Llamar a una función es fácil. Para obtener el tipo 3.0 y almacenar el resultado como una nueva variable, result puede usar lo siguiente:\n",
+    "\n",
+    "`result = type(3.0)`\n",
+    "La receta general para llamar a funciones y guardar el resultado en una variable es así:\n",
+    "\n",
+    "`output = function_name(input)`\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Use `print()` en combinación con `type()` para imprimir el tipo de *var1*.\n",
+    "* Use `len()` para obtener la longitud de la lista *var1*. Envuélvalo en una llamada `print()` para imprimirlo directamente.\n",
+    "* Use `int()` para convertir *var2* a un entero. Almacene la salida como *out2*."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create variables var1 and var2\n",
+    "var1 = [1, 2, 3, 4]\n",
+    "var2 = True\n",
+    "\n",
+    "# Print out type of var1\n",
+    "\n",
+    "\n",
+    "# Print out length of var1\n",
+    "\n",
+    "\n",
+    "# Convert var2 to an integer: out2\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Métodos de string\n",
+    "\n",
+    "Las cadenas vienen con un montón de métodos. Siga las instrucciones de cerca para descubrir algunas de ellas. Si desea descubrirlos con más detalle, siempre puede escribir help(str) en python.\n",
+    "\n",
+    "*place* Ya se ha creado una cadena para que experimente.\n",
+    "\n",
+    "**Actividad**\n",
+    "\n",
+    "* Use el método **upper()**  sobre *place* y almacene el resultado en *place_up*.\n",
+    "* Imprimir *place* y *place_up*. ¿Ambos cambiaron?\n",
+    "* Imprimir el número de ceros en la variable *place* llamando **count()** sobre *place* y pasando la carta 'o'como una entrada para el método. ¡Estamos hablando de la variable *place*, no de la palabra \"place\"!\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "poolhouse\n",
+      "POOLHOUSE\n",
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "# string to experiment with: place\n",
+    "place = \"poolhouse\"\n",
+    "\n",
+    "# Use upper() on place: place_up\n",
+    "place_up = place.upper()\n",
+    "\n",
+    "# Print out place and place_up\n",
+    "print(place)\n",
+    "print(place_up)\n",
+    "\n",
+    "# Print out the number of o's in place\n",
+    "print(place.count('o'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

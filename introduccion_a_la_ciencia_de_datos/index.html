@@ -1,0 +1,537 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introducción a la ciencia de datos con Python &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Información del curso" href="course-info.html" />
+    <link rel="prev" title="Bienvenido al curso de introducción a la ciencia de datos con Python" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introducción a la ciencia de datos con Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repositorio.html">Repositorio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sesion-01-introduccion">Sesión 01 - Introducción</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/01-introduccion.html">Introducción al lenguaje Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Operadores-y-expresiones">Operadores y expresiones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/practicas/01-pr-introduccion.html">Práctica 1 - Calentamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html">Variables y Tipos de datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/practicas/02-pr-variables-y-tipos.html">Práctica 02 - Asignación de Variable</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/03-estructuras-de-control.html">Estructuras de control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/practicas/03-pr-estructuras-de-control-flujo.html">Práctica 03 - Estructuras de Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#laboratorio-01">Laboratorio 01</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/laboratorios/01-laboratorio.html">Laboratorio-01</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/04-listas-y-tuplas.html">Listas y tuplas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/practicas/04-pr-listas-y-tuplas.html">Practica 04 - Listas y tuplas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sesion-05-diccionarios">Sesión 05 - Diccionarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/05-diccionarios.html">Diccionarios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/practicas/05-pr-diccionarios.html">Practica 05 - Diccionarios</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sesion-06-funciones">Sesión 06 - Funciones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/06-funciones.html">Funciones de usuario - básicas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/practicas/06-pr-funciones.html">Practica 06 - Funciones de usuario</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#laboratorio-02">Laboratorio 02</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/laboratorios/02-laboratorio.html">Laboratorio-02</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html">Pandas básico</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/practicas/07-pr-pandas-basics.html">Practica 07 - Pandas básico</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html">Pandas Avanzado</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/practicas/08-pr-pandas-avanzado.html">Practica 08 - Pandas avanzado</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html">Visualización con matplotlib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/practicas/09-pr-visualizacion-con-matplotlib.html">Practica 09 - Visualización con matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#laboratorio-03">Laboratorio 03</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/recursos/laboratorios/03-laboratorio.html">Laboratorio-03</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introducción a la ciencia de datos con Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/introduccion_a_la_ciencia_de_datos/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="introduccion-a-la-ciencia-de-datos-con-python">
+<h1>Introducción a la ciencia de datos con Python<a class="headerlink" href="#introduccion-a-la-ciencia-de-datos-con-python" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="course-info.html">Información del curso</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repositorio.html">Repositorio</a></li>
+</ul>
+</div>
+<div class="section" id="sesion-01-introduccion">
+<h2>Sesión 01 - Introducción<a class="headerlink" href="#sesion-01-introduccion" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/01-introduccion.html">Introducción al lenguaje Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Acerca-de-Python">Acerca de Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Características">Características</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Instalación-de-Anaconda">Instalación de Anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Tu-primer-programa">Tu primer programa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Sintaxis">Sintaxis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Ayudas">Ayudas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#La-librería-estándar-de-Python">La librería estándar de Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Instalando-módulos-de-terceros">Instalando módulos de terceros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Buenas-prácticas-de-programación-de-Python">Buenas prácticas de programación de Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Operadores-y-expresiones">Operadores y expresiones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Operadores-aritméticos">Operadores aritméticos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Operadores-lógicos">Operadores lógicos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/01-introduccion.html#Python-como-calculadora">Python como calculadora</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/practicas/01-pr-introduccion.html">Práctica 1 - Calentamiento</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sesion-02-manejo-de-variables-y-tipos">
+<h2>Sesión 02 - Manejo de variables y tipos<a class="headerlink" href="#sesion-02-manejo-de-variables-y-tipos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html">Variables y Tipos de datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Clasificación">Clasificación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Ejemplo-de-asignar-múltiples-valores-a-a-múltiples-variables">Ejemplo de asignar múltiples valores a a múltiples variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Palabras-reservadas">Palabras reservadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Resumen-de-tipos-de-variables">Resumen de tipos de variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Lectura-de-datos-en-Python">Lectura de datos en Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Números">Números</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Cadenas-de-texto-(string)">Cadenas de texto (string)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Concatenación-de-strings">Concatenación de strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Conversión-de-tipos">Conversión de tipos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/02-variables-y-tipos.html#Métodos-en-cadenas-de-texto-(string)">Métodos en cadenas de texto (string)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/practicas/02-pr-variables-y-tipos.html">Práctica 02 - Asignación de Variable</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sesion-03-estructuras-de-control">
+<h2>Sesión 03 - Estructuras de control<a class="headerlink" href="#sesion-03-estructuras-de-control" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/03-estructuras-de-control.html">Estructuras de control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/03-estructuras-de-control.html#Condicionales">Condicionales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/03-estructuras-de-control.html#Bucles">Bucles</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/practicas/03-pr-estructuras-de-control-flujo.html">Práctica 03 - Estructuras de Control</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="laboratorio-01">
+<h2>Laboratorio 01<a class="headerlink" href="#laboratorio-01" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/laboratorios/01-laboratorio.html">Laboratorio-01</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sesion-04-listas-y-tuplas">
+<h2>Sesión 04 - Listas y tuplas<a class="headerlink" href="#sesion-04-listas-y-tuplas" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/04-listas-y-tuplas.html">Listas y tuplas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/04-listas-y-tuplas.html#Listas">Listas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/04-listas-y-tuplas.html#Tuplas">Tuplas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/practicas/04-pr-listas-y-tuplas.html">Practica 04 - Listas y tuplas</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sesion-05-diccionarios">
+<h2>Sesión 05 - Diccionarios<a class="headerlink" href="#sesion-05-diccionarios" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/05-diccionarios.html">Diccionarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/05-diccionarios.html#Crear-diccionarios">Crear diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/05-diccionarios.html#Recorrer-un-diccionario">Recorrer un diccionario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/05-diccionarios.html#Borrar-un-elemento">Borrar un elemento</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/practicas/05-pr-diccionarios.html">Practica 05 - Diccionarios</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sesion-06-funciones">
+<h2>Sesión 06 - Funciones<a class="headerlink" href="#sesion-06-funciones" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/06-funciones.html">Funciones de usuario - básicas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/06-funciones.html#Definir-y-llamar-a-una-función">Definir y llamar a una función</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/06-funciones.html#Funciones-con-un-solo-parámetro">Funciones con un solo parámetro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/06-funciones.html#Los-Docstrings">Los Docstrings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/06-funciones.html#Funciones-con-varios-parámetros">Funciones con varios parámetros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/06-funciones.html#Funciones-con-argumento-predeterminado">Funciones con argumento predeterminado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/06-funciones.html#Sentencia-return">Sentencia return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/06-funciones.html#Retorno-múltiple">Retorno múltiple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/06-funciones.html#Ámbito-de-las-variables-(scope)">Ámbito de las variables (scope)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/06-funciones.html#Funciones-recursivas">Funciones recursivas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/practicas/06-pr-funciones.html">Practica 06 - Funciones de usuario</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="laboratorio-02">
+<h2>Laboratorio 02<a class="headerlink" href="#laboratorio-02" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/laboratorios/02-laboratorio.html">Laboratorio-02</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sesion-07-pandas-basico">
+<h2>Sesión 07 - Pandas básico<a class="headerlink" href="#sesion-07-pandas-basico" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html">Pandas básico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Diccionario-a-DataFrame">Diccionario a DataFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Leer-un-archivo-de-Excel">Leer un archivo de Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Importar-archivo-CSV">Importar archivo CSV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Leer-un-archivo-de-texto">Leer un archivo de texto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Propiedades-del-DataFrame">Propiedades del DataFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Visualización-de-datos">Visualización de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Subconjunto-de-registros">Subconjunto de registros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Subconjunto-de-columnas">Subconjunto de columnas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Subconjunto-de-filas-y-columnas">Subconjunto de filas y columnas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/07-pandas-basics.html#Escribir-DataFrame-al-disco">Escribir DataFrame al disco</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/practicas/07-pr-pandas-basics.html">Practica 07 - Pandas básico</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sesion-08-pandas-avanzado">
+<h2>Sesión 08 - Pandas avanzado<a class="headerlink" href="#sesion-08-pandas-avanzado" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html">Pandas Avanzado</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html#Filtrar-el-valor-de-una-columna">Filtrar el valor de una columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html#Filtrar-columnas-que-no-tienen-un-valor">Filtrar columnas que no tienen un valor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html#Filtrar-valores-nulos">Filtrar valores nulos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html#Filtrar-por-elementos-en-una-lista">Filtrar por elementos en una lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html#Fitrar-con-multiples-condiciones">Fitrar con multiples condiciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html#Fusionar-tablas">Fusionar tablas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html#Iterar-sobre-un-DataFrame">Iterar sobre un DataFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/08-pandas-avanzado.html#groupby">groupby</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/practicas/08-pr-pandas-avanzado.html">Practica 08 - Pandas avanzado</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sesion-09-visualizacion-con-matplotlib">
+<h2>Sesión 09 - Visualización con matplotlib<a class="headerlink" href="#sesion-09-visualizacion-con-matplotlib" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html">Visualización con matplotlib</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Pasos-para-crear-un-gráfico-con-matplotlib">Pasos para crear un gráfico con matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Gráfico-de-líneas">Gráfico de líneas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Gráfico-de-dispersión">Gráfico de dispersión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Gráfico-de-áreas">Gráfico de áreas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Gráfico-de-barras-verticales">Gráfico de barras verticales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Gráfico-de-barras-horizontales">Gráfico de barras horizontales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Histogramas">Histogramas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Gráfico-de-torta">Gráfico de torta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Gráfico-de-caja-y-bigotes">Gráfico de caja y bigotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Gráfico-de-violín">Gráfico de violín</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Gráfico-de-contorno">Gráfico de contorno</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Mapas-de-color">Mapas de color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Mapas-de-color-(2)">Mapas de color (2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Personalización-del-gráfico">Personalización del gráfico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Múltiples-gráficos">Múltiples gráficos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Integración-con-Pandas">Integración con Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/python/09-visualizacion-con-matplotlib.html#Bibliografia">Bibliografia</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/practicas/09-pr-visualizacion-con-matplotlib.html">Practica 09 - Visualización con matplotlib</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="laboratorio-03">
+<h2>Laboratorio 03<a class="headerlink" href="#laboratorio-03" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/recursos/laboratorios/03-laboratorio.html">Laboratorio-03</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="course-info.html" class="btn btn-neutral float-right" title="Información del curso" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Bienvenido al curso de introducción a la ciencia de datos con Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

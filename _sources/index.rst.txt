@@ -1,0 +1,32 @@
+Bienvenido al curso de introducción a la ciencia de datos con Python
+====================================================================
+
+
+.. toctree::
+   :caption: Cursos
+   :maxdepth: 3
+
+
+   /introduccion_a_la_ciencia_de_datos/index
+
+**Docente responsable:** 
+
+**Dubadier Najar M., MSc.---**
+
+| E-mail: dubadier.najar@esumer.edu.co
+| `GitHub <https://github.com/dnajarm>`_
+**Descripción**
+
+La Ciencia de Datos (Data Science) es la extracción de conocimiento a partir de grandes volúmenes 
+de información estructurada o no estructurada. La elección del lenguaje de programación adecuado para proyectos es una decisión crucial.
+Cada vez hay más profesionales de data science que usan Python para big data.
+
+Este es un curso que pretende mostrarle al estudiante las nociones básicas del uso de Python para el
+analísis de datos. Se recomienda tener algunas 
+nociones de programación, pero a lo largo del curso se introducirán los 
+temas necesarios para lograr hacer ciencia de datos abarcando temas 
+sencillos como manejo de variables y tipos de datos hasta la exploración de datos en gráficas.
+
+**¿Para quién es este curso?**
+
+Cualquier persona que desee aprender sobre ciencia de datos con Python

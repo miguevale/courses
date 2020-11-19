@@ -1,0 +1,1002 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Practica 07 - Pandas básico &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+    <link rel="next" title="Pandas Avanzado" href="../../python/08-pandas-avanzado.html" />
+    <link rel="prev" title="Pandas básico" href="../../python/07-pandas-basics.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/repositorio.html">Repositorio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-01-introduccion">Sesión 01 - Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-01">Laboratorio 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-05-diccionarios">Sesión 05 - Diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-06-funciones">Sesión 06 - Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-02">Laboratorio 02</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../python/07-pandas-basics.html">Pandas básico</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Practica 07 - Pandas básico</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Diccionario-a-DataFrame-(1)">Diccionario a DataFrame (1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Diccionario-a-DataFrame-(2)">Diccionario a DataFrame (2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#CSV-a-DataFrame-(1)">CSV a DataFrame (1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#CSV-a-DataFrame-(2)">CSV a DataFrame (2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Corchetes-(1)">Corchetes (1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Corchetes-(2)">Corchetes (2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loc-e-iloc-(1)">loc e iloc (1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loc-e-iloc-(2)">loc e iloc (2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loc-e-iloc-(3)">loc e iloc (3)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-03">Laboratorio 03</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a> &raquo;</li>
+        
+      <li>Practica 07 - Pandas básico</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/notebooks/recursos/practicas/07-pr-pandas-basics.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Practica-07---Pandas-básico">
+<h1>Practica 07 - Pandas básico<a class="headerlink" href="#Practica-07---Pandas-básico" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="Diccionario-a-DataFrame-(1)">
+<h2>Diccionario a DataFrame (1)<a class="headerlink" href="#Diccionario-a-DataFrame-(1)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Pandas es una biblioteca de código abierto, que proporciona estructuras de datos y herramientas de análisis de datos de alto rendimiento y fáciles de usar para Python. ¡Suena prometedor!</p>
+<p>El DataFrame es una de las estructuras de datos más importantes de Pandas. Básicamente es una forma de almacenar datos tabulares donde puede etiquetar las filas y las columnas. Una forma de construir un DataFrame es desde un diccionario.</p>
+<p>En los ejercicios siguientes, trabajará con datos de vehículos de diferentes países. Cada observación corresponde a un país y las columnas dan información sobre el número de vehículos per cápita, si las personas conducen hacia la izquierda o hacia la derecha, y así sucesivamente.</p>
+<p>Se definen tres listas en el script:</p>
+<ul class="simple">
+<li><p><em>names</em>, que contiene los nombres de países para los que hay datos disponibles.</p></li>
+<li><p><em>dr</em>, una lista con booleanos que indica si las personas conducen hacia la izquierda o hacia la derecha en el país correspondiente.</p></li>
+<li><p><em>cpc</em>, el número de vehículos automotores por cada 1000 personas en el país correspondiente. Cada clave del diccionario es una etiqueta de columna y cada valor es una lista que contiene los elementos de la columna.</p></li>
+</ul>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Importar pandas como pd.</p></li>
+<li><p>Use las listas predefinidas para crear un diccionario llamado my_dict. Debe haber tres pares de valores clave:</p></li>
+<li><p>Clave <em>‘country’</em> y valor <em>names</em>.</p></li>
+<li><p>Clave <em>‘drives_right’</em> y valor <em>dr</em>.</p></li>
+<li><p>Clave <em>‘cars_per_cap’</em> y valor <em>cpc</em>.</p></li>
+<li><p>Use <strong>pd.DataFrame()</strong> para convertir su dict en un DataFrame llamado <em>cars</em>.</p></li>
+<li><p>Imprima <em>cars</em> y vea lo hermoso que es.</p></li>
+</ul>
+<p>Respuesta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>         <span class="n">country</span>  <span class="n">drives_right</span>  <span class="n">cars_per_cap</span>
+<span class="mi">0</span>  <span class="n">United</span> <span class="n">States</span>          <span class="kc">True</span>           <span class="mi">809</span>
+<span class="mi">1</span>      <span class="n">Australia</span>         <span class="kc">False</span>           <span class="mi">731</span>
+<span class="mi">2</span>          <span class="n">Japan</span>         <span class="kc">False</span>           <span class="mi">588</span>
+<span class="mi">3</span>          <span class="n">India</span>         <span class="kc">False</span>            <span class="mi">18</span>
+<span class="mi">4</span>         <span class="n">Russia</span>          <span class="kc">True</span>           <span class="mi">200</span>
+<span class="mi">5</span>        <span class="n">Morocco</span>          <span class="kc">True</span>            <span class="mi">70</span>
+<span class="mi">6</span>          <span class="n">Egypt</span>          <span class="kc">True</span>            <span class="mi">45</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Pre-defined lists</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;United States&#39;</span><span class="p">,</span> <span class="s1">&#39;Australia&#39;</span><span class="p">,</span> <span class="s1">&#39;Japan&#39;</span><span class="p">,</span> <span class="s1">&#39;India&#39;</span><span class="p">,</span> <span class="s1">&#39;Russia&#39;</span><span class="p">,</span> <span class="s1">&#39;Morocco&#39;</span><span class="p">,</span> <span class="s1">&#39;Egypt&#39;</span><span class="p">]</span>
+<span class="n">dr</span> <span class="o">=</span>  <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">cpc</span> <span class="o">=</span> <span class="p">[</span><span class="mi">809</span><span class="p">,</span> <span class="mi">731</span><span class="p">,</span> <span class="mi">588</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
+
+<span class="c1"># Import pandas as pd</span>
+
+
+<span class="c1"># Create dictionary my_dict with three key:value pairs: my_dict</span>
+
+
+<span class="c1"># Build a DataFrame cars from my_dict: cars</span>
+
+
+<span class="c1"># Print cars</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Diccionario-a-DataFrame-(2)">
+<h2>Diccionario a DataFrame (2)<a class="headerlink" href="#Diccionario-a-DataFrame-(2)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>¿Ha notado que las etiquetas de fila (es decir, las etiquetas para las diferentes observaciones) se configuraron automáticamente en enteros de 0 a 6?</p>
+<p>Para resolver esto, se ha creado una lista <em>row_labels</em> . Puede usarlo para especificar las etiquetas de fila del DataFrame <em>cars</em>. Para ello, establezca el atributo <em>index</em> de <em>cars</em>, al que puede acceder como <em>cars.index</em>.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Ejecute el código para ver que las etiquetas de fila no están configuradas correctamente.</p></li>
+<li><p>Especifique las etiquetas de fila estableciendo <em>cars.index</em> igual a <em>row_labels</em>.</p></li>
+<li><p>Imprima nuevamente <em>cars</em> y compruebe si las etiquetas de las filas son correctas esta vez.</p></li>
+</ul>
+<p>Respuesta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>         <span class="n">country</span>  <span class="n">drives_right</span>  <span class="n">cars_per_cap</span>
+<span class="mi">0</span>  <span class="n">United</span> <span class="n">States</span>          <span class="kc">True</span>           <span class="mi">809</span>
+<span class="mi">1</span>      <span class="n">Australia</span>         <span class="kc">False</span>           <span class="mi">731</span>
+<span class="mi">2</span>          <span class="n">Japan</span>         <span class="kc">False</span>           <span class="mi">588</span>
+<span class="mi">3</span>          <span class="n">India</span>         <span class="kc">False</span>            <span class="mi">18</span>
+<span class="mi">4</span>         <span class="n">Russia</span>          <span class="kc">True</span>           <span class="mi">200</span>
+<span class="mi">5</span>        <span class="n">Morocco</span>          <span class="kc">True</span>            <span class="mi">70</span>
+<span class="mi">6</span>          <span class="n">Egypt</span>          <span class="kc">True</span>            <span class="mi">45</span>
+           <span class="n">country</span>  <span class="n">drives_right</span>  <span class="n">cars_per_cap</span>
+<span class="n">US</span>   <span class="n">United</span> <span class="n">States</span>          <span class="kc">True</span>           <span class="mi">809</span>
+<span class="n">AUS</span>      <span class="n">Australia</span>         <span class="kc">False</span>           <span class="mi">731</span>
+<span class="n">JPN</span>          <span class="n">Japan</span>         <span class="kc">False</span>           <span class="mi">588</span>
+<span class="n">IN</span>           <span class="n">India</span>         <span class="kc">False</span>            <span class="mi">18</span>
+<span class="n">RU</span>          <span class="n">Russia</span>          <span class="kc">True</span>           <span class="mi">200</span>
+<span class="n">MOR</span>        <span class="n">Morocco</span>          <span class="kc">True</span>            <span class="mi">70</span>
+<span class="n">EG</span>           <span class="n">Egypt</span>          <span class="kc">True</span>            <span class="mi">45</span>
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Build cars DataFrame</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;United States&#39;</span><span class="p">,</span> <span class="s1">&#39;Australia&#39;</span><span class="p">,</span> <span class="s1">&#39;Japan&#39;</span><span class="p">,</span> <span class="s1">&#39;India&#39;</span><span class="p">,</span> <span class="s1">&#39;Russia&#39;</span><span class="p">,</span> <span class="s1">&#39;Morocco&#39;</span><span class="p">,</span> <span class="s1">&#39;Egypt&#39;</span><span class="p">]</span>
+<span class="n">dr</span> <span class="o">=</span>  <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">cpc</span> <span class="o">=</span> <span class="p">[</span><span class="mi">809</span><span class="p">,</span> <span class="mi">731</span><span class="p">,</span> <span class="mi">588</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
+<span class="n">cars_dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;country&#39;</span><span class="p">:</span><span class="n">names</span><span class="p">,</span> <span class="s1">&#39;drives_right&#39;</span><span class="p">:</span><span class="n">dr</span><span class="p">,</span> <span class="s1">&#39;cars_per_cap&#39;</span><span class="p">:</span><span class="n">cpc</span> <span class="p">}</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cars_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
+
+<span class="c1"># Definition of row_labels</span>
+<span class="n">row_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;AUS&#39;</span><span class="p">,</span> <span class="s1">&#39;JPN&#39;</span><span class="p">,</span> <span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="s1">&#39;RU&#39;</span><span class="p">,</span> <span class="s1">&#39;MOR&#39;</span><span class="p">,</span> <span class="s1">&#39;EG&#39;</span><span class="p">]</span>
+
+<span class="c1"># Specify row labels of cars</span>
+
+
+<span class="c1"># Print cars again</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+         country  drives_right  cars_per_cap
+0  United States          True           809
+1      Australia         False           731
+2          Japan         False           588
+3          India         False            18
+4         Russia          True           200
+5        Morocco          True            70
+6          Egypt          True            45
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="CSV-a-DataFrame-(1)">
+<h2>CSV a DataFrame (1)<a class="headerlink" href="#CSV-a-DataFrame-(1)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Poner datos en un diccionario y luego construir un DataFrame funciona, pero no es muy eficiente. ¿Qué pasa si se trata de millones de observaciones? En esos casos, los datos generalmente están disponibles como archivos con una estructura regular. Uno de esos tipos de archivo es el archivo CSV, que es la abreviatura de “valores separados por comas”.</p>
+<p>Para importar datos CSV en Python como Pandas DataFrame, puede usar <strong>read_csv()</strong>.</p>
+<p>Exploremos esta función con los mismos datos de autos de los ejercicios anteriores. Esta vez, sin embargo, los datos están disponibles en un archivo CSV, llamado <em>cars.csv</em>. Está disponible en su directorio de trabajo actual, por lo que la ruta al archivo es sencilla <em>‘cars.csv’</em>.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Para importar archivos CSV, aún necesita el paquete pandas: impórtelo como pd.</p></li>
+<li><p>Se usa pd.read_csv() para importar datos <em>‘data/cars.csv’</em> como un DataFrame con sep =‘;’. Almacene este marco de datos como <em>cars</em>.</p></li>
+<li><p>Imprimir <em>cars</em>. ¿Todo se ve bien?</p></li>
+</ul>
+<p>Respuesta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">Unnamed</span><span class="p">:</span> <span class="mi">0</span>  <span class="n">cars_per_cap</span>        <span class="n">country</span>  <span class="n">drives_right</span>
+<span class="mi">0</span>         <span class="n">US</span>           <span class="mi">809</span>  <span class="n">United</span> <span class="n">States</span>          <span class="kc">True</span>
+<span class="mi">1</span>        <span class="n">AUS</span>           <span class="mi">731</span>      <span class="n">Australia</span>         <span class="kc">False</span>
+<span class="mi">2</span>        <span class="n">JPN</span>           <span class="mi">588</span>          <span class="n">Japan</span>         <span class="kc">False</span>
+<span class="mi">3</span>         <span class="n">IN</span>            <span class="mi">18</span>          <span class="n">India</span>         <span class="kc">False</span>
+<span class="mi">4</span>         <span class="n">RU</span>           <span class="mi">200</span>         <span class="n">Russia</span>          <span class="kc">True</span>
+<span class="mi">5</span>        <span class="n">MOR</span>            <span class="mi">70</span>        <span class="n">Morocco</span>          <span class="kc">True</span>
+<span class="mi">6</span>         <span class="n">EG</span>            <span class="mi">45</span>          <span class="n">Egypt</span>          <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Import pandas as pd</span>
+
+
+<span class="c1"># Import the cars.csv data: cars</span>
+
+
+<span class="c1"># Print out cars</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="CSV-a-DataFrame-(2)">
+<h2>CSV a DataFrame (2)<a class="headerlink" href="#CSV-a-DataFrame-(2)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Su llamada read_csv() para importar los datos CSV no generó un error, pero el resultado no es del todo lo que queríamos. Las etiquetas de fila se importaron como otra columna sin nombre.</p>
+<p>Para corregir esto en read_csv() agregamo el argumento <strong>index_col</strong> para especificar qué columna del archivo CSV debe usarse como etiqueta de fila</p>
+<p>El código Python que resuelve el ejercicio anterior ya está incluido; ¿Puedes hacer los cambios apropiados para arreglar la importación de datos?</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Ejecute el código con Código de ejecución y afirme que la primera columna debería usarse como etiquetas de fila.</p></li>
+<li><p>Especifique el argumento index_col dentro <strong>pd.read_csv()</strong>: configúrelo <em>0</em> para que la primera columna se use como etiquetas de fila.</p></li>
+<li><p>¿Ha carsmejorado la impresión de ahora?</p></li>
+</ul>
+<p>Respuesta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="n">cars_per_cap</span>        <span class="n">country</span>  <span class="n">drives_right</span>
+<span class="n">US</span>            <span class="mi">809</span>  <span class="n">United</span> <span class="n">States</span>          <span class="kc">True</span>
+<span class="n">AUS</span>           <span class="mi">731</span>      <span class="n">Australia</span>         <span class="kc">False</span>
+<span class="n">JPN</span>           <span class="mi">588</span>          <span class="n">Japan</span>         <span class="kc">False</span>
+<span class="n">IN</span>             <span class="mi">18</span>          <span class="n">India</span>         <span class="kc">False</span>
+<span class="n">RU</span>            <span class="mi">200</span>         <span class="n">Russia</span>          <span class="kc">True</span>
+<span class="n">MOR</span>            <span class="mi">70</span>        <span class="n">Morocco</span>          <span class="kc">True</span>
+<span class="n">EG</span>             <span class="mi">45</span>          <span class="n">Egypt</span>          <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Import pandas as pd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Fix import by including index_col</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/cars.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Print out cars</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+  Unnamed: 0  cars_per_cap        country  drives_right
+0         US           809  United States          True
+1        AUS           731      Australia         False
+2        JPN           588          Japan         False
+3         IN            18          India         False
+4         RU           200         Russia          True
+5        MOR            70        Morocco          True
+6         EG            45          Egypt          True
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Corchetes-(1)">
+<h2>Corchetes (1)<a class="headerlink" href="#Corchetes-(1)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En el código de muestra, los mismos datos de automóviles se importan de un archivo CSV como un DataFrame de Pandas. Para seleccionar solo la columna <em>cars_per_cap</em> de <em>cars</em>, puede usar:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cars</span><span class="p">[</span><span class="s1">&#39;cars_per_cap&#39;</span><span class="p">]</span>
+<span class="n">cars</span><span class="p">[[</span><span class="s1">&#39;cars_per_cap&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>La versión de un corchete ofrece una Serie Pandas, la versión de doble corchete ofrece un DataFrame de Pandas.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Use corchetes individuales para imprimir un Series de la columna <em>country</em> de <em>cars</em> .</p></li>
+<li><p>Use corchetes dobles para imprimir un DataFrame de la columna <em>country</em> de <em>carsun</em> .</p></li>
+<li><p>Use corchetes dobles para imprimir un DataFrame con las columnas <em>country</em> y <em>drives_right</em> de <em>cars</em>, en este orden.</p></li>
+</ul>
+<p>Respueta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">US</span>     <span class="n">United</span> <span class="n">States</span>
+<span class="n">AUS</span>        <span class="n">Australia</span>
+<span class="n">JPN</span>            <span class="n">Japan</span>
+<span class="n">IN</span>             <span class="n">India</span>
+<span class="n">RU</span>            <span class="n">Russia</span>
+<span class="n">MOR</span>          <span class="n">Morocco</span>
+<span class="n">EG</span>             <span class="n">Egypt</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">country</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+           <span class="n">country</span>
+<span class="n">US</span>   <span class="n">United</span> <span class="n">States</span>
+<span class="n">AUS</span>      <span class="n">Australia</span>
+<span class="n">JPN</span>          <span class="n">Japan</span>
+<span class="n">IN</span>           <span class="n">India</span>
+<span class="n">RU</span>          <span class="n">Russia</span>
+<span class="n">MOR</span>        <span class="n">Morocco</span>
+<span class="n">EG</span>           <span class="n">Egypt</span>
+           <span class="n">country</span>  <span class="n">drives_right</span>
+<span class="n">US</span>   <span class="n">United</span> <span class="n">States</span>          <span class="kc">True</span>
+<span class="n">AUS</span>      <span class="n">Australia</span>         <span class="kc">False</span>
+<span class="n">JPN</span>          <span class="n">Japan</span>         <span class="kc">False</span>
+<span class="n">IN</span>           <span class="n">India</span>         <span class="kc">False</span>
+<span class="n">RU</span>          <span class="n">Russia</span>          <span class="kc">True</span>
+<span class="n">MOR</span>        <span class="n">Morocco</span>          <span class="kc">True</span>
+<span class="n">EG</span>           <span class="n">Egypt</span>          <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Import cars data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/cars.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Print out country column as Pandas Series</span>
+
+
+<span class="c1"># Print out country column as Pandas DataFrame</span>
+
+
+<span class="c1"># Print out DataFrame with country and drives_right columns</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Corchetes-(2)">
+<h2>Corchetes (2)<a class="headerlink" href="#Corchetes-(2)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los corchetes pueden hacer más que solo seleccionar columnas. También puede usarlos para obtener filas u observaciones de un DataFrame. La siguiente llamada selecciona las primeras cinco filas del DataFrame <em>cars</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cars</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>El resultado es otro DataFrame que contiene solo las filas que especificó.</p>
+<p>Preste atención: solo puede seleccionar filas usando corchetes si especifica un corte, como 0:4. Además, está utilizando los índices enteros de las filas aquí, ¡no las etiquetas de las filas!</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Seleccione las primeras 3 observaciones de <em>cars</em> e imprímalas.</p></li>
+<li><p>Seleccione la cuarta, quinta y sexta observación, correspondiente a los índices de fila 3, 4 y 5, e imprímalos.</p></li>
+</ul>
+<p>Respuesta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="n">cars_per_cap</span>        <span class="n">country</span>  <span class="n">drives_right</span>
+<span class="n">US</span>            <span class="mi">809</span>  <span class="n">United</span> <span class="n">States</span>          <span class="kc">True</span>
+<span class="n">AUS</span>           <span class="mi">731</span>      <span class="n">Australia</span>         <span class="kc">False</span>
+<span class="n">JPN</span>           <span class="mi">588</span>          <span class="n">Japan</span>         <span class="kc">False</span>
+     <span class="n">cars_per_cap</span>  <span class="n">country</span>  <span class="n">drives_right</span>
+<span class="n">IN</span>             <span class="mi">18</span>    <span class="n">India</span>         <span class="kc">False</span>
+<span class="n">RU</span>            <span class="mi">200</span>   <span class="n">Russia</span>          <span class="kc">True</span>
+<span class="n">MOR</span>            <span class="mi">70</span>  <span class="n">Morocco</span>          <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Import cars data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/cars.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Print out first 3 observations</span>
+
+
+<span class="c1"># Print out fourth, fifth and sixth observation</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="loc-e-iloc-(1)">
+<h2>loc e iloc (1)<a class="headerlink" href="#loc-e-iloc-(1)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Con <em>loc</em> y <em>iloc</em> puede hacer prácticamente cualquier operación de selección de datos en DataFrames que se le ocurra. <em>loc</em> está basado en etiquetas, lo que significa que debe especificar filas y columnas en función de sus etiquetas de fila y columna. <em>iloc</em> está basado en un índice entero, por lo que debe especificar filas y columnas por su índice entero como lo hizo en el ejercicio anterior.</p>
+<p>Pruebe los siguientes comandos en Jupyter para experimentar <em>loc</em> y <em>iloc</em> seleccionar observaciones. Cada par de comandos aquí da el mismo resultado.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;RU&#39;</span><span class="p">]</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;RU&#39;</span><span class="p">]]</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+
+<span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;RU&#39;</span><span class="p">,</span> <span class="s1">&#39;AUS&#39;</span><span class="p">]]</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Use <em>loc</em> o <em>iloc</em> para seleccionar la observación correspondiente a Japón como Serie. La etiqueta de esta fila es JPN, el índice es 2. Asegúrese de imprimir la serie resultante.</p></li>
+<li><p>Use <em>loc</em> o <em>iloc</em> para seleccionar las observaciones de Australia y Egipto como un DataFrame. Puede conocer las etiquetas / índices de estas filas inspeccionando <em>cars</em>. Asegúrese de imprimir el DataFrame resultante.</p></li>
+</ul>
+<p>Respuesta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cars_per_cap</span>      <span class="mi">588</span>
+<span class="n">country</span>         <span class="n">Japan</span>
+<span class="n">drives_right</span>    <span class="kc">False</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">JPN</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+     <span class="n">cars_per_cap</span>    <span class="n">country</span>  <span class="n">drives_right</span>
+<span class="n">AUS</span>           <span class="mi">731</span>  <span class="n">Australia</span>         <span class="kc">False</span>
+<span class="n">EG</span>             <span class="mi">45</span>      <span class="n">Egypt</span>          <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Import cars data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/cars.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Print out observation for Japan</span>
+
+
+<span class="c1"># Print out observations for Australia and Egypt</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="loc-e-iloc-(2)">
+<h2>loc e iloc (2)<a class="headerlink" href="#loc-e-iloc-(2)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>loc</em> y <em>iloc</em> también le permite seleccionar tanto filas como columnas de un DataFrame. Para experimentar, pruebe los siguientes comandos. Nuevamente, los comandos emparejados producen el mismo resultado.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="s1">&#39;cars_per_cap&#39;</span><span class="p">]</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="s1">&#39;RU&#39;</span><span class="p">],</span> <span class="s1">&#39;cars_per_cap&#39;</span><span class="p">]</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;IN&#39;</span><span class="p">,</span> <span class="s1">&#39;RU&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;cars_per_cap&#39;</span><span class="p">,</span> <span class="s1">&#39;country&#39;</span><span class="p">]]</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Imprima el valor de <em>drives_right</em> de la fila correspondiente a Marruecos (su etiqueta de fila es <em>MOR</em>)</p></li>
+<li><p>Imprima un sub-DataFrame, que contiene las observaciones para Rusia y Marruecos y las columnas <em>country</em> y <em>drives_right</em>.</p></li>
+</ul>
+<p>Respuesta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span>
+     <span class="n">country</span>  <span class="n">drives_right</span>
+<span class="n">RU</span>    <span class="n">Russia</span>          <span class="kc">True</span>
+<span class="n">MOR</span>  <span class="n">Morocco</span>          <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Import cars data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/cars.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Print out drives_right value of Morocco</span>
+
+
+<span class="c1"># Print sub-DataFrame</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="loc-e-iloc-(3)">
+<h2>loc e iloc (3)<a class="headerlink" href="#loc-e-iloc-(3)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>También es posible seleccionar solo columnas con <em>loc</em> y <em>iloc</em>. En ambos casos, simplemente coloca dos puntos para ir de principio a fin delante de la coma:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;country&#39;</span><span class="p">]</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span><span class="s1">&#39;drives_right&#39;</span><span class="p">]]</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Imprima la columna <em>drives_right</em> como una serie con <em>loc</em> o <em>iloc</em>.</p></li>
+<li><p>Imprima la columna <em>drives_right</em> como un DataFrame con <em>loc</em> o <em>iloc</em>.</p></li>
+<li><p>Imprima las cars_per_cap y drives_right columnas como un DataFrame con <em>loc</em> o <em>iloc</em>.</p></li>
+</ul>
+<p>Resultado:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">US</span>      <span class="kc">True</span>
+<span class="n">AUS</span>    <span class="kc">False</span>
+<span class="n">JPN</span>    <span class="kc">False</span>
+<span class="n">IN</span>     <span class="kc">False</span>
+<span class="n">RU</span>      <span class="kc">True</span>
+<span class="n">MOR</span>     <span class="kc">True</span>
+<span class="n">EG</span>      <span class="kc">True</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">drives_right</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">bool</span>
+     <span class="n">drives_right</span>
+<span class="n">US</span>           <span class="kc">True</span>
+<span class="n">AUS</span>         <span class="kc">False</span>
+<span class="n">JPN</span>         <span class="kc">False</span>
+<span class="n">IN</span>          <span class="kc">False</span>
+<span class="n">RU</span>           <span class="kc">True</span>
+<span class="n">MOR</span>          <span class="kc">True</span>
+<span class="n">EG</span>           <span class="kc">True</span>
+     <span class="n">cars_per_cap</span>  <span class="n">drives_right</span>
+<span class="n">US</span>            <span class="mi">809</span>          <span class="kc">True</span>
+<span class="n">AUS</span>           <span class="mi">731</span>         <span class="kc">False</span>
+<span class="n">JPN</span>           <span class="mi">588</span>         <span class="kc">False</span>
+<span class="n">IN</span>             <span class="mi">18</span>         <span class="kc">False</span>
+<span class="n">RU</span>            <span class="mi">200</span>          <span class="kc">True</span>
+<span class="n">MOR</span>            <span class="mi">70</span>          <span class="kc">True</span>
+<span class="n">EG</span>             <span class="mi">45</span>          <span class="kc">True</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Import cars data</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/cars.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Print out drives_right column as Series</span>
+
+
+<span class="c1"># Print out drives_right column as DataFrame</span>
+
+
+<span class="c1"># Print out cars_per_cap and drives_right as DataFrame</span>
+
+
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../python/08-pandas-avanzado.html" class="btn btn-neutral float-right" title="Pandas Avanzado" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../python/07-pandas-basics.html" class="btn btn-neutral float-left" title="Pandas básico" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

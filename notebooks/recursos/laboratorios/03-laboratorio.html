@@ -1,0 +1,968 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Laboratorio-03 &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+    <link rel="prev" title="Practica 09 - Visualización con matplotlib" href="../practicas/09-pr-visualizacion-con-matplotlib.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/repositorio.html">Repositorio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-01-introduccion">Sesión 01 - Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-01">Laboratorio 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-05-diccionarios">Sesión 05 - Diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-06-funciones">Sesión 06 - Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-02">Laboratorio 02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-03">Laboratorio 03</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Laboratorio-03</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-01">Problema 01</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-02">Problema 02</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-03">Problema 03</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-04">Problema 04</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-05">Problema 05</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-06">Problema 06</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-07">Problema 07</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-08">Problema 08</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-09">Problema 09</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-10">Problema 10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Problema-11">Problema 11</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a> &raquo;</li>
+        
+      <li>Laboratorio-03</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/notebooks/recursos/laboratorios/03-laboratorio.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Laboratorio-03">
+<h1>Laboratorio-03<a class="headerlink" href="#Laboratorio-03" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Vamos a poner a prueba lo aprendido durante este curso. <code class="docutils literal notranslate"><span class="pre">!!MUCHOS</span> <span class="pre">ÉXITOS!!</span></code></p>
+<p>El fichero data/titanic.csv contiene información sobre los pasajeros del Titanic. Escribir un programa con los siguientes requisitos:</p>
+<div class="section" id="Problema-01">
+<h2>Problema 01<a class="headerlink" href="#Problema-01" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Generar un DataFrame con los datos del fichero.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Respuesta</span><span class="p">:</span>
+                 <span class="n">Survived</span>  <span class="n">Pclass</span>  \
+    <span class="n">PassengerId</span>
+    <span class="mi">1</span>                   <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">2</span>                   <span class="mi">1</span>       <span class="mi">1</span>
+    <span class="mi">3</span>                   <span class="mi">1</span>       <span class="mi">3</span>
+    <span class="mi">4</span>                   <span class="mi">1</span>       <span class="mi">1</span>
+    <span class="mi">5</span>                   <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="o">...</span>               <span class="o">...</span>     <span class="o">...</span>
+    <span class="mi">887</span>                 <span class="mi">0</span>       <span class="mi">2</span>
+    <span class="mi">888</span>                 <span class="mi">1</span>       <span class="mi">1</span>
+    <span class="mi">889</span>                 <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">890</span>                 <span class="mi">1</span>       <span class="mi">1</span>
+    <span class="mi">891</span>                 <span class="mi">0</span>       <span class="mi">3</span>
+
+                                                              <span class="n">Name</span>     <span class="n">Sex</span>   <span class="n">Age</span>  \
+    <span class="n">PassengerId</span>
+    <span class="mi">1</span>                                      <span class="n">Braund</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Owen</span> <span class="n">Harris</span>    <span class="n">male</span>  <span class="mf">22.0</span>
+    <span class="mi">2</span>            <span class="n">Cumings</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">John</span> <span class="n">Bradley</span> <span class="p">(</span><span class="n">Florence</span> <span class="n">Briggs</span> <span class="n">Th</span><span class="o">...</span>  <span class="n">female</span>  <span class="mf">38.0</span>
+    <span class="mi">3</span>                                       <span class="n">Heikkinen</span><span class="p">,</span> <span class="n">Miss</span><span class="o">.</span> <span class="n">Laina</span>  <span class="n">female</span>  <span class="mf">26.0</span>
+    <span class="mi">4</span>                 <span class="n">Futrelle</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">Jacques</span> <span class="n">Heath</span> <span class="p">(</span><span class="n">Lily</span> <span class="n">May</span> <span class="n">Peel</span><span class="p">)</span>  <span class="n">female</span>  <span class="mf">35.0</span>
+    <span class="mi">5</span>                                     <span class="n">Allen</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">William</span> <span class="n">Henry</span>    <span class="n">male</span>  <span class="mf">35.0</span>
+    <span class="o">...</span>                                                        <span class="o">...</span>     <span class="o">...</span>   <span class="o">...</span>
+    <span class="mi">887</span>                                      <span class="n">Montvila</span><span class="p">,</span> <span class="n">Rev</span><span class="o">.</span> <span class="n">Juozas</span>    <span class="n">male</span>  <span class="mf">27.0</span>
+    <span class="mi">888</span>                               <span class="n">Graham</span><span class="p">,</span> <span class="n">Miss</span><span class="o">.</span> <span class="n">Margaret</span> <span class="n">Edith</span>  <span class="n">female</span>  <span class="mf">19.0</span>
+    <span class="mi">889</span>                   <span class="n">Johnston</span><span class="p">,</span> <span class="n">Miss</span><span class="o">.</span> <span class="n">Catherine</span> <span class="n">Helen</span> <span class="s2">&quot;Carrie&quot;</span>  <span class="n">female</span>   <span class="n">NaN</span>
+    <span class="mi">890</span>                                      <span class="n">Behr</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Karl</span> <span class="n">Howell</span>    <span class="n">male</span>  <span class="mf">26.0</span>
+    <span class="mi">891</span>                                        <span class="n">Dooley</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Patrick</span>    <span class="n">male</span>  <span class="mf">32.0</span>
+
+                 <span class="n">SibSp</span>  <span class="n">Parch</span>            <span class="n">Ticket</span>     <span class="n">Fare</span> <span class="n">Cabin</span> <span class="n">Embarked</span>
+    <span class="n">PassengerId</span>
+    <span class="mi">1</span>                <span class="mi">1</span>      <span class="mi">0</span>         <span class="n">A</span><span class="o">/</span><span class="mi">5</span> <span class="mi">21171</span>   <span class="mf">7.2500</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">2</span>                <span class="mi">1</span>      <span class="mi">0</span>          <span class="n">PC</span> <span class="mi">17599</span>  <span class="mf">71.2833</span>   <span class="n">C85</span>        <span class="n">C</span>
+    <span class="mi">3</span>                <span class="mi">0</span>      <span class="mi">0</span>  <span class="n">STON</span><span class="o">/</span><span class="n">O2</span><span class="o">.</span> <span class="mi">3101282</span>   <span class="mf">7.9250</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">4</span>                <span class="mi">1</span>      <span class="mi">0</span>            <span class="mi">113803</span>  <span class="mf">53.1000</span>  <span class="n">C123</span>        <span class="n">S</span>
+    <span class="mi">5</span>                <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">373450</span>   <span class="mf">8.0500</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="o">...</span>            <span class="o">...</span>    <span class="o">...</span>               <span class="o">...</span>      <span class="o">...</span>   <span class="o">...</span>      <span class="o">...</span>
+    <span class="mi">887</span>              <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">211536</span>  <span class="mf">13.0000</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">888</span>              <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">112053</span>  <span class="mf">30.0000</span>   <span class="n">B42</span>        <span class="n">S</span>
+    <span class="mi">889</span>              <span class="mi">1</span>      <span class="mi">2</span>        <span class="n">W</span><span class="o">./</span><span class="n">C</span><span class="o">.</span> <span class="mi">6607</span>  <span class="mf">23.4500</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">890</span>              <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">111369</span>  <span class="mf">30.0000</span>  <span class="n">C148</span>        <span class="n">C</span>
+    <span class="mi">891</span>              <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">370376</span>   <span class="mf">7.7500</span>   <span class="n">NaN</span>        <span class="n">Q</span>
+
+    <span class="p">[</span><span class="mi">891</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">11</span> <span class="n">columns</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Importe pandas como pd</span>
+
+
+<span class="c1"># Generar un DataFrame con los datos del fichero como: titanic</span>
+
+
+
+<span class="c1"># Imprima titanic</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-02">
+<h2>Problema 02<a class="headerlink" href="#Problema-02" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Mostrar por pantalla las dimensiones del DataFrame, el número de datos que contiene, los nombres de sus columnas y filas, los tipos de datos de las columnas, las 10 primeras filas y las 10 últimas filas</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Respuesta</span><span class="p">:</span>
+
+    <span class="n">Dimensiones</span><span class="p">:</span> <span class="p">(</span><span class="mi">891</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+    <span class="n">Número</span> <span class="n">de</span> <span class="n">elemntos</span><span class="p">:</span> <span class="mi">9801</span>
+    <span class="n">Nombres</span> <span class="n">de</span> <span class="n">columnas</span><span class="p">:</span> <span class="n">Index</span><span class="p">([</span><span class="s1">&#39;Survived&#39;</span><span class="p">,</span> <span class="s1">&#39;Pclass&#39;</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;SibSp&#39;</span><span class="p">,</span> <span class="s1">&#39;Parch&#39;</span><span class="p">,</span> <span class="s1">&#39;Ticket&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Fare&#39;</span><span class="p">,</span> <span class="s1">&#39;Cabin&#39;</span><span class="p">,</span> <span class="s1">&#39;Embarked&#39;</span><span class="p">],</span>
+          <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span>
+    <span class="n">Nombres</span> <span class="n">de</span> <span class="n">filas</span><span class="p">:</span> <span class="n">Int64Index</span><span class="p">([</span>  <span class="mi">1</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span>   <span class="mi">3</span><span class="p">,</span>   <span class="mi">4</span><span class="p">,</span>   <span class="mi">5</span><span class="p">,</span>   <span class="mi">6</span><span class="p">,</span>   <span class="mi">7</span><span class="p">,</span>   <span class="mi">8</span><span class="p">,</span>   <span class="mi">9</span><span class="p">,</span>  <span class="mi">10</span><span class="p">,</span>
+                <span class="o">...</span>
+                <span class="mi">882</span><span class="p">,</span> <span class="mi">883</span><span class="p">,</span> <span class="mi">884</span><span class="p">,</span> <span class="mi">885</span><span class="p">,</span> <span class="mi">886</span><span class="p">,</span> <span class="mi">887</span><span class="p">,</span> <span class="mi">888</span><span class="p">,</span> <span class="mi">889</span><span class="p">,</span> <span class="mi">890</span><span class="p">,</span> <span class="mi">891</span><span class="p">],</span>
+               <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;PassengerId&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">891</span><span class="p">)</span>
+    <span class="n">Tipos</span> <span class="n">de</span> <span class="n">datos</span><span class="p">:</span>
+     <span class="n">Survived</span>      <span class="n">int64</span>
+    <span class="n">Pclass</span>        <span class="n">int64</span>
+    <span class="n">Name</span>         <span class="nb">object</span>
+    <span class="n">Sex</span>          <span class="nb">object</span>
+    <span class="n">Age</span>         <span class="n">float64</span>
+    <span class="n">SibSp</span>         <span class="n">int64</span>
+    <span class="n">Parch</span>         <span class="n">int64</span>
+    <span class="n">Ticket</span>       <span class="nb">object</span>
+    <span class="n">Fare</span>        <span class="n">float64</span>
+    <span class="n">Cabin</span>        <span class="nb">object</span>
+    <span class="n">Embarked</span>     <span class="nb">object</span>
+    <span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+    <span class="n">Primeras</span> <span class="mi">10</span> <span class="n">filas</span><span class="p">:</span>
+                  <span class="n">Survived</span>  <span class="n">Pclass</span>  \
+    <span class="n">PassengerId</span>
+    <span class="mi">1</span>                   <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">2</span>                   <span class="mi">1</span>       <span class="mi">1</span>
+    <span class="mi">3</span>                   <span class="mi">1</span>       <span class="mi">3</span>
+    <span class="mi">4</span>                   <span class="mi">1</span>       <span class="mi">1</span>
+    <span class="mi">5</span>                   <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">6</span>                   <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">7</span>                   <span class="mi">0</span>       <span class="mi">1</span>
+    <span class="mi">8</span>                   <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">9</span>                   <span class="mi">1</span>       <span class="mi">3</span>
+    <span class="mi">10</span>                  <span class="mi">1</span>       <span class="mi">2</span>
+
+                                                              <span class="n">Name</span>     <span class="n">Sex</span>   <span class="n">Age</span>  \
+    <span class="n">PassengerId</span>
+    <span class="mi">1</span>                                      <span class="n">Braund</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Owen</span> <span class="n">Harris</span>    <span class="n">male</span>  <span class="mf">22.0</span>
+    <span class="mi">2</span>            <span class="n">Cumings</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">John</span> <span class="n">Bradley</span> <span class="p">(</span><span class="n">Florence</span> <span class="n">Briggs</span> <span class="n">Th</span><span class="o">...</span>  <span class="n">female</span>  <span class="mf">38.0</span>
+    <span class="mi">3</span>                                       <span class="n">Heikkinen</span><span class="p">,</span> <span class="n">Miss</span><span class="o">.</span> <span class="n">Laina</span>  <span class="n">female</span>  <span class="mf">26.0</span>
+    <span class="mi">4</span>                 <span class="n">Futrelle</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">Jacques</span> <span class="n">Heath</span> <span class="p">(</span><span class="n">Lily</span> <span class="n">May</span> <span class="n">Peel</span><span class="p">)</span>  <span class="n">female</span>  <span class="mf">35.0</span>
+    <span class="mi">5</span>                                     <span class="n">Allen</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">William</span> <span class="n">Henry</span>    <span class="n">male</span>  <span class="mf">35.0</span>
+    <span class="mi">6</span>                                             <span class="n">Moran</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">James</span>    <span class="n">male</span>   <span class="n">NaN</span>
+    <span class="mi">7</span>                                      <span class="n">McCarthy</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Timothy</span> <span class="n">J</span>    <span class="n">male</span>  <span class="mf">54.0</span>
+    <span class="mi">8</span>                               <span class="n">Palsson</span><span class="p">,</span> <span class="n">Master</span><span class="o">.</span> <span class="n">Gosta</span> <span class="n">Leonard</span>    <span class="n">male</span>   <span class="mf">2.0</span>
+    <span class="mi">9</span>            <span class="n">Johnson</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">Oscar</span> <span class="n">W</span> <span class="p">(</span><span class="n">Elisabeth</span> <span class="n">Vilhelmina</span> <span class="n">Berg</span><span class="p">)</span>  <span class="n">female</span>  <span class="mf">27.0</span>
+    <span class="mi">10</span>                         <span class="n">Nasser</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">Nicholas</span> <span class="p">(</span><span class="n">Adele</span> <span class="n">Achem</span><span class="p">)</span>  <span class="n">female</span>  <span class="mf">14.0</span>
+
+                 <span class="n">SibSp</span>  <span class="n">Parch</span>            <span class="n">Ticket</span>     <span class="n">Fare</span> <span class="n">Cabin</span> <span class="n">Embarked</span>
+    <span class="n">PassengerId</span>
+    <span class="mi">1</span>                <span class="mi">1</span>      <span class="mi">0</span>         <span class="n">A</span><span class="o">/</span><span class="mi">5</span> <span class="mi">21171</span>   <span class="mf">7.2500</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">2</span>                <span class="mi">1</span>      <span class="mi">0</span>          <span class="n">PC</span> <span class="mi">17599</span>  <span class="mf">71.2833</span>   <span class="n">C85</span>        <span class="n">C</span>
+    <span class="mi">3</span>                <span class="mi">0</span>      <span class="mi">0</span>  <span class="n">STON</span><span class="o">/</span><span class="n">O2</span><span class="o">.</span> <span class="mi">3101282</span>   <span class="mf">7.9250</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">4</span>                <span class="mi">1</span>      <span class="mi">0</span>            <span class="mi">113803</span>  <span class="mf">53.1000</span>  <span class="n">C123</span>        <span class="n">S</span>
+    <span class="mi">5</span>                <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">373450</span>   <span class="mf">8.0500</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">6</span>                <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">330877</span>   <span class="mf">8.4583</span>   <span class="n">NaN</span>        <span class="n">Q</span>
+    <span class="mi">7</span>                <span class="mi">0</span>      <span class="mi">0</span>             <span class="mi">17463</span>  <span class="mf">51.8625</span>   <span class="n">E46</span>        <span class="n">S</span>
+    <span class="mi">8</span>                <span class="mi">3</span>      <span class="mi">1</span>            <span class="mi">349909</span>  <span class="mf">21.0750</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">9</span>                <span class="mi">0</span>      <span class="mi">2</span>            <span class="mi">347742</span>  <span class="mf">11.1333</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">10</span>               <span class="mi">1</span>      <span class="mi">0</span>            <span class="mi">237736</span>  <span class="mf">30.0708</span>   <span class="n">NaN</span>        <span class="n">C</span>
+    <span class="n">Últimas</span> <span class="mi">10</span> <span class="n">filas</span><span class="p">:</span>
+                  <span class="n">Survived</span>  <span class="n">Pclass</span>                                      <span class="n">Name</span>  \
+    <span class="n">PassengerId</span>
+    <span class="mi">882</span>                 <span class="mi">0</span>       <span class="mi">3</span>                        <span class="n">Markun</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Johann</span>
+    <span class="mi">883</span>                 <span class="mi">0</span>       <span class="mi">3</span>              <span class="n">Dahlberg</span><span class="p">,</span> <span class="n">Miss</span><span class="o">.</span> <span class="n">Gerda</span> <span class="n">Ulrika</span>
+    <span class="mi">884</span>                 <span class="mi">0</span>       <span class="mi">2</span>             <span class="n">Banfield</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Frederick</span> <span class="n">James</span>
+    <span class="mi">885</span>                 <span class="mi">0</span>       <span class="mi">3</span>                    <span class="n">Sutehall</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Henry</span> <span class="n">Jr</span>
+    <span class="mi">886</span>                 <span class="mi">0</span>       <span class="mi">3</span>      <span class="n">Rice</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">William</span> <span class="p">(</span><span class="n">Margaret</span> <span class="n">Norton</span><span class="p">)</span>
+    <span class="mi">887</span>                 <span class="mi">0</span>       <span class="mi">2</span>                     <span class="n">Montvila</span><span class="p">,</span> <span class="n">Rev</span><span class="o">.</span> <span class="n">Juozas</span>
+    <span class="mi">888</span>                 <span class="mi">1</span>       <span class="mi">1</span>              <span class="n">Graham</span><span class="p">,</span> <span class="n">Miss</span><span class="o">.</span> <span class="n">Margaret</span> <span class="n">Edith</span>
+    <span class="mi">889</span>                 <span class="mi">0</span>       <span class="mi">3</span>  <span class="n">Johnston</span><span class="p">,</span> <span class="n">Miss</span><span class="o">.</span> <span class="n">Catherine</span> <span class="n">Helen</span> <span class="s2">&quot;Carrie&quot;</span>
+    <span class="mi">890</span>                 <span class="mi">1</span>       <span class="mi">1</span>                     <span class="n">Behr</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Karl</span> <span class="n">Howell</span>
+    <span class="mi">891</span>                 <span class="mi">0</span>       <span class="mi">3</span>                       <span class="n">Dooley</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Patrick</span>
+
+                    <span class="n">Sex</span>   <span class="n">Age</span>  <span class="n">SibSp</span>  <span class="n">Parch</span>            <span class="n">Ticket</span>     <span class="n">Fare</span> <span class="n">Cabin</span>  \
+    <span class="n">PassengerId</span>
+    <span class="mi">882</span>            <span class="n">male</span>  <span class="mf">33.0</span>      <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">349257</span>   <span class="mf">7.8958</span>   <span class="n">NaN</span>
+    <span class="mi">883</span>          <span class="n">female</span>  <span class="mf">22.0</span>      <span class="mi">0</span>      <span class="mi">0</span>              <span class="mi">7552</span>  <span class="mf">10.5167</span>   <span class="n">NaN</span>
+    <span class="mi">884</span>            <span class="n">male</span>  <span class="mf">28.0</span>      <span class="mi">0</span>      <span class="mi">0</span>  <span class="n">C</span><span class="o">.</span><span class="n">A</span><span class="o">./</span><span class="n">SOTON</span> <span class="mi">34068</span>  <span class="mf">10.5000</span>   <span class="n">NaN</span>
+    <span class="mi">885</span>            <span class="n">male</span>  <span class="mf">25.0</span>      <span class="mi">0</span>      <span class="mi">0</span>   <span class="n">SOTON</span><span class="o">/</span><span class="n">OQ</span> <span class="mi">392076</span>   <span class="mf">7.0500</span>   <span class="n">NaN</span>
+    <span class="mi">886</span>          <span class="n">female</span>  <span class="mf">39.0</span>      <span class="mi">0</span>      <span class="mi">5</span>            <span class="mi">382652</span>  <span class="mf">29.1250</span>   <span class="n">NaN</span>
+    <span class="mi">887</span>            <span class="n">male</span>  <span class="mf">27.0</span>      <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">211536</span>  <span class="mf">13.0000</span>   <span class="n">NaN</span>
+    <span class="mi">888</span>          <span class="n">female</span>  <span class="mf">19.0</span>      <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">112053</span>  <span class="mf">30.0000</span>   <span class="n">B42</span>
+    <span class="mi">889</span>          <span class="n">female</span>   <span class="n">NaN</span>      <span class="mi">1</span>      <span class="mi">2</span>        <span class="n">W</span><span class="o">./</span><span class="n">C</span><span class="o">.</span> <span class="mi">6607</span>  <span class="mf">23.4500</span>   <span class="n">NaN</span>
+    <span class="mi">890</span>            <span class="n">male</span>  <span class="mf">26.0</span>      <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">111369</span>  <span class="mf">30.0000</span>  <span class="n">C148</span>
+    <span class="mi">891</span>            <span class="n">male</span>  <span class="mf">32.0</span>      <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">370376</span>   <span class="mf">7.7500</span>   <span class="n">NaN</span>
+
+                <span class="n">Embarked</span>
+    <span class="n">PassengerId</span>
+    <span class="mi">882</span>                <span class="n">S</span>
+    <span class="mi">883</span>                <span class="n">S</span>
+    <span class="mi">884</span>                <span class="n">S</span>
+    <span class="mi">885</span>                <span class="n">S</span>
+    <span class="mi">886</span>                <span class="n">Q</span>
+    <span class="mi">887</span>                <span class="n">S</span>
+    <span class="mi">888</span>                <span class="n">S</span>
+    <span class="mi">889</span>                <span class="n">S</span>
+    <span class="mi">890</span>                <span class="n">C</span>
+    <span class="mi">891</span>                <span class="n">Q</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Imprima las dimensiones del DataFrame</span>
+
+
+<span class="c1"># Imprima el número de datos que contiene la tabla (número filas x número columnas)</span>
+
+
+<span class="c1"># Imprima los nombres de sus columnas</span>
+
+
+<span class="c1"># Imprima los nombres filas desde el index</span>
+
+
+<span class="c1"># Imprima los tipos de datos de las columnas</span>
+
+
+<span class="c1"># Imprima las 10 primeras filas</span>
+
+
+<span class="c1"># Imprima las 10 últimas filas.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-03">
+<h2>Problema 03<a class="headerlink" href="#Problema-03" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Mostrar por pantalla los datos del pasajero con identificador 148.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Respuesta</span><span class="p">:</span>
+    <span class="n">Survived</span>                                   <span class="mi">0</span>
+    <span class="n">Pclass</span>                                     <span class="mi">3</span>
+    <span class="n">Name</span>        <span class="n">Ford</span><span class="p">,</span> <span class="n">Miss</span><span class="o">.</span> <span class="n">Robina</span> <span class="n">Maggie</span> <span class="s2">&quot;Ruby&quot;</span>
+    <span class="n">Sex</span>                                   <span class="n">female</span>
+    <span class="n">Age</span>                                        <span class="mi">9</span>
+    <span class="n">SibSp</span>                                      <span class="mi">2</span>
+    <span class="n">Parch</span>                                      <span class="mi">2</span>
+    <span class="n">Ticket</span>                            <span class="n">W</span><span class="o">./</span><span class="n">C</span><span class="o">.</span> <span class="mi">6608</span>
+    <span class="n">Fare</span>                                  <span class="mf">34.375</span>
+    <span class="n">Cabin</span>                                    <span class="n">NaN</span>
+    <span class="n">Embarked</span>                                   <span class="n">S</span>
+    <span class="n">Name</span><span class="p">:</span> <span class="mi">148</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Imprima los datos del pasajero con identificador 148</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-04">
+<h2>Problema 04<a class="headerlink" href="#Problema-04" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Mostrar por pantalla las filas pares del DataFrame.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Respuesta</span><span class="p">:</span>
+                 <span class="n">Survived</span>  <span class="n">Pclass</span>  \
+    <span class="n">PassengerId</span>
+    <span class="mi">2</span>                   <span class="mi">1</span>       <span class="mi">1</span>
+    <span class="mi">4</span>                   <span class="mi">1</span>       <span class="mi">1</span>
+    <span class="mi">6</span>                   <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">8</span>                   <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">10</span>                  <span class="mi">1</span>       <span class="mi">2</span>
+    <span class="o">...</span>               <span class="o">...</span>     <span class="o">...</span>
+    <span class="mi">882</span>                 <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">884</span>                 <span class="mi">0</span>       <span class="mi">2</span>
+    <span class="mi">886</span>                 <span class="mi">0</span>       <span class="mi">3</span>
+    <span class="mi">888</span>                 <span class="mi">1</span>       <span class="mi">1</span>
+    <span class="mi">890</span>                 <span class="mi">1</span>       <span class="mi">1</span>
+
+                                                              <span class="n">Name</span>     <span class="n">Sex</span>   <span class="n">Age</span>  \
+    <span class="n">PassengerId</span>
+    <span class="mi">2</span>            <span class="n">Cumings</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">John</span> <span class="n">Bradley</span> <span class="p">(</span><span class="n">Florence</span> <span class="n">Briggs</span> <span class="n">Th</span><span class="o">...</span>  <span class="n">female</span>  <span class="mf">38.0</span>
+    <span class="mi">4</span>                 <span class="n">Futrelle</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">Jacques</span> <span class="n">Heath</span> <span class="p">(</span><span class="n">Lily</span> <span class="n">May</span> <span class="n">Peel</span><span class="p">)</span>  <span class="n">female</span>  <span class="mf">35.0</span>
+    <span class="mi">6</span>                                             <span class="n">Moran</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">James</span>    <span class="n">male</span>   <span class="n">NaN</span>
+    <span class="mi">8</span>                               <span class="n">Palsson</span><span class="p">,</span> <span class="n">Master</span><span class="o">.</span> <span class="n">Gosta</span> <span class="n">Leonard</span>    <span class="n">male</span>   <span class="mf">2.0</span>
+    <span class="mi">10</span>                         <span class="n">Nasser</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">Nicholas</span> <span class="p">(</span><span class="n">Adele</span> <span class="n">Achem</span><span class="p">)</span>  <span class="n">female</span>  <span class="mf">14.0</span>
+    <span class="o">...</span>                                                        <span class="o">...</span>     <span class="o">...</span>   <span class="o">...</span>
+    <span class="mi">882</span>                                         <span class="n">Markun</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Johann</span>    <span class="n">male</span>  <span class="mf">33.0</span>
+    <span class="mi">884</span>                              <span class="n">Banfield</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Frederick</span> <span class="n">James</span>    <span class="n">male</span>  <span class="mf">28.0</span>
+    <span class="mi">886</span>                       <span class="n">Rice</span><span class="p">,</span> <span class="n">Mrs</span><span class="o">.</span> <span class="n">William</span> <span class="p">(</span><span class="n">Margaret</span> <span class="n">Norton</span><span class="p">)</span>  <span class="n">female</span>  <span class="mf">39.0</span>
+    <span class="mi">888</span>                               <span class="n">Graham</span><span class="p">,</span> <span class="n">Miss</span><span class="o">.</span> <span class="n">Margaret</span> <span class="n">Edith</span>  <span class="n">female</span>  <span class="mf">19.0</span>
+    <span class="mi">890</span>                                      <span class="n">Behr</span><span class="p">,</span> <span class="n">Mr</span><span class="o">.</span> <span class="n">Karl</span> <span class="n">Howell</span>    <span class="n">male</span>  <span class="mf">26.0</span>
+
+                 <span class="n">SibSp</span>  <span class="n">Parch</span>            <span class="n">Ticket</span>     <span class="n">Fare</span> <span class="n">Cabin</span> <span class="n">Embarked</span>
+    <span class="n">PassengerId</span>
+    <span class="mi">2</span>                <span class="mi">1</span>      <span class="mi">0</span>          <span class="n">PC</span> <span class="mi">17599</span>  <span class="mf">71.2833</span>   <span class="n">C85</span>        <span class="n">C</span>
+    <span class="mi">4</span>                <span class="mi">1</span>      <span class="mi">0</span>            <span class="mi">113803</span>  <span class="mf">53.1000</span>  <span class="n">C123</span>        <span class="n">S</span>
+    <span class="mi">6</span>                <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">330877</span>   <span class="mf">8.4583</span>   <span class="n">NaN</span>        <span class="n">Q</span>
+    <span class="mi">8</span>                <span class="mi">3</span>      <span class="mi">1</span>            <span class="mi">349909</span>  <span class="mf">21.0750</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">10</span>               <span class="mi">1</span>      <span class="mi">0</span>            <span class="mi">237736</span>  <span class="mf">30.0708</span>   <span class="n">NaN</span>        <span class="n">C</span>
+    <span class="o">...</span>            <span class="o">...</span>    <span class="o">...</span>               <span class="o">...</span>      <span class="o">...</span>   <span class="o">...</span>      <span class="o">...</span>
+    <span class="mi">882</span>              <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">349257</span>   <span class="mf">7.8958</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">884</span>              <span class="mi">0</span>      <span class="mi">0</span>  <span class="n">C</span><span class="o">.</span><span class="n">A</span><span class="o">./</span><span class="n">SOTON</span> <span class="mi">34068</span>  <span class="mf">10.5000</span>   <span class="n">NaN</span>        <span class="n">S</span>
+    <span class="mi">886</span>              <span class="mi">0</span>      <span class="mi">5</span>            <span class="mi">382652</span>  <span class="mf">29.1250</span>   <span class="n">NaN</span>        <span class="n">Q</span>
+    <span class="mi">888</span>              <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">112053</span>  <span class="mf">30.0000</span>   <span class="n">B42</span>        <span class="n">S</span>
+    <span class="mi">890</span>              <span class="mi">0</span>      <span class="mi">0</span>            <span class="mi">111369</span>  <span class="mf">30.0000</span>  <span class="n">C148</span>        <span class="n">C</span>
+
+    <span class="p">[</span><span class="mi">445</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">11</span> <span class="n">columns</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Imprima las filas pares del DataFrame.</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-05">
+<h2>Problema 05<a class="headerlink" href="#Problema-05" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Mostrar por pantalla los nombres de las personas que iban en primera clase [“Pclass”] ordenadas alfabéticamente.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Imprima los nombres de las personas que iban en primera clase campo &quot;&quot;Pclass&quot; ordenadas alfabéticamente.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-06">
+<h2>Problema 06<a class="headerlink" href="#Problema-06" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Mostrar por pantalla el porcentaje de personas que sobrevivieron y murieron [‘Survived’].</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Respuesta</span><span class="p">:</span>
+    <span class="mi">0</span>    <span class="mf">61.616162</span>
+    <span class="mi">1</span>    <span class="mf">38.383838</span>
+    <span class="n">Name</span><span class="p">:</span> <span class="n">Survived</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Imprima el porcentaje de personas que sobrevivieron y murieron</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-07">
+<h2>Problema 07<a class="headerlink" href="#Problema-07" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Mostrar por pantalla el porcentaje de personas que sobrevivieron [‘Survived’] en cada clase [‘Pclass’].</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Respuesta</span><span class="p">:</span>
+    <span class="n">Pclass</span>  <span class="n">Survived</span>
+    <span class="mi">1</span>       <span class="mi">1</span>           <span class="mf">0.629630</span>
+            <span class="mi">0</span>           <span class="mf">0.370370</span>
+    <span class="mi">2</span>       <span class="mi">0</span>           <span class="mf">0.527174</span>
+            <span class="mi">1</span>           <span class="mf">0.472826</span>
+    <span class="mi">3</span>       <span class="mi">0</span>           <span class="mf">0.757637</span>
+            <span class="mi">1</span>           <span class="mf">0.242363</span>
+    <span class="n">Name</span><span class="p">:</span> <span class="n">Survived</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Imprima el porcentaje de personas que sobrevivieron en cada clase</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-08">
+<h2>Problema 08<a class="headerlink" href="#Problema-08" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Eliminar del DataFrame los pasajeros con edad [‘Age’] desconocida.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Respuesta:
+
+    Survived    Pclass  Name    Sex Age SibSp   Parch   Ticket  Fare    Cabin   Embarked
+    PassengerId
+    1   0   3   Braund, Mr. Owen Harris male    22.0    1   0   A/5 21171   7.2500  NaN S
+    2   1   1   Cumings, Mrs. John Bradley (Florence Briggs Th...   female  38.0    1   0   PC 17599    71.2833 C85 C
+    3   1   3   Heikkinen, Miss. Laina  female  26.0    0   0   STON/O2. 3101282    7.9250  NaN S
+    4   1   1   Futrelle, Mrs. Jacques Heath (Lily May Peel)    female  35.0    1   0   113803  53.1000 C123    S
+    5   0   3   Allen, Mr. William Henry    male    35.0    0   0   373450  8.0500  NaN S
+    ... ... ... ... ... ... ... ... ... ... ... ...
+    886 0   3   Rice, Mrs. William (Margaret Norton)    female  39.0    0   5   382652  29.1250 NaN Q
+    887 0   2   Montvila, Rev. Juozas   male    27.0    0   0   211536  13.0000 NaN S
+    888 1   1   Graham, Miss. Margaret Edith    female  19.0    0   0   112053  30.0000 B42 S
+    890 1   1   Behr, Mr. Karl Howell   male    26.0    0   0   111369  30.0000 C148    C
+    891 0   3   Dooley, Mr. Patrick male    32.0    0   0   370376  7.7500  NaN Q
+    714 rows × 11 columns
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Eliminar del DataFrame los pasajeros con edad desconocida.</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-09">
+<h2>Problema 09<a class="headerlink" href="#Problema-09" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Mostrar por pantalla la edad media [‘Age’] de las mujeres [‘Sex’] que viajaban en cada clase [‘Pclass’].</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Respuesta</span><span class="p">:</span>
+    <span class="n">Pclass</span>
+    <span class="mi">1</span>    <span class="mf">34.611765</span>
+    <span class="mi">2</span>    <span class="mf">28.722973</span>
+    <span class="mi">3</span>    <span class="mf">21.750000</span>
+    <span class="n">Name</span><span class="p">:</span> <span class="n">female</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Imprima la edad media de las mujeres que viajaban en cada clase.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-10">
+<h2>Problema 10<a class="headerlink" href="#Problema-10" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Añadir una nueva columna booleana para ver si el pasajero era menor de edad o no [‘Age’].</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Respuesta</span><span class="p">:</span>
+
+    <span class="n">PassengerId</span>
+    <span class="mi">1</span>      <span class="kc">False</span>
+    <span class="mi">2</span>      <span class="kc">False</span>
+    <span class="mi">3</span>      <span class="kc">False</span>
+    <span class="mi">4</span>      <span class="kc">False</span>
+    <span class="mi">5</span>      <span class="kc">False</span>
+           <span class="o">...</span>
+    <span class="mi">886</span>    <span class="kc">False</span>
+    <span class="mi">887</span>    <span class="kc">False</span>
+    <span class="mi">888</span>    <span class="kc">False</span>
+    <span class="mi">890</span>    <span class="kc">False</span>
+    <span class="mi">891</span>    <span class="kc">False</span>
+    <span class="n">Name</span><span class="p">:</span> <span class="n">Young</span><span class="p">,</span> <span class="n">Length</span><span class="p">:</span> <span class="mi">714</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">bool</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Añadir una nueva columna booleana para ver si el pasajero era menor de edad o no.</span>
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Problema-11">
+<h2>Problema 11<a class="headerlink" href="#Problema-11" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Mostrar por pantalla el porcentaje de menores y mayores de edad que sobrevivieron en cada clase.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Respuesta</span><span class="p">:</span>
+    <span class="n">Pclass</span>  <span class="n">Young</span>  <span class="n">Survived</span>
+    <span class="mi">1</span>       <span class="kc">False</span>  <span class="mi">1</span>           <span class="mf">63.793103</span>
+                   <span class="mi">0</span>           <span class="mf">36.206897</span>
+            <span class="kc">True</span>   <span class="mi">1</span>           <span class="mf">91.666667</span>
+                   <span class="mi">0</span>            <span class="mf">8.333333</span>
+    <span class="mi">2</span>       <span class="kc">False</span>  <span class="mi">0</span>           <span class="mf">58.666667</span>
+                   <span class="mi">1</span>           <span class="mf">41.333333</span>
+            <span class="kc">True</span>   <span class="mi">1</span>           <span class="mf">91.304348</span>
+                   <span class="mi">0</span>            <span class="mf">8.695652</span>
+    <span class="mi">3</span>       <span class="kc">False</span>  <span class="mi">0</span>           <span class="mf">79.783394</span>
+                   <span class="mi">1</span>           <span class="mf">20.216606</span>
+            <span class="kc">True</span>   <span class="mi">0</span>           <span class="mf">62.820513</span>
+                   <span class="mi">1</span>           <span class="mf">37.179487</span>
+    <span class="n">Name</span><span class="p">:</span> <span class="n">Survived</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Imprima el porcentaje de menores y mayores de edad que sobrevivieron en cada clase.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../practicas/09-pr-visualizacion-con-matplotlib.html" class="btn btn-neutral float-left" title="Practica 09 - Visualización con matplotlib" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

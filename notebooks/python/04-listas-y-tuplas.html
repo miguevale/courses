@@ -1,0 +1,1381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Listas y tuplas &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Practica 04 - Listas y tuplas" href="../recursos/practicas/04-pr-listas-y-tuplas.html" />
+    <link rel="prev" title="Laboratorio-01" href="../recursos/laboratorios/01-laboratorio.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/repositorio.html">Repositorio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-01-introduccion">Sesión 01 - Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-01">Laboratorio 01</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Listas y tuplas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Listas">Listas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Tuplas">Tuplas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../recursos/practicas/04-pr-listas-y-tuplas.html">Practica 04 - Listas y tuplas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-05-diccionarios">Sesión 05 - Diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-06-funciones">Sesión 06 - Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-02">Laboratorio 02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-03">Laboratorio 03</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a> &raquo;</li>
+        
+      <li>Listas y tuplas</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/notebooks/python/04-listas-y-tuplas.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Listas-y-tuplas">
+<h1>Listas y tuplas<a class="headerlink" href="#Listas-y-tuplas" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>90 min | Última modificación: Junio 07, 2020.</p>
+<div class="section" id="Listas">
+<h2>Listas<a class="headerlink" href="#Listas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las listas permiten guardar más de un elemento dentro de una variable en un orden concreto. Pueden contener un número ilimitado de variables de cualquier tipo:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># muestra &quot;Calos&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span> <span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># muestra &quot;Sandra&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span> <span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># muestra &quot;Lorenzo&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># muestra &quot;Laura&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Calos
+Sandra
+Lorenzo
+Laura
+</pre></div></div>
+</div>
+<p>Los métodos más utilizados con las listas son los siguientes:</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.append(x)</span></code> – agrega el elemento <code class="docutils literal notranslate"><span class="pre">x</span></code> al final de la lista.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.extend(L)</span></code> – agrega la lista <code class="docutils literal notranslate"><span class="pre">L</span></code> al final de la lista.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.insert(i,x)</span></code> – inserta el elemento <code class="docutils literal notranslate"><span class="pre">x</span></code> en la posición <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.remove(x)</span></code> – remueve el elemento <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.pop([j])</span></code> – remueve el elemento en la posición <code class="docutils literal notranslate"><span class="pre">j</span></code> de la lista.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.clear()</span></code> – borra la lista; elimina todos los elementos de la lista.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.index(x)</span></code> – devuelve el indice del elemento <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">list.count(x)</span></code> – Cuenta las veces que aparece el elemento <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.sort(key=None,</span> <span class="pre">reverse=False)</span></code> – ordena los elementos de la lista.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.reverse()</span></code> – Inverte el orden de los elementos de la lista.</p>
+<p><code class="docutils literal notranslate"><span class="pre">list.copy()</span></code> – crea una copia de la lista.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span> <span class="c1"># Creación de la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Calos&#39;, &#39;Sandra&#39;, &#39;Lorenzo&#39;, &#39;Laura&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Jhon&quot;</span><span class="p">)</span> <span class="c1"># Inserta “Jhon” al final de la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Calos&#39;, &#39;Sandra&#39;, &#39;Lorenzo&#39;, &#39;Laura&#39;, &#39;Jhon&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;Marcela&quot;</span><span class="p">)</span> <span class="c1"># Inserta “Marcela” en la posición 0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Marcela&#39;, &#39;Calos&#39;, &#39;Sandra&#39;, &#39;Lorenzo&#39;, &#39;Laura&#39;, &#39;Jhon&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Marcela&quot;</span><span class="p">)</span> <span class="c1"># Elimina la primera aparición de “Marcela” de la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Calos&#39;, &#39;Sandra&#39;, &#39;Lorenzo&#39;, &#39;Laura&#39;, &#39;Jhon&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="c1"># Elimina el último elemento de la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Calos&#39;, &#39;Sandra&#39;, &#39;Lorenzo&#39;, &#39;Laura&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># Elimina todos los elementos de la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="n">alumnos</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Lorenzo&quot;</span><span class="p">)</span> <span class="c1">#Devuelve el índice de la primera aparición de &quot;Lorenzo&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># Ordena la lista (los elementos deben ser comparables)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Calos&#39;, &#39;Laura&#39;, &#39;Lorenzo&#39;, &#39;Sandra&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span> <span class="c1"># Devuelve una copia de la lista &#39;alumnos&#39; ordenada</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Calos&#39;, &#39;Laura&#39;, &#39;Lorenzo&#39;, &#39;Sandra&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="n">alumnos</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span> <span class="c1"># Ordena la lista en orden inverso</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Laura&#39;, &#39;Lorenzo&#39;, &#39;Sandra&#39;, &#39;Calos&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># Devuelve una copia de la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Laura&#39;, &#39;Lorenzo&#39;, &#39;Sandra&#39;, &#39;Calos&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="n">otra_lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">alumnos</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">otra_lista</span><span class="p">)</span> <span class="c1"># Fusiona las dos listas</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Calos&#39;, &#39;Sandra&#39;, &#39;Lorenzo&#39;, &#39;Laura&#39;, 1, 2, 3, 4, 5]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="c1"># convierte un objeto rango en lista</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span>  <span class="c1"># `y` apunta en memoria a la misma lista que `x`.</span>
+<span class="n">y</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>  <span class="c1"># si se remueve un elemento en la lista `y`, también se remueve en la lista `x`</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[0, 1, 2, 3, 4, 5, 6, 7, 8]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>         <span class="c1"># para evitar el problema anterior se usa `copy()`</span>
+<span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="c1"># cuenta la cantidad de veces que aparece cada elemento</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">),</span> <span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1 2 3 4
+</pre></div></div>
+</div>
+<div class="section" id="Otra-forma-de-borrado-de-elementos-de-una-lista">
+<h3>Otra forma de borrado de elementos de una lista<a class="headerlink" href="#Otra-forma-de-borrado-de-elementos-de-una-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">del</span></code> permite borar elementos de una lista.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># método visto anteriormente</span>
+<span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="n">alumnos</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Calos&quot;</span><span class="p">)</span> <span class="c1"># Elimina la primera aparición de “Sandra” de la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Sandra&#39;, &#39;Lorenzo&#39;, &#39;Laura&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># método de borrado por medio del index</span>
+<span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">alumnos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Elimina elemento de la primera posición de la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Sandra&#39;, &#39;Lorenzo&#39;, &#39;Laura&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">alumnos</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">alumnos</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Calos&#39;, &#39;Sandra&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">alumnos</span><span class="p">[:]</span>  <span class="c1"># Elimina todos los elementos de la lista. Similar list.clear()</span>
+<span class="n">alumnos</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[]
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">alumnos</span> <span class="c1"># Elimina la lista</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Subconjunto-de-lista">
+<h3>Subconjunto de lista<a class="headerlink" href="#Subconjunto-de-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Seleccionar valores individuales de una lista es solo una parte de la historia. También es posible dividir su lista, lo que significa seleccionar varios elementos de su lista. Use la siguiente sintaxis:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>El índice inicio se incluirá, mientras que el índice fin no.</p>
+<p>El siguiente ejemplo de código muestra un ejemplo. Se selecciona una lista con “b” y “c”, correspondiente a los índices 1 y 2, de una lista x:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1">#Los elementos con índice 1 y 2 están incluidos, mientras que el elemento con índice 3 no lo está.</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;b&#39;, &#39;c&#39;]
+</pre></div></div>
+</div>
+<p>También es posible no especificar estos índices. Si no especifica el índice inicio, Python seleccionará la sublista desde el primer elemento de la lista. Si no especifica el índice fin, la sublista irá hasta el último elemento de su lista.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[:])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;a&#39;, &#39;b&#39;]
+[&#39;c&#39;, &#39;d&#39;]
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Subconjunto-de-lista-de-listas">
+<h3>Subconjunto de lista de listas<a class="headerlink" href="#Subconjunto-de-lista-de-listas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Viste antes que una lista de Python puede contener prácticamente cualquier cosa; incluso otras listas! Para subconjuntar listas de listas, puede usar la misma técnica que antes: corchetes. Pruebe los comandos en el siguiente ejemplo de código en las celdas de jupyter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span>
+     <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">],</span>
+     <span class="p">[</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">]]</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">][:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span>
+     <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">],</span>
+     <span class="p">[</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">][:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># da como resultado una lista que puede volver a subconjuntar agregando corchetes adicionales.</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+g
+[&#39;g&#39;, &#39;h&#39;]
+[&#39;g&#39;, &#39;h&#39;, &#39;i&#39;]
+[[&#39;g&#39;, &#39;h&#39;, &#39;i&#39;]]
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Desempaquetado-de-listas">
+<h3>Desempaquetado de listas<a class="headerlink" href="#Desempaquetado-de-listas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Una acción típica de las listas es “desempaquetar” (unpack) sus valores.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">rest</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>    <span class="c1"># a = 1, rest = [2, 3]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rest</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[2, 3]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">middle</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="c1"># a = 1, middle = [2, 3], c = 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">middle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[2, 3]
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Recorrer-una-lista">
+<h3>Recorrer una lista<a class="headerlink" href="#Recorrer-una-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La forma habitual de recorrer una lista es mediante la sentencia for, tal y como muestra el ejemplo a continuación:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span><span class="s1">&#39;Excel&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programo en &quot;</span><span class="p">,</span> <span class="n">elemento</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Programo en  Python
+Programo en  Excel
+Programo en  R
+</pre></div></div>
+</div>
+<p>De igual manera se podría hacer mediante la sentencia while:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span><span class="s1">&#39;Excel&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sizeofList</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">sizeofList</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Python
+Excel
+R
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Tuplas">
+<h2>Tuplas<a class="headerlink" href="#Tuplas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las tuplas son listas inmutables. Es decir, una vez declaradas, no se pueden realizar modificaciones sobre ellas (añadir/eliminar elementos o hacer modificaciones sobre ellos). Para definir una tupla se escriben los elementos separados por comas:</p>
+<p><code class="docutils literal notranslate"><span class="pre">tupla</span> <span class="pre">=</span> <span class="pre">1,2,3</span></code></p>
+<p>El acceso a sus elementos se hace de igual que con listas:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">tupla</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;f&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span> <span class="c1"># una tupla se diferencia de una lista porque se imprime entre paréntesis.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;)
+b
+(&#39;c&#39;, &#39;d&#39;)
+</pre></div></div>
+</div>
+<p>Una acción típica de las tuplas es “desempaquetar” (unpack) sus valores:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">tupla</span> <span class="c1"># asignación de los elementos de una tupla.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1
+2
+3
+</pre></div></div>
+</div>
+<div class="section" id="Tupla-de-tuplas">
+<h3>Tupla de tuplas<a class="headerlink" href="#Tupla-de-tuplas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Al igual que la lista de listas, también se puede subconjuntar en tupla de tuplas.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Las tuplas pueden anidarse.</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">tupla</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">u</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+((1, 2, 3), (1, 2, 3, 4, 5))
+</pre></div></div>
+</div>
+<p>La función len() devuelve el número de elementos de una lista o tupla:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Calos&quot;</span><span class="p">,</span> <span class="s2">&quot;Sandra&quot;</span><span class="p">,</span> <span class="s2">&quot;Lorenzo&quot;</span><span class="p">,</span> <span class="s2">&quot;Laura&quot;</span><span class="p">]</span>
+<span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">alumnos</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tupla</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+4
+3
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Conjuntos">
+<h3>Conjuntos<a class="headerlink" href="#Conjuntos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Un conjunto es una colección no ordenada y sin elementos repetidos. Los conjuntos también soportan operaciones matemáticas como la unión, intersección, diferencia, y diferencia simétrica.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">canasta</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;manzana&#39;</span><span class="p">,</span> <span class="s1">&#39;naranja&#39;</span><span class="p">,</span> <span class="s1">&#39;manzana&#39;</span><span class="p">,</span> <span class="s1">&#39;pera&#39;</span><span class="p">,</span> <span class="s1">&#39;naranja&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">]</span>
+<span class="n">fruta</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">canasta</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;banana&#39;, &#39;naranja&#39;, &#39;pera&#39;, &#39;manzana&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;naranja&#39;</span> <span class="ow">in</span> <span class="n">fruta</span> <span class="c1"># verificación de pertenencia rápida</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="s1">&#39;yerba&#39;</span> <span class="ow">in</span> <span class="n">fruta</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+False
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span> <span class="c1"># letras únicas en a</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;alacazam&#39;</span><span class="p">)</span> <span class="c1"># letras únicas en b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;c&#39;, &#39;d&#39;, &#39;r&#39;, &#39;b&#39;, &#39;a&#39;}
+{&#39;c&#39;, &#39;l&#39;, &#39;z&#39;, &#39;m&#39;, &#39;a&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span> <span class="c1"># letras en a pero no en b</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;b&#39;, &#39;d&#39;, &#39;r&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span> <span class="o">|</span> <span class="n">b</span> <span class="c1"># letras en a o en b</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;l&#39;, &#39;m&#39;, &#39;r&#39;, &#39;z&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span> <span class="c1"># letras en a y en b</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;, &#39;c&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span> <span class="o">^</span> <span class="n">b</span> <span class="c1"># letras en a o b pero no en ambos</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;b&#39;, &#39;d&#39;, &#39;l&#39;, &#39;m&#39;, &#39;r&#39;, &#39;z&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../recursos/practicas/04-pr-listas-y-tuplas.html" class="btn btn-neutral float-right" title="Practica 04 - Listas y tuplas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../recursos/laboratorios/01-laboratorio.html" class="btn btn-neutral float-left" title="Laboratorio-01" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

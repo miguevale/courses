@@ -1,0 +1,1073 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Introducción al lenguaje Python\n",
+    "==========================\n",
+    "\n",
+    "90 min | Última modificación: Junio 07, 2020.\n",
+    "\n",
+    "## Acerca de Python\n",
+    "\n",
+    "Python es sin duda alguna uno de los lenguajes de programación más populares que existen hoy en día. En comparación con otros lenguajes de programación, Python presume de tener una curva de aprendizaje pequeña y un gran potencial, ya que hablamos de un lenguaje con el que es posible realizar tareas de todo tipo, como por ejemplo:\n",
+    "\n",
+    "* Desarrollo de aplicaciones web\n",
+    "* Inteligencia artificial\n",
+    "* Automatización de tareas\n",
+    "* Análisis avanzado de datos\n",
+    "\n",
+    "\n",
+    "<div align=\"center\"><img src=\"../images/Python_logo.png\" alt=\"Drawing\" style=\"width: 500px;\"/></div>\n",
+    "<div style=\"text-align: center\">Lenguaje de programación Python</div>\n",
+    "\n",
+    "\n",
+    "Este lenguaje fue creado a principios de los noventa por Guido van Rossum en los Países Bajos.  \n",
+    "Es relativamente joven (Fortran 1957, Pascal 1970, C 1972, Modula-2 1978, Java 1991).  \n",
+    "Es software libre, y está implementado en todas las plataformas y sistemas operativos habituales.\n",
+    "\n",
+    "<div align=\"center\"><img src=\"../images/Guido_van_Rossum.jpg\" alt=\"Drawing\" style=\"width: 200px;\"/></div>\n",
+    "<div style=\"text-align: center\">Guido van Rossum en 2006 </div>\n",
+    "\n",
+    "### Open source\n",
+    "\n",
+    "Python se desarrolla bajo una licencia de Open source o código abierto aprobada por OSI, por lo que se puede\n",
+    "usar y distribuir libremente, incluso para uso comercial.  \n",
+    "La licencia de Python es administrada por Python Software Foundation.\n",
+    "\n",
+    "### Aplicaciones\n",
+    "\n",
+    "El Python Package Index (PyPI) o en español significa Índice de paquetes de Python alberga miles de módulos\n",
+    "de terceros para Python.\n",
+    "\n",
+    "Tanto la biblioteca estándar de Python como los módulos aportados por la comunidad permiten infinitas posibilidades.\n",
+    "\n",
+    "* Desarrollo web e Internet.\n",
+    "* Científico y numérico.\n",
+    "* Educación.\n",
+    "* Desarrollo de software\n",
+    "* Aplicaciones de negocio.\n",
+    "\n",
+    "\n",
+    "[Ver mas](https://www.python.org/about/apps/)\n",
+    "\n",
+    "## Características\n",
+    "\n",
+    "Se trata de un lenguaje open source en el que destaca su legibilidad. El código es limpio y ordenado, lo cual convierte a Python en un lenguaje cómodo de leer y escribir. En definitiva: **un lenguaje de programación fácil de entender y aprender**.\n",
+    "\n",
+    "Al contrario que otros lenguajes de programación como C o Java, **Python es un lenguaje interpretado**, lo que significa que no es necesario compilar el código de Python antes de ejecutarlo. El intérprete irá analizando y ejecutando el código línea por línea.\n",
+    "\n",
+    "Otra de las principales características de Python es que es que es un **lenguaje de programación dinámicamente tipado**, es decir, el programador no tiene que declarar el tipo de las variables si no que este se deduce automáticamente en el tiempo de ejecución.\n",
+    "\n",
+    "```python\n",
+    "# La variable \"edad\" guarda el valor como integer\n",
+    "edad = 25\n",
+    "print(\"La variable 'edad' es de tipo: \" + str(type(edad)))\n",
+    "# Ahora \"edad\" guarda un string\n",
+    "edad = \"Tengo 25 años\"\n",
+    "print(\"La variable 'edad' es de tipo: \" + str(type(edad)))\n",
+    "```\n",
+    "\n",
+    "Por último, comentar que una de las mayores ventajas de este lenguaje de programación orientado\n",
+    "a objetos es la extensa variedad de liberías y frameworks disponibles para cualquier propósito, lo\n",
+    "cual hace que Python sea la opción perfecta para el desarrollo de aplicaciones de cualquier tipo.\n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Instalación de Anaconda\n",
+    "\n",
+    "Para el desarrollo del curso de introducción a la ciencia de datos necesitarás tener listo tu ambiente de desarrollo local, en tu computadora de escritorio o portátil. En este tutorial explicaremos una manera sencilla de configurar Anaconda Navigator  para poder utilizar los Jupyter Notebook como ambiente de aprendizaje de programación como un Científico de Datos.\n",
+    "\n",
+    "<div align=\"center\"><img src=\"../images/logo.png\" alt=\"Drawing\" style=\"width: 500px;\"/></div>\n",
+    "\n",
+    "\n",
+    "### ¿Por qué instalar Python y Anaconda en mi ordenador?\n",
+    "\n",
+    "Python es un lenguaje sencillo, rápido y liviano y es ideal para aprender, experimentar, practicar y trabajar en ciencia de datos.\n",
+    "\n",
+    "Utilizaremos la Suite de Anaconda que nos facilitará la tarea de instalar el ambiente e incluirá las Jupyter Notebooks, que es una aplicación que nos ayudará a hacer paso a paso ejercicios de ciencia de datos, crear visualizaciones de datos y escribir comentarios tal como si se tratase de un cuaderno de notas del colegio o la universidad.\n",
+    "\n",
+    "Esta Suite es multiplataforma y se puede utilizar para Windows, Linux y Macintosh. En mi caso descargaré la versión para Windows, pero para otro sistema operativo será similar.\n",
+    "\n",
+    "### Paso 1 – Descargar Anaconda\n",
+    "\n",
+    "*En este paso veremos como descargar anaconda a nuestro disco y obtener esta suite científica de Python*\n",
+    "\n",
+    "Nos dirigimos a la [Home de Anaconda][1] e iremos a la sección de [Download][2] (descargas)\n",
+    "\n",
+    "Elegimos nuestra plataforma: Windows, Mac o Linux (en mi caso seleccionaré la de Windows)\n",
+    "\n",
+    "<div align=\"center\"><img src=\"../images/anaconda.jpg\" alt=\"Drawing\" style=\"width: 1000px;\"/></div>\n",
+    "\n",
+    "Atención: Elegir la versión de Python 3.7 (**y no la de 2.7**) y seleccionar el instalador Gráfico (Graphical Installer)\n",
+    "\n",
+    "Con esto guardaremos en nuestro disco duro un archivo con el nombre similar a *Anaconda3-2020.02-Windows-x86_64.exe*\n",
+    "\n",
+    "[1]: https://www.anaconda.com/\n",
+    "[2]: https://www.anaconda.com/products/individual\n",
+    "\n",
+    "\n",
+    "### Paso 2 – Instalar Anaconda\n",
+    "\n",
+    "* En este paso instalaremos la app en nuestro sistema. \n",
+    "> *Deberá tener permisos de Administrador si instala para todos los usuarios. De lo contrario, la instalación quedará solo para el usuario*.\n",
+    "\n",
+    "\n",
+    "* Ejecutamos el archivo que descargamos haciendo doble click.\n",
+    "\n",
+    "* Se abrirá un «Típico Wizard» de instalación [Ver Video tutorial de instalación][1].\n",
+    "\n",
+    "<div align=\"center\"><img src=\"../images/instalacion_1.jpg\" alt=\"Drawing\" style=\"width: 500px;\"/></div>\n",
+    "\n",
+    "* Seguiremos los pasos, podemos seleccionar instalación sólo para nuestro usuario, seleccionar la ruta en disco donde instalaremos y listo.\n",
+    "\n",
+    "* Al instalarse el tamaño total podrá superar 1Gb en disco.\n",
+    "\n",
+    "[1]: https://www.youtube.com/watch?edufilter=NULL&v=9qYoCbkd9cY\n",
+    "\n",
+    "\n",
+    "### Paso 3 – Iniciar y Actualizar Anaconda\n",
+    "En este paso comprobaremos que se haya instalado correctamente y verificar tener la versión más reciente.\n",
+    "\n",
+    "Anaconda viene con una suite de herramientas gráficas llamada «Anaconda Navigator». Iniciemos la aplicación y veremos una pantalla como esta:\n",
+    "    \n",
+    "\n",
+    "<div align=\"center\"><img src=\"../images/inicio_anaconda.jpg\" alt=\"Drawing\" style=\"width: 1000px;\"/></div>\n",
+    "\n",
+    "### Material complementario\n",
+    "* [Installation](https://docs.anaconda.com/anaconda/install/)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Tu primer programa\n",
+    "\n",
+    "En informática, un programa **Hola Mundo** es el que imprime el texto *«¡Hola, Mundo!»* en un dispositivo de\n",
+    "visualización, en la mayoría de los casos una pantalla de monitor. Este programa suele ser usado como introducción\n",
+    "al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se lo considera fundamental desde\n",
+    "el punto de vista didáctico.\n",
+    "\n",
+    "El *Hola Mundo* se caracteriza por su sencillez, especialmente cuando se ejecuta en una interfaz de línea de comandos.\n",
+    "En interfaces gráficas la creación de este programa requiere de más pasos.\n",
+    "\n",
+    "El programa *Hola Mundo* también puede ser útil como prueba de configuración para asegurar que el compilador,\n",
+    "el entorno de desarrollo y el entorno de ejecución estén instalados correctamente y funcionando.\n",
+    "\n",
+    "### ¡Hola, Mundo!\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hola Mundo\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Hola Mundo\");"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Sintaxis\n",
+    "\n",
+    "### Indentación\n",
+    "Un aspecto muy importante a mencionar antes de comenzar a programar en Python es el hecho de que Python utiliza la indentación (también conocida como sangría, tabulación o espaciado) para delimitar los bloques de código. La indentación estándar de Python requiere una tabulación de 4 espacios:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "El valor de x es 5.\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 5\n",
+    "if x == 5:\n",
+    "    # tabulación de 4 espacios\n",
+    "    print(\"El valor de x es 5.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "En caso contrario, al ejecutar nuestro código recibiremos un error como el siguiente\n",
+    "```Python\n",
+    "IndentationError: expected an indented block\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Comentarios\n",
+    "\n",
+    "Es posible agregar comentarios a sus scripts de Python.\n",
+    "Los comentarios son importantes para asegurarse que usted y otros puedan entender de qué se trata su código.\n",
+    "\n",
+    "Para agregar comentarios a su script Python, puede usar la **#** etiqueta. \n",
+    "Estos comentarios no se ejecutan como código Python, por lo que no influirán en su resultado. \n",
+    "Como ejemplo, tome el comentario en la celda abajo **# Division**; se ignora por completo durante la ejecución."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Division\n",
+    "print(1/2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "\n",
+    "```python\n",
+    "Encima del  print(7 + 10), agregue el comentario # Suma\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "17\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Suma\n",
+    "print(7 + 10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Ayudas\n",
+    "Puede solicitar la ayudar del interprete de Python, ejecutando:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Help on package pandas:\n",
+      "\n",
+      "NAME\n",
+      "    pandas\n",
+      "\n",
+      "DESCRIPTION\n",
+      "    pandas - a powerful data analysis and manipulation library for Python\n",
+      "    =====================================================================\n",
+      "    \n",
+      "    **pandas** is a Python package providing fast, flexible, and expressive data\n",
+      "    structures designed to make working with \"relational\" or \"labeled\" data both\n",
+      "    easy and intuitive. It aims to be the fundamental high-level building block for\n",
+      "    doing practical, **real world** data analysis in Python. Additionally, it has\n",
+      "    the broader goal of becoming **the most powerful and flexible open source data\n",
+      "    analysis / manipulation tool available in any language**. It is already well on\n",
+      "    its way toward this goal.\n",
+      "    \n",
+      "    Main Features\n",
+      "    -------------\n",
+      "    Here are just a few of the things that pandas does well:\n",
+      "    \n",
+      "      - Easy handling of missing data in floating point as well as non-floating\n",
+      "        point data.\n",
+      "      - Size mutability: columns can be inserted and deleted from DataFrame and\n",
+      "        higher dimensional objects\n",
+      "      - Automatic and explicit data alignment: objects can be explicitly aligned\n",
+      "        to a set of labels, or the user can simply ignore the labels and let\n",
+      "        `Series`, `DataFrame`, etc. automatically align the data for you in\n",
+      "        computations.\n",
+      "      - Powerful, flexible group by functionality to perform split-apply-combine\n",
+      "        operations on data sets, for both aggregating and transforming data.\n",
+      "      - Make it easy to convert ragged, differently-indexed data in other Python\n",
+      "        and NumPy data structures into DataFrame objects.\n",
+      "      - Intelligent label-based slicing, fancy indexing, and subsetting of large\n",
+      "        data sets.\n",
+      "      - Intuitive merging and joining data sets.\n",
+      "      - Flexible reshaping and pivoting of data sets.\n",
+      "      - Hierarchical labeling of axes (possible to have multiple labels per tick).\n",
+      "      - Robust IO tools for loading data from flat files (CSV and delimited),\n",
+      "        Excel files, databases, and saving/loading data from the ultrafast HDF5\n",
+      "        format.\n",
+      "      - Time series-specific functionality: date range generation and frequency\n",
+      "        conversion, moving window statistics, date shifting and lagging.\n",
+      "\n",
+      "PACKAGE CONTENTS\n",
+      "    _config (package)\n",
+      "    _libs (package)\n",
+      "    _testing\n",
+      "    _typing\n",
+      "    _version\n",
+      "    api (package)\n",
+      "    arrays (package)\n",
+      "    compat (package)\n",
+      "    conftest\n",
+      "    core (package)\n",
+      "    errors (package)\n",
+      "    io (package)\n",
+      "    plotting (package)\n",
+      "    stats (package)\n",
+      "    testing\n",
+      "    tests (package)\n",
+      "    tseries (package)\n",
+      "    util (package)\n",
+      "\n",
+      "SUBMODULES\n",
+      "    _hashtable\n",
+      "    _lib\n",
+      "    _tslib\n",
+      "    offsets\n",
+      "\n",
+      "CLASSES\n",
+      "    builtins.object\n",
+      "        Panel\n",
+      "        SparseDataFrame\n",
+      "        SparseSeries\n",
+      "        __DatetimeSub\n",
+      "        __SparseArraySub\n",
+      "    \n",
+      "    class Panel(builtins.object)\n",
+      "     |  Data descriptors defined here:\n",
+      "     |  \n",
+      "     |  __dict__\n",
+      "     |      dictionary for instance variables (if defined)\n",
+      "     |  \n",
+      "     |  __weakref__\n",
+      "     |      list of weak references to the object (if defined)\n",
+      "    \n",
+      "    SparseArray = class __SparseArraySub(builtins.object)\n",
+      "     |  Methods defined here:\n",
+      "     |  \n",
+      "     |  emit_warning(dummy=0)\n",
+      "     |  \n",
+      "     |  ----------------------------------------------------------------------\n",
+      "     |  Static methods defined here:\n",
+      "     |  \n",
+      "     |  __new__(cls, *args, **kwargs)\n",
+      "     |      Create and return a new object.  See help(type) for accurate signature.\n",
+      "     |  \n",
+      "     |  ----------------------------------------------------------------------\n",
+      "     |  Data descriptors defined here:\n",
+      "     |  \n",
+      "     |  __dict__\n",
+      "     |      dictionary for instance variables (if defined)\n",
+      "     |  \n",
+      "     |  __weakref__\n",
+      "     |      list of weak references to the object (if defined)\n",
+      "    \n",
+      "    class SparseDataFrame(builtins.object)\n",
+      "     |  Data descriptors defined here:\n",
+      "     |  \n",
+      "     |  __dict__\n",
+      "     |      dictionary for instance variables (if defined)\n",
+      "     |  \n",
+      "     |  __weakref__\n",
+      "     |      list of weak references to the object (if defined)\n",
+      "    \n",
+      "    class SparseSeries(builtins.object)\n",
+      "     |  Data descriptors defined here:\n",
+      "     |  \n",
+      "     |  __dict__\n",
+      "     |      dictionary for instance variables (if defined)\n",
+      "     |  \n",
+      "     |  __weakref__\n",
+      "     |      list of weak references to the object (if defined)\n",
+      "    \n",
+      "    datetime = class __DatetimeSub(builtins.object)\n",
+      "     |  Methods defined here:\n",
+      "     |  \n",
+      "     |  emit_warning(dummy=0)\n",
+      "     |  \n",
+      "     |  ----------------------------------------------------------------------\n",
+      "     |  Static methods defined here:\n",
+      "     |  \n",
+      "     |  __new__(cls, *args, **kwargs)\n",
+      "     |      Create and return a new object.  See help(type) for accurate signature.\n",
+      "     |  \n",
+      "     |  ----------------------------------------------------------------------\n",
+      "     |  Data descriptors defined here:\n",
+      "     |  \n",
+      "     |  __dict__\n",
+      "     |      dictionary for instance variables (if defined)\n",
+      "     |  \n",
+      "     |  __weakref__\n",
+      "     |      list of weak references to the object (if defined)\n",
+      "\n",
+      "DATA\n",
+      "    IndexSlice = <pandas.core.indexing._IndexSlice object>\n",
+      "    NA = <NA>\n",
+      "    NaT = NaT\n",
+      "    __docformat__ = 'restructuredtext'\n",
+      "    __git_version__ = '3adf3340453d6704d4a2cb47058214cc697a7d29'\n",
+      "    describe_option = <pandas._config.config.CallableDynamicDoc object>\n",
+      "    get_option = <pandas._config.config.CallableDynamicDoc object>\n",
+      "    np = <pandas.__numpy object>\n",
+      "    options = <pandas._config.config.DictWrapper object>\n",
+      "    reset_option = <pandas._config.config.CallableDynamicDoc object>\n",
+      "    set_option = <pandas._config.config.CallableDynamicDoc object>\n",
+      "\n",
+      "VERSION\n",
+      "    1.0.3\n",
+      "\n",
+      "FILE\n",
+      "    c:\\users\\dnaja\\anaconda3\\lib\\site-packages\\pandas\\__init__.py\n",
+      "\n",
+      "\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\dnaja\\Anaconda3\\lib\\inspect.py:441: FutureWarning: The pandas.datetime class is deprecated and will be removed from pandas in a future version. Import from datetime instead.\n",
+      "  srch_obj = srch_cls.__getattr__(cls, name)\n",
+      "C:\\Users\\dnaja\\Anaconda3\\lib\\pydoc.py:216: FutureWarning: The pandas.datetime class is deprecated and will be removed from pandas in a future version. Import from datetime instead.\n",
+      "  fields = getattr(object, '_fields', [])\n"
+     ]
+    }
+   ],
+   "source": [
+    "help(pd)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "pd?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Puede consultar los detalles acerca del ‘objeto’ para esto use como ejemplo la librería pd ejecutando el siguiente\n",
+    "comando:"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Documentación de la librería\n",
+    "\n",
+    "Escriba la librería pd. y luego escribe dos underscore y presione dos veces la tecla tabular para usar la completado\n",
+    "automático del interprete al estilo de completación de lineas de comandos en el shell UNIX/Linux para ayudar a\n",
+    "la introspección del lenguaje y sus librerías."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "pandas - a powerful data analysis and manipulation library for Python\n",
+      "=====================================================================\n",
+      "\n",
+      "**pandas** is a Python package providing fast, flexible, and expressive data\n",
+      "structures designed to make working with \"relational\" or \"labeled\" data both\n",
+      "easy and intuitive. It aims to be the fundamental high-level building block for\n",
+      "doing practical, **real world** data analysis in Python. Additionally, it has\n",
+      "the broader goal of becoming **the most powerful and flexible open source data\n",
+      "analysis / manipulation tool available in any language**. It is already well on\n",
+      "its way toward this goal.\n",
+      "\n",
+      "Main Features\n",
+      "-------------\n",
+      "Here are just a few of the things that pandas does well:\n",
+      "\n",
+      "  - Easy handling of missing data in floating point as well as non-floating\n",
+      "    point data.\n",
+      "  - Size mutability: columns can be inserted and deleted from DataFrame and\n",
+      "    higher dimensional objects\n",
+      "  - Automatic and explicit data alignment: objects can be explicitly aligned\n",
+      "    to a set of labels, or the user can simply ignore the labels and let\n",
+      "    `Series`, `DataFrame`, etc. automatically align the data for you in\n",
+      "    computations.\n",
+      "  - Powerful, flexible group by functionality to perform split-apply-combine\n",
+      "    operations on data sets, for both aggregating and transforming data.\n",
+      "  - Make it easy to convert ragged, differently-indexed data in other Python\n",
+      "    and NumPy data structures into DataFrame objects.\n",
+      "  - Intelligent label-based slicing, fancy indexing, and subsetting of large\n",
+      "    data sets.\n",
+      "  - Intuitive merging and joining data sets.\n",
+      "  - Flexible reshaping and pivoting of data sets.\n",
+      "  - Hierarchical labeling of axes (possible to have multiple labels per tick).\n",
+      "  - Robust IO tools for loading data from flat files (CSV and delimited),\n",
+      "    Excel files, databases, and saving/loading data from the ultrafast HDF5\n",
+      "    format.\n",
+      "  - Time series-specific functionality: date range generation and frequency\n",
+      "    conversion, moving window statistics, date shifting and lagging.\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "print (pd.__doc__)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "pandas\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(pd.__name__)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## La librería estándar de Python"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La librería estándar es un conjunto de módulos y paquetes que se distribuyen junto con Python. Muchas de las operaciones más comúnes de la programación diaria ya están implementadas en ella, de modo que podemos concentrarnos en lo que realmente nos ocupa. Encontrarás la lista de todos los módulos y paquetes junto con su documentación en [The Python Standard Library](https://docs.python.org/3/library/)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "\n",
+    "# Raíz cuadrada.\n",
+    "print(math.sqrt(16))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "O bien random, que implementa funciones para trabajar con números aleatorios."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n",
+      "Java\n"
+     ]
+    }
+   ],
+   "source": [
+    "from random import randint, choice\n",
+    "\n",
+    "# Número aleatorio entre 1 y 10.\n",
+    "print(randint(1, 10))\n",
+    "# Retorna un elemento aleatorio de la lista.\n",
+    "print(choice([\"Python\", \"C\", \"C++\", \"Java\"]))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Modulos Python más usados**\n",
+    "* os\n",
+    "* datetime\n",
+    "* time\n",
+    "* sys\n",
+    "* math\n",
+    "* random\n",
+    "* pandas\n",
+    "* numpy"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Instalando módulos de terceros"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La colección de módulos y paquetes desarrollados por la enorme comunidad de programadores de Python en todo el mundo está alojada en [PyPI](https://pypi.org/) (Python Package Index).\n",
+    "\n",
+    "Cada uno de estos paquetes está identificado por un nombre. Para instalar alguno de ellos, utilizaremos una herramienta llamada pip que se incluye con la instalación de Python. El comando es el siguiente."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pip install paquete"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Por ejemplo, para instalar pandas, el paquete más famoso de Python que permite interactuar con DataFrame:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pip install pandas"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Por último confirma que el paquete se ha instalado correctamente desde la consola interactiva."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Buenas prácticas de programación de Python\n",
+    "\n",
+    "Si programas con Python o estás aprendiendo el lenguage de programación Python estos mandamientos te van a ser muy útiles:\n",
+    "\n",
+    "\n",
+    " 1. Los nombres de los ficheros deben escribirse en minúscula. Ejemplo:\n",
+    "\n",
+    "```python\n",
+    "hola.py calculadora.py\n",
+    "```\n",
+    "\n",
+    "2. Las llamadas a funciones se escriben en minúscula. Ejemplo:\n",
+    "\n",
+    "```python\n",
+    "print() input()\n",
+    "```\n",
+    "\n",
+    "3. Las variables se escriben en minúscula y, de estar formadas por varias palabras, éstas van unidas por guiones bajos. Ejemplo:\n",
+    "\n",
+    "```python\n",
+    "balones piezas_de_repuesto\n",
+    "```\n",
+    "\n",
+    "4. Los tipos de dato se escriben en minúscula. Ejemplo:\n",
+    "\n",
+    "```python\n",
+    "str    int\n",
+    "```\n",
+    "\n",
+    "5. Pon un espacio después de cada coma. Ejemplo:\n",
+    "\n",
+    "```python\n",
+    "print('Tienes', num_zapatos, 'zapatos y', num_blusas, 'blusas.')\n",
+    "```\n",
+    "\n",
+    "6. Pon un espacio antes y después de cada operador. Ejemplo:\n",
+    "\n",
+    "```python\n",
+    "8 + 2 total += 6\n",
+    "```\n",
+    "\n",
+    "7. Indenta con 4 espacios; nunca uses el tabulador. Ejemplo:\n",
+    "\n",
+    "```python\n",
+    "if nombre == 'Ángel':\n",
+    "    print('Hola', nombre)\n",
+    "1234\n",
+    "```\n",
+    "\n",
+    "8. Escribe abundantes comentarios en tu código, describiendo cada detalle, para hacer que sea lo más claro y legible posible.\n",
+    "\n",
+    "Algunas de las recomendaciones respecto a los estilos de programación de python están recogidas en la [Guía oficial de Estilos PEP8 de Python][1].\n",
+    "\n",
+    "[1]: https://www.python.org/dev/peps/pep-0008/\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Operadores y expresiones\n",
+    "\n",
+    "Los operadores son símbolos especiales que permiten realizar operaciones aritméticas o lógicas.\n",
+    "\n",
+    "## Operadores aritméticos\n",
+    "\n",
+    "Los operadores aritméticos se utilizan para realizar operaciones matemáticas (suma, resta, multiplicación,…).\n",
+    "La tabla siguiente contiene todos los operadores aritméticos permitidos por Python:\n",
+    "\n",
+    "\n",
+    "Operador | Ejemplo | Significado\n",
+    ":-------:|:-------:|:-----------\n",
+    "+ | a + b | Suma\n",
+    "- | a - b | Resta\n",
+    "- | -a | Negación (asignar valor negativo)\n",
+    "* | a * b | Multiplicación\n",
+    "/ | a / b | División\n",
+    "% | a % b | Módulo (resto de la división)\n",
+    "// | a //  b | División entera\n",
+    "** | a ** b | Exponente"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "7\n",
+      "3\n",
+      "10\n",
+      "2.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 5\n",
+    "y = 2\n",
+    "print(x + y) # 7\n",
+    "print(x - y) # 3\n",
+    "print(x * y) # 10\n",
+    "print(x / y) # 2.5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Operadores lógicos\n",
+    "\n",
+    "Los operadores lógicos ```and, or,``` y ```not``` evalúan valores devolviendo también True o False como resultado:\n",
+    "\n",
+    "Operador | Ejemplo | Significado\n",
+    ":-------:|:-------:|:------------\n",
+    "and | a and b | True si a y b son True\n",
+    "or | a or b | True si a o b son true\n",
+    "not | not b | True si b es falso\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Python como calculadora\n",
+    "\n",
+    "Python es perfectamente adecuado para hacer cálculos básicos. Además de la suma, resta, multiplicación y división, también hay soporte para operaciones más avanzadas como:\n",
+    "\n",
+    "* **Exponenciación**: (******). Este operador eleva el número a su izquierda a la potencia del número a su derecha. Por ejemplo 4**2 dará 16.\n",
+    "\n",
+    "* **Modulo**: (**%**). Este operador devuelve el residuo de la división del número a la izquierda por el número a su derecha. Por ejemplo 18 % 7 igual 4.\n",
+    "\n",
+    "El código en la celda de abajo da algunos ejemplos."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n",
+      "0\n",
+      "15\n",
+      "5.0\n",
+      "4\n",
+      "16\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Addition, subtraction\n",
+    "print(5 + 5)\n",
+    "print(5 - 5)\n",
+    "\n",
+    "# Multiplication, division, modulo, and exponentiation\n",
+    "print(3 * 5)\n",
+    "print(10 / 2)\n",
+    "print(18 % 7)\n",
+    "print(4 ** 2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Suponga que tiene $ 100, que puede invertir con un rendimiento del 10 % anual.   \n",
+    "Después de un año, es (***100 * 1.1 = 110***) dólares, y después de dos años es (***100 * 1.1 * 1.1 = 121***). Agregue código para calcular cuánto dinero obtiene después de 7 años e imprima el resultado.  \n",
+    "***100 × 1.1 = 110*** dólares, y después de dos años es  \n",
+    "***100 × 1.1 × 1.1 = 121***. \n",
+    "\n",
+    "**Agregue código para calcular cuánto dinero obtiene después de 7 años e imprima el resultado.**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "194.87171000000012\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(100*(1.1**7))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Un caracter de subrayado _ se usa para indicar el resultado del calculo anterior. Dos caracteres __ indican el penúltimo resultado; tres caracteres _ indican el antepenúltimo resultado. Igualmente, se puede usan In[1] para obtener el contenido de la primera celda, In[2] para la segunda y así sucesivamente. De igual forma, los resultados pueden obtenerse como Out[1], Out[2], etc."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.1"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "1.1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2.2"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "1.1 + _"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3.3000000000000003"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "1.1 + _"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3.3"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "round(_, 2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.1"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "Out[6]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'1.1 + _'"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "In[7]"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

@@ -1,0 +1,613 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Estructuras de control\n",
+    "\n",
+    "90 min | Última modificación: Junio 07, 2020.\n",
+    "\n",
+    "## Condicionales\n",
+    "\n",
+    "Las estructuras de control se utilizan para ejecutar bloques de código en función de condiciones.\n",
+    "\n",
+    "### Estructura if - else\n",
+    "\n",
+    "Se evalúa la condición especificada en la sentencia ```if``` y en caso de cumplirse se ejecutará el bloque de código indentado. En caso de que el resultado de la condición sea ```False```, no el bloque especificado no se ejecutará.\n",
+    "\n",
+    "La identación usando cuatro espacios en blanco es el mecanismo definido en Python para delimitar el cuerpo asociado a las estructuras de control y a las funciones de usuario."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Es mayor que uno\n"
+     ]
+    }
+   ],
+   "source": [
+    "numero = 5\n",
+    "if numero > 1:\n",
+    "    print(\"Es mayor que uno\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Es posible especificar un bloque de código que se ejecute en caso de que la condición no se cumpla:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Es menor o igual que diez\n"
+     ]
+    }
+   ],
+   "source": [
+    "numero = 2\n",
+    "if numero > 10:\n",
+    "    print(\"Es mayor que diez\")\n",
+    "else:\n",
+    "    print(\"Es menor o igual que diez\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "También podemos comprobar más condiciones mediante la expresión ```elif```. En este caso, se seguirán comprobando todas las condiciones elif hasta que una de ellas se cumpla. En caso contrario, se ejecutará el bloque de código dentro de else (si lo hubiera).\n",
+    "\n",
+    "El uso del caracter ```:``` es obligatorio."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "El número está entre el 3 y el 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# este código es mucho más dificil de leer.\n",
+    "numero = 5\n",
+    "if numero < 3:\n",
+    "    print(\"Es menor que 3\")\n",
+    "else:\n",
+    "    if numero < 6:\n",
+    "        print(\"El número está entre el 3 y el 5\")\n",
+    "    else:\n",
+    "        print(\"Es mayor o igual a 6\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "El número está entre el 3 y el 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# código mucho más legible\n",
+    "numero = 5\n",
+    "if numero < 3:\n",
+    "    print(\"Es menor que 3\")\n",
+    "elif numero < 6:\n",
+    "    print(\"El número está entre el 3 y el 5\")\n",
+    "else:\n",
+    "    print(\"Es mayor o igual a 6\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Bucles\n",
+    "\n",
+    "Los bucles permiten ejecutar un bloque de código tantas veces como queramos.\n",
+    "\n",
+    "### Estructura while\n",
+    "\n",
+    "El ciclo ```while``` es como una declaración ```if``` repetitiva. El código se ejecuta una y otra vez, siempre que la condición sea ```True```. Echa otro vistazo a su receta.\n",
+    "\n",
+    "```python\n",
+    "while condition :\n",
+    "    expression\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "fin\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 0\n",
+    "while n < 5:  # se ejecuta mientras se cumpla que n < 5\n",
+    "    print(n)\n",
+    "    n = n + 1\n",
+    "\n",
+    "print('fin')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Comandos break, continue y pass\n",
+    "\n",
+    "* El comando ```break``` causa la salida del cuerpo del ciclo ```while/for```.  \n",
+    "* El comando ```continue``` causa que se ejecute una nueva iteración del ciclo ```while/for``` sin pasar por el resto del código que hace parte del cuerpo del ciclo ```while/for```. \n",
+    "* La sentencia ```pass``` no hace nada. Se puede usar cuando una sentencia es requerida por la sintáxis pero el programa no requiere ninguna acción.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "fin\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 0\n",
+    "while n < 5:\n",
+    "    n = n + 1\n",
+    "    if n == 3:\n",
+    "        break\n",
+    "        print(n)\n",
+    "    else:\n",
+    "        print(n)\n",
+    "print('fin')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "4\n",
+      "5\n",
+      "fin\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 0\n",
+    "while n < 5:\n",
+    "    n = n + 1\n",
+    "    if n == 3:\n",
+    "        continue\n",
+    "        print(n)\n",
+    "    else:\n",
+    "        print(n)\n",
+    "print('fin')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "fin\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 0\n",
+    "while n < 5:\n",
+    "    n = n + 1\n",
+    "    if n == 3:\n",
+    "        pass \n",
+    "        print(n)\n",
+    "    else:\n",
+    "        print(n)\n",
+    "print('fin')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Estructura for\n",
+    "\n",
+    "La sentencia ```for``` permite iterar por secuencias (listas, tuplas, cadenas de caracteres,…)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ane\n",
+      "Mikel\n",
+      "Unai\n",
+      "Lorea\n"
+     ]
+    }
+   ],
+   "source": [
+    "alumnos = [\"Ane\", \"Mikel\", \"Unai\", \"Lorea\"]\n",
+    "for alumno in alumnos:\n",
+    "    print(alumno)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "También es posible utilizarlo para recorrer un string:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A\n",
+      "p\n",
+      "r\n",
+      "e\n",
+      "n\n",
+      "d\n",
+      "i\n",
+      "e\n",
+      "n\n",
+      "d\n",
+      "o\n",
+      " \n",
+      "P\n",
+      "y\n",
+      "t\n",
+      "h\n",
+      "o\n",
+      "n\n"
+     ]
+    }
+   ],
+   "source": [
+    "frase = \"Aprendiendo Python\"\n",
+    "for c in frase:\n",
+    "    print(c)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Uso del ```break```:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n",
+      "4\n",
+      "8\n",
+      "12\n"
+     ]
+    }
+   ],
+   "source": [
+    "numeros = [4,8,2,7,1,9,3,5]\n",
+    "total = 0\n",
+    "\n",
+    "for n in numeros:\n",
+    "    total += n\n",
+    "    print(n)\n",
+    "    print(total)\n",
+    "    if total > 10:\n",
+    "        break"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Uso del ```continue```:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n",
+      "Numero par, no lo sumamos\n",
+      "8\n",
+      "Numero par, no lo sumamos\n",
+      "2\n",
+      "Numero par, no lo sumamos\n"
+     ]
+    }
+   ],
+   "source": [
+    "numeros = [4,8,2,7,1,9,3,5]\n",
+    "total = 0\n",
+    "\n",
+    "# solo sumar los números impares\n",
+    "for num in numeros:\n",
+    "    if num % 2 == 0:\n",
+    "        print(num)\n",
+    "        print(\"Numero par, no lo sumamos\")\n",
+    "        continue\n",
+    "    total += n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Bucle while/for con else\n",
+    "\n",
+    "Los ciclos creados usando los comandos ```for``` y ```while``` pueden contener un comando ```else```. En el caso de los ciclos ```for```, el cuerpo del ```else``` se ejecuta cuando se termina el ciclo; para los ciclos ```while```, el cuerpo del ```else``` se ejecuta cuando el condicional se hace ```False```."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "cuerpo else\n",
+      "fin\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 0\n",
+    "while n < 5:  # se ejecuta mientras se cumpla que n < 5\n",
+    "    print(n)\n",
+    "    n = n + 1\n",
+    "else:\n",
+    "    print('cuerpo else')\n",
+    "\n",
+    "print('fin')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "cuerpo else\n",
+      "fin\n"
+     ]
+    }
+   ],
+   "source": [
+    "for n in range(5):  # se ejecuta mientras se cumpla que n < 5\n",
+    "    print(n)\n",
+    "    n = n + 1\n",
+    "else:\n",
+    "    print('cuerpo else')\n",
+    "\n",
+    "print('fin')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### La función range()\n",
+    "\n",
+    "La función ```range([start,] stop [, step])``` devuelve una secuencia de números. Es por ello que se utiliza de forma frecuente para iterar:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(3):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "También podemos indicar el inicio, fin y step:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Números del 5 al 10\n",
+      "5, 6, 7, 8, 9, "
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Números del 5 al 10\")\n",
+    "for i in range(5, 10):\n",
+    "    print(i, end=', ')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Números impares del 1 al 10\n",
+      "1, 3, 5, 7, 9, "
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Números impares del 1 al 10\")\n",
+    "for i in range(1, 10, 2):\n",
+    "    print(i, end=', ')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Para iterar por una lista utilizando el índice, basta con combinarlo con la función ```len()```:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n",
+      "Ane\n",
+      "Mikel\n",
+      "Unai\n",
+      "Lorea\n"
+     ]
+    }
+   ],
+   "source": [
+    "alumnos = [\"Ane\", \"Mikel\", \"Unai\", \"Lorea\"]\n",
+    "print(len(alumnos))\n",
+    "for i in range(len(alumnos)):\n",
+    "    print(alumnos[i])"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

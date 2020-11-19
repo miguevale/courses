@@ -1,0 +1,814 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Práctica 02 - Asignación de Variable &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+    <link rel="next" title="Estructuras de control" href="../../python/03-estructuras-de-control.html" />
+    <link rel="prev" title="Variables y Tipos de datos" href="../../python/02-variables-y-tipos.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/repositorio.html">Repositorio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-01-introduccion">Sesión 01 - Introducción</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../python/02-variables-y-tipos.html">Variables y Tipos de datos</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Práctica 02 - Asignación de Variable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Cálculos-con-variables">Cálculos con variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Otros-tipos-de-variables">Otros tipos de variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Adivina-el-tipo">Adivina el tipo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Operaciones-con-otros-tipos">Operaciones con otros tipos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Conversión-de-tipo">Conversión de tipo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#¿Puede-Python-manejar-todo?">¿Puede Python manejar todo?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funciones-integradas">Funciones integradas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Métodos-de-string">Métodos de string</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-01">Laboratorio 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-05-diccionarios">Sesión 05 - Diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-06-funciones">Sesión 06 - Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-02">Laboratorio 02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-03">Laboratorio 03</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a> &raquo;</li>
+        
+      <li>Práctica 02 - Asignación de Variable</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/notebooks/recursos/practicas/02-pr-variables-y-tipos.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Práctica-02---Asignación-de-Variable">
+<h1>Práctica 02 - Asignación de Variable<a class="headerlink" href="#Práctica-02---Asignación-de-Variable" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>En Python, una variable le permite hacer referencia a un valor con un nombre. Para crear un uso variable <strong>=</strong>, como este ejemplo:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<p>Ahora puede utilizar el nombre de esta variable, <strong>x</strong> en lugar del valor real <strong>5</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">Nota</p>
+<p><strong>=</strong> en Python significa asignación, ¡no prueba la igualdad!</p>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Cree la variable <strong>ahorro</strong> con el valor de <em>100</em>.</p></li>
+<li><p>Echa un vistazo a esta variable escribiendo <strong>print(ahorro)</strong>.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Crea la variable ahorro</span>
+
+
+<span class="c1"># Imprimir ahorro</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="Cálculos-con-variables">
+<h2>Cálculos con variables<a class="headerlink" href="#Cálculos-con-variables" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>¿Recuerda cómo calculó el dinero con el que terminó después de 7 años de invertir $ 100? Hiciste algo como esto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="o">*</span> <span class="mf">1.1</span> <span class="o">**</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<p>En lugar de calcular con los valores reales, puede usar variables en su lugar. La variable ahorro que ha creado en el ejercicio anterior representa los $ 100 con los que comenzó. ¡Depende de usted crear una nueva variable para representar 1.1 y luego rehacer los cálculos!</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Cree la variable factor_crecimiento <strong>igual</strong> a 1.1.</p></li>
+<li><p>Cree la variable resultado <strong>igual</strong> a la cantidad de dinero que ahorró después de 7años.</p></li>
+<li><p>Imprima el valor de resultado.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># crea la variable ahorro</span>
+<span class="n">ahorro</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Crea la variable factor_crecimiento</span>
+
+
+<span class="c1"># Calcula el resultado</span>
+
+
+<span class="c1"># Imprime el resultado</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Otros-tipos-de-variables">
+<h2>Otros tipos de variables<a class="headerlink" href="#Otros-tipos-de-variables" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En el ejercicio anterior, trabajó con dos tipos de datos de Python:</p>
+<ul class="simple">
+<li><p><strong>int o entero</strong>: un número sin una parte fraccionaria. ahorro, con el valor 100, es un ejemplo de un entero.</p></li>
+<li><p><strong>float o coma flotante</strong>: un número que tiene una parte entera y una fracción, separadas por un punto. factor_crecimiento, con el valor 1.1, es un ejemplo de flotante.</p></li>
+</ul>
+<p>Además de los tipos de datos numéricos, hay otros dos tipos de datos muy comunes:</p>
+<ul class="simple">
+<li><p><strong>str o cadena</strong>: un tipo para representar texto. Puede usar comillas simples o dobles para construir una cadena.</p></li>
+<li><p><strong>bool o boolean</strong>: un tipo para representar valores lógicos. Solo puede ser <strong>True o False</strong> (¡la capitalización es importante!).</p></li>
+</ul>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Cree una nueva variable <em>desc</em> con el valor “interes compuesto”.</p></li>
+<li><p>Cree una nueva variable <em>utilidad</em> con el valor True.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create a variable desc</span>
+
+
+<span class="c1"># Create a variable utilidad</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Adivina-el-tipo">
+<h2>Adivina el tipo<a class="headerlink" href="#Adivina-el-tipo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para averiguar el tipo de un valor o una variable que se refiere a ese valor, puede usar la función type(). Supongamos que ha definido una variable <strong>a</strong>, pero se nos olvidó el tipo de esta variable. Para determinar el tipo de a, simplemente ejecute:</p>
+<p><strong>type(a)</strong></p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>¿Cuál es el tipo de dato para cada una de las siguientes variables: * ahorro * factor_crecimiento * desc * utilidad</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Imprime el tipo de ahorro</span>
+
+
+<span class="c1"># Imprime el tipo de facto_crecimiento</span>
+
+
+<span class="c1"># Imprime el tipo de desc</span>
+
+
+<span class="c1"># Imprime el tipo de utilidad</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Operaciones-con-otros-tipos">
+<h2>Operaciones con otros tipos<a class="headerlink" href="#Operaciones-con-otros-tipos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los diferentes tipos de datos se comportan de manera diferente en Python.</p>
+<p>Cuando suma dos cadenas, por ejemplo, obtendrá un comportamiento diferente que cuando suma dos enteros o dos booleanos.</p>
+<p>En la celda ya se han creado algunas variables con diferentes tipos. Depende de usted usarlos.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Calcule el producto de ahorro y factor_crecimiento. Almacene el resultado en <em>year1</em>.</p></li>
+<li><p>¿Cuál crees que será el tipo resultante? Descúbrelo imprimiendo el tipo de year1.</p></li>
+<li><p>Calcule la suma de desc y desc, almacene el resultado en una nueva variable <em>dobledesc</em>.</p></li>
+<li><p>Imprimir dobledesc. ¿Esperabas esto?</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ahorro</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">factor_crecimiento</span> <span class="o">=</span> <span class="mf">1.1</span>
+<span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;interes compuesto&quot;</span>
+
+<span class="c1"># Asigna el producto de ahorro y factor_crecimiento a year1</span>
+
+
+<span class="c1"># Imprime el tipo de year1</span>
+
+
+<span class="c1"># Asigna la suma de desc y desc a dobledesc</span>
+
+
+<span class="c1"># Imprime dobledesc</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Conversión-de-tipo">
+<h2>Conversión de tipo<a class="headerlink" href="#Conversión-de-tipo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Usar el operador <em>+</em> para pegar dos cadenas puede ser muy útil en la creación de mensajes personalizados.</p>
+<p>Supongamos, por ejemplo, que ha calculado el rendimiento de su inversión y desea resumir los resultados en una cadena. Suponiendo que la variable tipo entero <em>ahorro</em> y el flotante <em>resultado</em> están definidos, puede intentar algo como esto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yo empecé con $&quot;</span> <span class="o">+</span> <span class="n">ahorro</span> <span class="o">+</span> <span class="s2">&quot; y ahora tengo &quot;</span> <span class="o">+</span> <span class="n">resultado</span> <span class="o">+</span> <span class="s2">&quot;. Increíble!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Sin embargo, esto no funcionará, ya que no puede simplemente sumar cadenas y enteros / flotantes.</p>
+<p>Para corregir el error, deberá convertir explícitamente los tipos de datos de sus variables. Más específicamente, necesitará convertir un número en una cadena con ayuda de la función str().Por ejemplo, str(ahorro) convertirá la variable <em>ahorro</em> de tipo entero en una cadena.</p>
+<p>Funciones similares como <code class="docutils literal notranslate"><span class="pre">int(),</span> <span class="pre">float()</span> <span class="pre">y</span> <span class="pre">bool()</span></code> te ayudarán a convertir los valores de Python en cualquier tipo.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Presione Run Code para ejecutar el código. Intenta entender el mensaje de error.</p></li>
+<li><p>Arregle el código de modo que la impresión se ejecute sin errores; use la función str() para convertir las variables en cadenas.</p></li>
+<li><p>Convierta la variable pi_string a un flotante y almacene este flotante como una nueva variable, pi_float.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Definicion de ahorro y resultado</span>
+<span class="n">ahorro</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="mf">1.10</span> <span class="o">**</span> <span class="mi">7</span>
+
+<span class="c1"># Arregla la impresión</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yo empecé con $&quot;</span> <span class="o">+</span> <span class="n">ahorro</span> <span class="o">+</span> <span class="s2">&quot; y ahora tengo &quot;</span> <span class="o">+</span> <span class="n">resultado</span> <span class="o">+</span> <span class="s2">&quot;. Increíble!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Definicion de pi_string</span>
+<span class="n">pi_string</span> <span class="o">=</span> <span class="s2">&quot;3.1415926&quot;</span>
+
+<span class="c1"># Convierte pi_string en un flotante: pi_float</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="¿Puede-Python-manejar-todo?">
+<h2>¿Puede Python manejar todo?<a class="headerlink" href="#¿Puede-Python-manejar-todo?" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Ahora que sabe algo más sobre la combinación de diferentes fuentes de información, eche un vistazo a las cuatro expresiones de Python a continuación.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>¿Cuál de estos arrojará un error? ¡Siempre puede copiar y pegar cada código en las celdas de Jupyter para averiguarlo!</p>
+<ul class="simple">
+<li><p>“Puedo agregar enteros, como” + str(5) + » a strings.»</p></li>
+<li><p>“Digo” + (“Hey” * 2) + “Hey!”</p></li>
+<li><p>“La respuesta correcta a este ejercicio de opción múltiple es el número de respuest” + 2</p></li>
+<li><p>True + False</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Evalúe su respuesta</span>
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Funciones-integradas">
+<h2>Funciones integradas<a class="headerlink" href="#Funciones-integradas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Python ofrece un montón de funciones integradas para facilitarle la vida como científico de datos. Ya conoce dos de estas funciones: <code class="docutils literal notranslate"><span class="pre">print()</span></code> y <code class="docutils literal notranslate"><span class="pre">type()</span></code>. También ha utilizado las funciones <code class="docutils literal notranslate"><span class="pre">str()</span></code>, <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">bool()</span></code> y <code class="docutils literal notranslate"><span class="pre">float()</span></code> para cambiar entre los tipos de datos. Estas son funciones integradas también.</p>
+<p>Llamar a una función es fácil. Para obtener el tipo 3.0 y almacenar el resultado como una nueva variable, result puede usar lo siguiente:</p>
+<p><code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">type(3.0)</span></code> La receta general para llamar a funciones y guardar el resultado en una variable es así:</p>
+<p><code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">=</span> <span class="pre">function_name(input)</span></code></p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">print()</span></code> en combinación con <code class="docutils literal notranslate"><span class="pre">type()</span></code> para imprimir el tipo de <em>var1</em>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">len()</span></code> para obtener la longitud de la lista <em>var1</em>. Envuélvalo en una llamada <code class="docutils literal notranslate"><span class="pre">print()</span></code> para imprimirlo directamente.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">int()</span></code> para convertir <em>var2</em> a un entero. Almacene la salida como <em>out2</em>.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create variables var1 and var2</span>
+<span class="n">var1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Print out type of var1</span>
+
+
+<span class="c1"># Print out length of var1</span>
+
+
+<span class="c1"># Convert var2 to an integer: out2</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Métodos-de-string">
+<h2>Métodos de string<a class="headerlink" href="#Métodos-de-string" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las cadenas vienen con un montón de métodos. Siga las instrucciones de cerca para descubrir algunas de ellas. Si desea descubrirlos con más detalle, siempre puede escribir help(str) en python.</p>
+<p><em>place</em> Ya se ha creado una cadena para que experimente.</p>
+<p><strong>Actividad</strong></p>
+<ul class="simple">
+<li><p>Use el método <strong>upper()</strong> sobre <em>place</em> y almacene el resultado en <em>place_up</em>.</p></li>
+<li><p>Imprimir <em>place</em> y <em>place_up</em>. ¿Ambos cambiaron?</p></li>
+<li><p>Imprimir el número de ceros en la variable <em>place</em> llamando <strong>count()</strong> sobre <em>place</em> y pasando la carta ’o’como una entrada para el método. ¡Estamos hablando de la variable <em>place</em>, no de la palabra “place”!</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># string to experiment with: place</span>
+<span class="n">place</span> <span class="o">=</span> <span class="s2">&quot;poolhouse&quot;</span>
+
+<span class="c1"># Use upper() on place: place_up</span>
+<span class="n">place_up</span> <span class="o">=</span> <span class="n">place</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="c1"># Print out place and place_up</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">place</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">place_up</span><span class="p">)</span>
+
+<span class="c1"># Print out the number of o&#39;s in place</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">place</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+poolhouse
+POOLHOUSE
+3
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../python/03-estructuras-de-control.html" class="btn btn-neutral float-right" title="Estructuras de control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../python/02-variables-y-tipos.html" class="btn btn-neutral float-left" title="Variables y Tipos de datos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

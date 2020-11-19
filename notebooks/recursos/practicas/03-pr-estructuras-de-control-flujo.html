@@ -1,0 +1,763 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Práctica 03 - Estructuras de Control &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+    <link rel="next" title="Laboratorio-01" href="../laboratorios/01-laboratorio.html" />
+    <link rel="prev" title="Estructuras de control" href="../../python/03-estructuras-de-control.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/repositorio.html">Repositorio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-01-introduccion">Sesión 01 - Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../python/03-estructuras-de-control.html">Estructuras de control</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Práctica 03 - Estructuras de Control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#if">if</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Agregue-else">Agregue else</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personalizar-más:-elif">Personalizar más: elif</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Bucle-while-básico">Bucle while básico</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Bucle while básico</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Agregar-condicionales">Agregar condicionales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-01">Laboratorio 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-05-diccionarios">Sesión 05 - Diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-06-funciones">Sesión 06 - Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-02">Laboratorio 02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-03">Laboratorio 03</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a> &raquo;</li>
+        
+      <li>Práctica 03 - Estructuras de Control</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/notebooks/recursos/practicas/03-pr-estructuras-de-control-flujo.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Práctica-03---Estructuras-de-Control">
+<h1>Práctica 03 - Estructuras de Control<a class="headerlink" href="#Práctica-03---Estructuras-de-Control" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Para entender un poco la sentencia <code class="docutils literal notranslate"><span class="pre">if</span></code> y <code class="docutils literal notranslate"><span class="pre">else</span></code>, eche un vistazo a este ejemplo de código:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">area</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="k">if</span><span class="p">(</span><span class="n">area</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;small&quot;</span><span class="p">)</span>
+<span class="k">elif</span><span class="p">(</span><span class="n">area</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;medium&quot;</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;large&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>¿Cuál será el resultado si ejecuta este fragmento de código?</p>
+<p><strong>Respuestas posibles</strong> * small * medium * large * La sintaxis es incorrecta; Este código producirá un error.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># evalúe sus respuestas</span>
+
+
+
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="if">
+<h2>if<a class="headerlink" href="#if" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>Crea un programa que solicite un número al usuario y devuelva el siguiente mensaje:</p>
+<ul class="simple">
+<li><p>Si es mayor que 0: <code class="docutils literal notranslate"><span class="pre">&quot;Es</span> <span class="pre">un</span> <span class="pre">número</span> <span class="pre">positivo.&quot;</span></code></p></li>
+<li><p>Si es igual a 0: <code class="docutils literal notranslate"><span class="pre">&quot;Es</span> <span class="pre">igual</span> <span class="pre">a</span> <span class="pre">cero.&quot;</span></code></p></li>
+<li><p>Si es menor que 0: <code class="docutils literal notranslate"><span class="pre">&quot;Es</span> <span class="pre">un</span> <span class="pre">número</span> <span class="pre">negativo.&quot;</span></code></p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># cree aquí el programa</span>
+
+
+
+</pre></div>
+</div>
+</div>
+<p>Es hora de mirar más de cerca en su casa.</p>
+<p>En el código de muestra se definen dos variables: <code class="docutils literal notranslate"><span class="pre">room</span></code> un string que le indica qué habitación de la casa estamos viendo y <em>area</em> el área de esa habitación.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Examine la declaración <code class="docutils literal notranslate"><span class="pre">if</span></code> que imprime <code class="docutils literal notranslate"><span class="pre">&quot;mirar</span> <span class="pre">alrededor</span> <span class="pre">en</span> <span class="pre">la</span> <span class="pre">cocina.&quot;</span></code> si <code class="docutils literal notranslate"><span class="pre">room</span></code> es igual a <code class="docutils literal notranslate"><span class="pre">&quot;kit&quot;</span></code>.</p></li>
+<li><p>Escriba otra declaración <code class="docutils literal notranslate"><span class="pre">if</span></code> que imprima <code class="docutils literal notranslate"><span class="pre">&quot;¡gran</span> <span class="pre">lugar!&quot;</span></code> si <code class="docutils literal notranslate"><span class="pre">area</span></code> es mayor que <code class="docutils literal notranslate"><span class="pre">15</span></code>.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Define variables</span>
+<span class="n">room</span> <span class="o">=</span> <span class="s2">&quot;kit&quot;</span>
+<span class="n">area</span> <span class="o">=</span> <span class="mf">14.0</span>
+
+<span class="c1"># if statement for room</span>
+
+
+
+<span class="c1"># if statement for area</span>
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Agregue-else">
+<h2>Agregue else<a class="headerlink" href="#Agregue-else" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La declaración de <code class="docutils literal notranslate"><span class="pre">if</span></code> para <code class="docutils literal notranslate"><span class="pre">room</span></code> se ha ampliado con una declaración <code class="docutils literal notranslate"><span class="pre">else</span></code> para que <code class="docutils literal notranslate"><span class="pre">&quot;mirar</span> <span class="pre">a</span> <span class="pre">otro</span> <span class="pre">lado&quot;</span></code>. se imprime si la condición se evalúa <code class="docutils literal notranslate"><span class="pre">room</span> <span class="pre">==</span> <span class="pre">&quot;kit&quot;</span></code> como <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>¿Puedes hacer algo similar para agregar más funcionalidad a la declaración <code class="docutils literal notranslate"><span class="pre">if</span></code> <code class="docutils literal notranslate"><span class="pre">area</span></code>?</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Agregue una declaración <code class="docutils literal notranslate"><span class="pre">else</span></code> a la segunda estructura de control para que sea <code class="docutils literal notranslate"><span class="pre">&quot;bastante</span> <span class="pre">pequeña&quot;.</span></code> se imprime si se evalúa <code class="docutils literal notranslate"><span class="pre">area</span> <span class="pre">&gt;</span> <span class="pre">15</span></code> como <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Define variables</span>
+<span class="n">room</span> <span class="o">=</span> <span class="s2">&quot;kit&quot;</span>
+<span class="n">area</span> <span class="o">=</span> <span class="mf">14.0</span>
+
+<span class="c1"># if-else construct for room</span>
+
+
+
+
+<span class="c1"># if-else construct for area</span>
+
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Personalizar-más:-elif">
+<h2>Personalizar más: elif<a class="headerlink" href="#Personalizar-más:-elif" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>También es posible echar un vistazo en la habitación. El código de muestra contiene una parte <em>elif</em> que comprueba si <em>room</em> es igual a “cama”. En ese caso, “mirar alrededor en el dormitorio”. está impreso</p>
+<p>¡Depende de ti ahora! Haga una adición similar a la segunda estructura de control para personalizar aún más los mensajes para diferentes valores de <em>area</em>.</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Agregue un <code class="docutils literal notranslate"><span class="pre">elif</span></code> a la segunda estructura de control de modo que “¡tamaño mediano, bonito!” se imprime si <code class="docutils literal notranslate"><span class="pre">area</span></code> es mayor que 10.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="c1"># Define variables</span>
+<span class="n">room</span> <span class="o">=</span> <span class="s2">&quot;bed&quot;</span>
+<span class="n">area</span> <span class="o">=</span> <span class="mf">14.0</span>
+
+<span class="c1"># if-elif-else construct for room</span>
+
+
+
+
+
+<span class="c1"># if-elif-else construct for area</span>
+
+
+
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Bucle-while-básico">
+<h2>Bucle while básico<a class="headerlink" href="#Bucle-while-básico" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<p>¿Puedes decir cuántas impresiones hará <code class="docutils literal notranslate"><span class="pre">while</span></code> el siguiente ciclo?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Respuestas posibles</strong></p>
+<ul class="simple">
+<li><p>0</p></li>
+<li><p>1</p></li>
+<li><p>2</p></li>
+<li><p>3</p></li>
+<li><p>4</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># evalue sus respuestas</span>
+
+
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Bucle while básico<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>A continuación la variable error, inicialmente igual a 50.0, se divide por 4 y se imprime en cada ejecución:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">error</span> <span class="o">=</span> <span class="mf">50.0</span>
+<span class="k">while</span> <span class="n">error</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">:</span>
+    <span class="n">error</span> <span class="o">=</span> <span class="n">error</span> <span class="o">/</span> <span class="mi">4</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>¡Este ejemplo será útil, porque es hora de construir un ciclo while usted mismo! Vamos a codificar un bucle <em>while</em> que implementa un sistema de control muy básico para un péndulo invertido. Si hay un desplazamiento por estar perfectamente erguido, el bucle <em>while</em> solucionará gradualmente este desplazamiento.</p>
+<p>Tenga en cuenta que si su ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code> tarda demasiado en ejecutarse, es posible que haya cometido un error. En particular, recuerde indentar el contenido del bucle!</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p>Cree la variable <code class="docutils literal notranslate"><span class="pre">offset</span></code> con un valor inicial de <code class="docutils literal notranslate"><span class="pre">8</span></code>.</p></li>
+<li><p>Codifique un bucle <em>while</em> que siga ejecutándose mientras <code class="docutils literal notranslate"><span class="pre">offset</span></code> no sea igual a <code class="docutils literal notranslate"><span class="pre">0</span></code>. Dentro del bucle <code class="docutils literal notranslate"><span class="pre">while</span></code>:</p>
+<ul>
+<li><p>Imprime la palabra “correcting…”.</p></li>
+<li><p>Luego, disminuya el valor de <code class="docutils literal notranslate"><span class="pre">offset</span></code> en <code class="docutils literal notranslate"><span class="pre">1</span></code>. Puede hacer esto con <code class="docutils literal notranslate"><span class="pre">offset</span> <span class="pre">=</span> <span class="pre">offset</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p></li>
+<li><p>Finalmente, aún dentro de su ciclo, imprima <code class="docutils literal notranslate"><span class="pre">offset</span></code> para que pueda ver cómo cambia.</p></li>
+</ul>
+</li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Initialize offset</span>
+
+
+<span class="c1"># Code the while loop</span>
+
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Agregar-condicionales">
+<h2>Agregar condicionales<a class="headerlink" href="#Agregar-condicionales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El ciclo while que corrige <code class="docutils literal notranslate"><span class="pre">offset</span></code> es un buen comienzo, pero ¿y si <code class="docutils literal notranslate"><span class="pre">offset</span></code> es negativo? Puede intentar ejecutar el siguiente código donde <code class="docutils literal notranslate"><span class="pre">offset</span></code> se inicializa para <code class="docutils literal notranslate"><span class="pre">-6</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize offset</span>
+<span class="n">offset</span> <span class="o">=</span> <span class="o">-</span><span class="mi">6</span>
+
+<span class="c1"># Code the while loop</span>
+<span class="k">while</span> <span class="n">offset</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;correcting...&quot;</span><span class="p">)</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>pero tu sesión se desconectará. El bucle while nunca dejará de ejecutarse, porque <code class="docutils literal notranslate"><span class="pre">offset</span></code> se reducirá aún más en cada ejecución. Por lo tanto, <code class="docutils literal notranslate"><span class="pre">offset</span> <span class="pre">!=</span> <span class="pre">0</span></code> nunca se convertirá <code class="docutils literal notranslate"><span class="pre">False</span></code> y el ciclo while continúa para siempre.</p>
+<p>Arregle las cosas poniendo una declaración <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">-</span> <span class="pre">else</span></code> dentro del ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code>. Si su código aún tarda demasiado en ejecutarse, ¡probablemente haya cometido un error!</p>
+<div class="admonition note">
+<p><strong>Actividad</strong></p>
+</div>
+<ul class="simple">
+<li><p><strong>Dentro</strong> del bucle <code class="docutils literal notranslate"><span class="pre">while</span></code>, complete la declaración <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">-</span> <span class="pre">else</span></code>:</p>
+<ul>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">offset</span></code> es mayor que cero, debe disminuir <code class="docutils literal notranslate"><span class="pre">offset</span></code> en 1.</p></li>
+<li><p>De lo contrario, deberías aumentar <code class="docutils literal notranslate"><span class="pre">offset</span></code> en 1.</p></li>
+</ul>
+</li>
+<li><p>Si ha codificado las cosas correctamente, ejecutar debería funcionar esta vez.</p></li>
+<li><p>Si su código todavía tarda demasiado en ejecutarse (o su sesión está caducando), probablemente cometió un error. ¡Verifique su código y asegúrese de que la declaración <code class="docutils literal notranslate"><span class="pre">offset</span> <span class="pre">!=</span> <span class="pre">0</span></code> eventualmente se evalúe <code class="docutils literal notranslate"><span class="pre">FALSE!</span></code></p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Initialize offset</span>
+
+
+
+<span class="c1"># Code the while loop</span>
+
+
+
+
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../laboratorios/01-laboratorio.html" class="btn btn-neutral float-right" title="Laboratorio-01" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../python/03-estructuras-de-control.html" class="btn btn-neutral float-left" title="Estructuras de control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

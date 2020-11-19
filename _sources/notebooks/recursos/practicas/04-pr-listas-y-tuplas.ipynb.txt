@@ -1,0 +1,1111 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Practica 04 - Listas y tuplas"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Listas\n",
+    "\n",
+    "### Crear una lista\n",
+    "\n",
+    "A diferencia de los tipos de datos *int*, *bool*, etc., una lista es un tipo de datos compuesto; dónde puedes agrupar valores:\n",
+    "\n",
+    "```python\n",
+    "a = \"is\"  \n",
+    "b = \"nice\"  \n",
+    "my_list = [\"my\", \"list\", a, b]\n",
+    "```\n",
+    "\n",
+    "Después de medir la altura de su familia, decide recopilar información sobre la casa en la que vive. Las áreas de las diferentes partes de su casa se almacenan en variables separadas por ahora, como se muestra arriba.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "* Cree una lista llamada ```areas``` que contenga el área del pasillo (hall), la cocina (kit), la sala de estar (liv), el dormitorio (bed) y el baño (bath), en este orden. Utiliza las variables predefinidas.\n",
+    "\n",
+    "* Imprime ```areas``` con la función print().\n",
+    "\n",
+    "Respuesta: [11.25, 18.0, 20.0, 10.75, 9.5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[11.25, 18.0, 20.0, 10.75, 9.5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# variables de area (en metros cuadrados)\n",
+    "hall = 11.25\n",
+    "kit = 18.0\n",
+    "liv = 20.0\n",
+    "bed = 10.75\n",
+    "bath = 9.50\n",
+    "\n",
+    "# Crea lista de areas\n",
+    "\n",
+    "\n",
+    "# Imprime areas\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Crea una lista con diferentes tipos\n",
+    "\n",
+    "Una lista puede contener cualquier tipo de dato de Python. Aunque no es realmente común, una lista también puede contener una combinación de tipos de datos de Python que incluyen cadenas, flotantes, booleanos, etc.\n",
+    "\n",
+    "La impresión del ejercicio anterior no fue realmente satisfactoria. Es solo una lista de números que representan las áreas, pero no puede saber qué área corresponde a qué parte de su casa.\n",
+    "\n",
+    "El código de abajo es el comienzo de una solución. Para algunas de las áreas, el nombre de la habitación correspondiente ya se encuentra al frente. ¡Presta atención aquí! \"bathroom\"es una cadena, mientras que bath una variable que representa el flotante 9.50 que especificó anteriormente.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Termine la línea de código que crea la lista de areas. Cree la lista de modo que primero contenga el nombre de cada habitación como una cadena y luego su área. En otras palabras, añadir los strings \"hallway\", \"kitchen\" y \"bedroom\" en los lugares apropiados.\n",
+    "* Imprimir de nuevo ```areas```; ¿Es la impresión más informativa esta vez?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-5-379188c0d3e6>, line 9)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;36m  File \u001b[1;32m\"<ipython-input-5-379188c0d3e6>\"\u001b[1;36m, line \u001b[1;32m9\u001b[0m\n\u001b[1;33m    areas = [, hall, , kit, \"living room\", liv, \"bedroom\", bed, , bath]\u001b[0m\n\u001b[1;37m             ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "# area variables (in square meters)\n",
+    "hall = 11.25\n",
+    "kit = 18.0\n",
+    "liv = 20.0\n",
+    "bed = 10.75\n",
+    "bath = 9.50\n",
+    "\n",
+    "# Adapt list areas\n",
+    "areas = [, hall, , kit, \"living room\", liv, \"bedroom\", bed, , bath]\n",
+    "\n",
+    "# Print areas\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Selecciona la lista válida\n",
+    "\n",
+    "Una lista puede contener cualquier tipo de Python. Pero una lista en sí también es de tipo Python. ¡Eso significa que una lista también puede contener una lista! Python se está volviendo cada vez más funky, pero no temas, solo recuerda la sintaxis de la lista:\n",
+    "\n",
+    "```python\n",
+    "my_list = [el1, el2, el3]\n",
+    "```\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "Prube las siguientes líneas de código Python y concluya si son formas validas de lista\n",
+    "\n",
+    "\n",
+    "* ```[1, 3, 4, 2] ```   \n",
+    "* ```[[1, 2, 3], [4, 5, 7]]```  \n",
+    "* ```[1 + 2, \"a\" * 5, 3]```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Evalúe su respuestas\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Lista de listas\n",
+    "\n",
+    "Como científico de datos, a menudo estará tratando con muchos datos, y tendrá sentido agrupar algunos de estos datos.\n",
+    "\n",
+    "En lugar de crear una lista plana que contenga cadenas y flotantes, que represente los nombres y áreas de las habitaciones de su casa, puede crear una lista de listas.\n",
+    "\n",
+    "No se confunda aquí: \"hallway\"es una cadena, mientras que halles una variable que representa el flotante 11.25 que especificó anteriormente.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Termine la lista de listas para que también contenga los datos del dormitorio y el baño. ¡Asegúrese de ingresarlos en orden!\n",
+    "* Imprimir house; ¿Tiene más sentido esta forma de estructurar sus datos?\n",
+    "* Imprime el tipo de house. ¿Sigues lidiando con una lista?\n",
+    "\n",
+    "Respuesta: [['hallway', 11.25], ['kitchen', 18.0], ['living room', 20.0], ['bedroom', 10.75], ['bathroom', 9.50]]  \n",
+    "Respuesta: <class 'list'>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# area variables (in square meters)\n",
+    "hall = 11.25\n",
+    "kit = 18.0\n",
+    "liv = 20.0\n",
+    "bed = 10.75\n",
+    "bath = 9.50\n",
+    "\n",
+    "# house information as list of lists\n",
+    "house = [[\"hallway\", hall],\n",
+    "         [\"kitchen\", kit],\n",
+    "         [\"living room\", liv]]\n",
+    "\n",
+    "# Print out house\n",
+    "\n",
+    "\n",
+    "# Print out the type of house\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Subconjunto de listas\n",
+    "\n",
+    "#### Subconjunto\n",
+    "\n",
+    "Subconjunto de listas de Python es pan comido. Tome el ejemplo de código a continuación, que crea una lista x y luego selecciona \"b\". Recuerde que este es el segundo elemento, por lo que tiene el índice 1. También puede usar la indexación negativa.\n",
+    "\n",
+    "```python\n",
+    "x = [\"a\", \"b\", \"c\", \"d\"]  \n",
+    "x[1]  \n",
+    "x[-3] # same result!  \n",
+    "```\n",
+    "\n",
+    "¿Recuerdas la areaslista de antes, que contiene cadenas y flotantes? Su definición ya está en el guión. ¿Puedes agregar el código correcto para hacer algunos subconjuntos de Python?\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Imprima el segundo elemento de la lista ```areas``` (tiene el valor 11.25).\n",
+    "* Subconjunto e imprime el último elemento de areas, ser 9.50. ¡Usar un índice negativo tiene sentido aquí!\n",
+    "* Seleccione el número que representa el área de la sala de estar ( 20.0) e imprímalo.\n",
+    "\n",
+    "Respuesta:  \n",
+    "11.25  \n",
+    "9.5  \n",
+    "20.0  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "11.25\n",
+      "9.5\n",
+      "20.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Create the areas list\n",
+    "areas = [\"hallway\", 11.25, \"kitchen\", 18.0, \"living room\", 20.0, \"bedroom\", 10.75, \"bathroom\", 9.50]\n",
+    "\n",
+    "# Print out second element from areas\n",
+    "\n",
+    "\n",
+    "# Print out last element from areas\n",
+    "\n",
+    "\n",
+    "# Print out the area of the living room\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Subconjunto y calcular\n",
+    "\n",
+    "Después de extraer los valores de una lista, puede usarlos para realizar cálculos adicionales. Tome este ejemplo, donde de x se extrae el segundo y cuarto elemento de una lista. Las cadenas que resultan se unen usando el operador + :\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "bd\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = [\"a\", \"b\", \"c\", \"d\"]\n",
+    "\n",
+    "print(x[1] + x[3])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Usando una combinación de subconjunto de listas y asignación de variables, cree una nueva variable eat_sleep_areaque contenga la suma del área de la cocina y el área del dormitorio.\n",
+    "* Imprime la nueva variable eat_sleep_area.\n",
+    "\n",
+    "Respuesta: 28.75"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create the areas list\n",
+    "areas = [\"hallway\", 11.25, \"kitchen\", 18.0, \"living room\", 20.0, \"bedroom\", 10.75, \"bathroom\", 9.50]\n",
+    "\n",
+    "# Sum of kitchen and bedroom area: eat_sleep_area\n",
+    "\n",
+    "\n",
+    "# Print the variable eat_sleep_area\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Subconjunto de lista\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Use la siguiente sintaxis:\n",
+    "\n",
+    "```python\n",
+    "my_list[inicio:fin]\n",
+    "```\n",
+    "\n",
+    "\n",
+    "El índice inicio se incluirá, mientras que el índice fin no.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Use la sublistas para crear una lista downstairs que contenga los primeros 6 elementos de areas.\n",
+    "* Haga algo similar para crear una nueva variable upstairs, que contenga los últimos 4 elementos de areas.\n",
+    "* Imprime ambos downstairsy upstairsusando print().\n",
+    "\n",
+    "Respuesta:  \n",
+    "['hallway', 11.25, 'kitchen', 18.0, 'living room', 20.0]  \n",
+    "['bedroom', 10.75, 'bathroom', 9.5]  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create the areas list\n",
+    "areas = [\"hallway\", 11.25, \"kitchen\", 18.0, \"living room\", 20.0, \"bedroom\", 10.75, \"bathroom\", 9.50]\n",
+    "\n",
+    "# Use slicing to create downstairs\n",
+    "\n",
+    "\n",
+    "# Use slicing to create upstairs\n",
+    "\n",
+    "\n",
+    "# Print out downstairs and upstairs\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Crear de nuevo downstairs, como los primeros 6 elementos de areas. Esta vez, simplifique el corte omitiendo el iníndice inicio.\n",
+    "* Crear de nuevo upstairs, como los últimos 4 elementos de areas. Esta vez, simplifique el corte omitiendo el índice fin."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create the areas list\n",
+    "areas = [\"hallway\", 11.25, \"kitchen\", 18.0, \"living room\", 20.0, \"bedroom\", 10.75, \"bathroom\", 9.50]\n",
+    "\n",
+    "# Alternative slicing to create downstairs\n",
+    "downstairs = areas[:6]\n",
+    "\n",
+    "# Alternative slicing to create upstairs\n",
+    "upstairs = areas[-4:]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Subconjunto de lista de listas\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "¿Qué tipo de datos volverá house[-1][1]?, la lista de listas que creó anteriormente."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "20.0"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Evalúe su respuesta con type()\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Reemplazar elementos de la lista\n",
+    "\n",
+    "Reemplazar elementos de la lista es bastante fácil. Simplemente subconjunte la lista y asigne nuevos valores al subconjunto. Puede seleccionar elementos individuales o puede cambiar secciones enteras de la lista a la vez.\n",
+    "\n",
+    "Use las celdas de jupyter para experimentar con los siguientes comandos. ¿Puedes decir qué está pasando y por qué?\n",
+    "```python\n",
+    "x = [\"a\", \"b\", \"c\", \"d\"]  \n",
+    "x[1] = \"r\"  \n",
+    "x[2:] = [\"s\", \"t\"]  \n",
+    "```\n",
+    "Para este y los siguientes ejercicios, continuará trabajando en la lista **areas** que contiene los nombres y áreas de las diferentes habitaciones de una casa.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Actualice el área del baño para que sea 10.50 metros cuadrados en lugar de 9.50.\n",
+    "\n",
+    "* ¡Haz que la lista  areas sea más moderna! Cambiar \"living room\"a \"chill zone\".\n",
+    "\n",
+    "Respuesta: ['hallway', 11.25, 'kitchen', 18.0, 'chill zone', 20.0, 'bedroom', 10.75, 'bathroom', 10.5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create the areas list\n",
+    "areas = [\"hallway\", 11.25, \"kitchen\", 18.0, \"living room\", 20.0, \"bedroom\", 10.75, \"bathroom\", 9.50]\n",
+    "\n",
+    "# Correct the bathroom area\n",
+    "\n",
+    "\n",
+    "# Change \"living room\" to \"chill zone\"\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Ampliar una lista\n",
+    "\n",
+    "Si puede cambiar elementos en una lista, seguramente desea poder agregarle elementos, ¿verdad? Puedes usar el operador **+** o list.extend(otra_lista) :\n",
+    "```python\n",
+    "x = [\"a\", \"b\", \"c\", \"d\"]  \n",
+    "y = x + [\"e\", \"f\"]  \n",
+    "```\n",
+    "¡Acabas de ganar la lotería, increíble! Decides construir una casa de la piscina y un garaje. ¿Puedes agregar la información a la lista **areas**?\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Use el operador **+** o list.extend(otra_lista)  para pegar la ```lista [\"poolhouse\", 24.5]``` al final de la lista *areas*. Almacene la lista resultante como *areas_1*.\n",
+    "* Amplíe aún más *areas_1* agregando datos en su garaje. Agrega el string \"garage\" y valor 15.45. Nombra la lista resultante *areas_2*.\n",
+    "\n",
+    "Respuesta:  \n",
+    "['hallway', 11.25, 'kitchen', 18.0, 'chill zone', 20.0, 'bedroom', 10.75, 'bathroom', 10.5, 'poolhouse', 24.5]  \n",
+    "['hallway', 11.25, 'kitchen', 18.0, 'chill zone', 20.0, 'bedroom', 10.75, 'bathroom', 10.5, 'poolhouse', 24.5, 'garage', 15.45]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create the areas list and make some changes\n",
+    "areas = [\"hallway\", 11.25, \"kitchen\", 18.0, \"chill zone\", 20.0,\n",
+    "         \"bedroom\", 10.75, \"bathroom\", 10.50]\n",
+    "\n",
+    "# Add poolhouse data to areas, new list is areas_1\n",
+    "\n",
+    "\n",
+    "\n",
+    "# Add garage data to areas_1, new list is areas_2\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Eliminar elementos de la lista\n",
+    "\n",
+    "Finalmente, también puede eliminar elementos de su lista. Puede hacer esto con la declaración *del*:\n",
+    "```python\n",
+    "x = [\"a\", \"b\", \"c\", \"d\"]\n",
+    "del(x[1])\n",
+    "```   \n",
+    "Preste atención aquí: tan pronto como elimine un elemento de una lista, ¡los índices de los elementos que vienen después del elemento eliminado cambian todos!\n",
+    "\n",
+    "La versión actualizada y extendida de la areasque ha creado en los ejercicios anteriores se codifica a continuación. Puede copiar y pegar esto en las celdas de jupyter para jugar con el resultado.\n",
+    "\n",
+    "```python\n",
+    "areas = [\"hallway\", 11.25, \"kitchen\", 18.0,  \n",
+    "            \"chill zone\", 20.0, \"bedroom\", 10.75,  \n",
+    "             \"bathroom\", 10.50, \"poolhouse\", 24.5,  \n",
+    "             \"garage\", 15.45]\n",
+    "```         \n",
+    "¡Hubo un error! La cantidad que ganó con la lotería no es tan grande después de todo y parece que el área de la piscina no va a suceder. Decide eliminar la cadena y el flotante correspondiente de la lista *areas*.\n",
+    "\n",
+    "El signo ```;``` se usa para colocar comandos en la misma línea. Los siguientes dos fragmentos de código son equivalentes:\n",
+    "\n",
+    "**Misma linea**   \n",
+    "command1; command2\n",
+    "\n",
+    "**Lineas separadas**   \n",
+    "command1  \n",
+    "command2\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "¿Cuál de los fragmentos de código hará el trabajo por nosotros?\n",
+    "\n",
+    "Respuestas posibles\n",
+    "```python\n",
+    "* del(areas[10]); del(areas[11])  \n",
+    "* del(areas[10:11])  \n",
+    "* del(areas[-4:-2])  \n",
+    "* del(areas[-3]); del(areas[-4])  \n",
+    "``` "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Evalúe su respuesta\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Funcionamiento interno de listas\n",
+    "\n",
+    "El código Python en el script ya crea una lista con el nombre areas y una copia nombrada *areas_copy*. A continuación, *areas_copy* se cambia el primer elemento de la lista y se imprime la lista *areas*. Al ejecutar el código verá que aunque ha cambiado *areas_copy*, el cambio también tiene efecto en la lista *areas*. Eso es porque *areas* y *areas_copy* apuntan a la misma lista.\n",
+    "\n",
+    "Si desea evitar que los cambios *areas_copy* también surtan efecto *areas*, tendrá que hacer una copia más explícita de la lista *areas*. Puede hacer esto con list.copy().\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "Cambie el segundo comando, que crea la variable *areas_copy*, de modo que *areas_copy* sea una copia explícita de *areas*. Después de su edición, los cambios realizados en *areas_copy* no deberían afectar *areas*.\n",
+    "\n",
+    "Respuesta:  \n",
+    "[11.25, 18.0, 20.0, 10.75, 9.5]  \n",
+    "[5.0, 18.0, 20.0, 10.75, 9.5]  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5.0, 18.0, 20.0, 10.75, 9.5]\n",
+      "[5.0, 18.0, 20.0, 10.75, 9.5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Create list areas\n",
+    "areas = [11.25, 18.0, 20.0, 10.75, 9.50]\n",
+    "\n",
+    "# Create areas_copy\n",
+    "areas_copy = areas\n",
+    "\n",
+    "# Change areas_copy\n",
+    "areas_copy[0] = 5.0\n",
+    "\n",
+    "# Print areas\n",
+    "print(areas)\n",
+    "print(areas_copy)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Recorrer una lista\n",
+    "\n",
+    "```python\n",
+    "fam = [1.73, 1.68, 1.71, 1.89]  \n",
+    "for height in fam :   \n",
+    "    print(height)\n",
+    "```\n",
+    "\n",
+    "Como de costumbre, simplemente tiene que indentar el código con 4 espacios para indicarle a Python qué código debe ejecutarse en el bucle ```for```.\n",
+    "\n",
+    "La variable ```areas```, que contiene el área de diferentes habitaciones en su casa, ya está definida.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Escriba un bucle for que repita todos los elementos de la lista ```areas``` e imprima cada elemento por separado.\n",
+    "\n",
+    "Respuesta:  \n",
+    "11.25  \n",
+    "18.0  \n",
+    "20.0  \n",
+    "10.75  \n",
+    "9.50"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# areas list\n",
+    "areas = [11.25, 18.0, 20.0, 10.75, 9.50]\n",
+    "\n",
+    "# Code the for loop\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Índices y valores (1)\n",
+    "\n",
+    "El uso de un bucle for para iterar sobre una lista solo le da acceso a cada elemento de la lista en cada ejecución, uno tras otro. Si también desea acceder a la información del índice, puede ubicar el elemento de la lista sobre el que está iterando enumerate().\n",
+    "\n",
+    "Como ejemplo, eche un vistazo a cómo forse convirtió el bucle del video:\n",
+    "\n",
+    "```python\n",
+    "fam = [1.73, 1.68, 1.71, 1.89]\n",
+    "for index, height in enumerate(fam) :\n",
+    "    print(\"person \" + str(index) + \": \" + str(height))\n",
+    "```\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Tome el resultado del ejercicio anterior y adapte el bucle ```for``` con el código del ejemplo para usar ```enumerate()``` y utilice dos variables iteradoras.\n",
+    "* Actualice la declaración ```print()``` para que en cada ejecución, \"```room a: b```\" se imprima una línea del formulario , donde ```a``` es el índice del elemento de la lista y ```b``` es el elemento de la lista real, es decir, el área. Asegúrese de imprimir esta cadena exacta, con el espacio correcto.\n",
+    "\n",
+    "Respuesta:  \n",
+    "room  0:  11.25  \n",
+    "room  1:  18.0  \n",
+    "room  2:  20.0  \n",
+    "room  3:  10.75  \n",
+    "room  4:  9.5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "11.25\n",
+      "18.0\n",
+      "20.0\n",
+      "10.75\n",
+      "9.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# areas list\n",
+    "areas = [11.25, 18.0, 20.0, 10.75, 9.50]\n",
+    "\n",
+    "# Change for loop to use enumerate() and update print()\n",
+    "for room in areas:\n",
+    "    print(room)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Índices y valores (2)\n",
+    "\n",
+    "Para los no programadores, ```room 0: 11.25``` es extraño. ¿No sería mejor si el conteo comenzara en 1?\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Adapte la función ```print()``` en el bucle ```for``` para que la primera impresión se convierta \"```room 1: 11.25```\", la segunda \"```room 2: 18.0```\" y así sucesivamente.\n",
+    "\n",
+    "Respuesta:  \n",
+    "room 1: 11.25  \n",
+    "room 2: 18.0  \n",
+    "room 3: 20.0  \n",
+    "room 4: 10.75  \n",
+    "room 5: 9.5 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "room 0: 11.25\n",
+      "room 1: 18.0\n",
+      "room 2: 20.0\n",
+      "room 3: 10.75\n",
+      "room 4: 9.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# areas list\n",
+    "areas = [11.25, 18.0, 20.0, 10.75, 9.50]\n",
+    "\n",
+    "# Code the for loop\n",
+    "for a,b in enumerate(areas) :\n",
+    "    print(\"room \" + str(a) + \": \" + str(b))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Recorrer la lista de listas\n",
+    "\n",
+    "La variable house básicamente es una lista de listas, donde cada sublista contiene el nombre y el área de una habitación en su casa.\n",
+    "\n",
+    "¡Depende de usted construir un bucle for desde cero esta vez!\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "***Actividad***\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Escriba un bucle ```for``` que pase por cada sublista de ```house``` e imprima ```the x is y sqm```, donde ```x``` es el nombre de la habitación e ```y``` es el área de la habitación.\n",
+    "\n",
+    "Respuesta:  \n",
+    "the hallway is 11.25 sqm  \n",
+    "the kitchen is 18.0 sqm  \n",
+    "the living room is 20.0 sqm  \n",
+    "the bedroom is 10.75 sqm  \n",
+    "the bathroom is 9.5 sqm"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# house list of lists\n",
+    "house = [[\"hallway\", 11.25], \n",
+    "         [\"kitchen\", 18.0], \n",
+    "         [\"living room\", 20.0], \n",
+    "         [\"bedroom\", 10.75], \n",
+    "         [\"bathroom\", 9.50]]\n",
+    "         \n",
+    "# Build a for loop from scratch\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Ordenar lista\n",
+    "\n",
+    "En el ejercicio anterior, los corchetes imagen la documentación nos mostraron que el imagargumento es opcional. Pero Python también usa una forma diferente de decirle a los usuarios que los argumentos son opcionales.\n",
+    "\n",
+    "Eche un vistazo a la documentación de sorted()escribiendo help(sorted)el Shell de IPython.\n",
+    "\n",
+    "Verá que sorted()toma tres argumentos: iterable, keyy reverse.\n",
+    "\n",
+    "key=Nonesignifica que si no especificas el keyargumento, lo será None. reverse=Falsesignifica que si no especificas el reverseargumento, lo será False.\n",
+    "\n",
+    "En este ejercicio, solo tendrá que especificar iterabley reverse, no key. La primera entrada que pases sorted()coincidirá con el iterableargumento, pero ¿qué pasa con la segunda entrada? Para decirle a Python que desea especificar reversesin cambiar nada key, puede usar =:\n",
+    "\n",
+    "sorted(___, reverse = ___)\n",
+    "Se han creado dos listas para usted a la derecha. ¿Puedes pegarlos y ordenarlos en orden descendente?\n",
+    "\n",
+    "Nota: Por ahora, podemos entender que un iterable es cualquier colección de objetos, por ejemplo, una Lista.\n",
+    "\n",
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "* Utilizar **+** para combinar los contenidos de *first* y second en una nueva lista: *full*.\n",
+    "* Llamar **sorted()** en *full* y especifique el argumento *reverse* sea *True*. Guarde la lista ordenada como *full_sorted*.\n",
+    "* Termine imprimiendo *full_sorted*.\n",
+    "\n",
+    "Respuesta:\n",
+    "[20.0, 18.0, 11.25, 10.75, 9.5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create lists first and second\n",
+    "first = [11.25, 18.0, 20.0]\n",
+    "second = [10.75, 9.50]\n",
+    "\n",
+    "# Paste together first and second: full\n",
+    "\n",
+    "\n",
+    "# Sort full in descending order: full_sorted\n",
+    "\n",
+    "\n",
+    "# Print out full_sorted\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Métodos de lista\n",
+    "\n",
+    "Las cadenas no son los únicos tipos de Python que tienen métodos asociados con ellas. Las listas, flotantes, enteros y booleanos también son tipos que vienen empaquetados con un montón de métodos útiles. En este ejercicio, experimentarás con:\n",
+    "\n",
+    "index(), para obtener el índice del primer elemento de una lista que coincide con su entrada y\n",
+    "count(), para obtener el número de veces que aparece un elemento en una lista.\n",
+    "Que va a trabajar en la lista con el área de las diferentes partes de una casa: areas.\n",
+    "\n",
+    "**Actividad**\n",
+    "* Use el *index()* método para obtener el índice del elemento areasque es igual a **20.0**. Imprime este índice.\n",
+    "* Llamar *count()* en *areas* averiguar cuántas veces **9.50** aparece en la lista. Nuevamente imprima este número.\n",
+    "\n",
+    "Respuesta:  \n",
+    "2  \n",
+    "1 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create list areas\n",
+    "areas = [11.25, 18.0, 20.0, 10.75, 9.50]\n",
+    "\n",
+    "# Print out the index of the element 20.0\n",
+    "\n",
+    "\n",
+    "# Print out how often 9.50 appears in areas\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Métodos de lista (2)\n",
+    "\n",
+    "La mayoría de los métodos de lista cambiarán la lista a la que están llamados. Ejemplos son:\n",
+    "\n",
+    "* **append()**, que agrega un elemento a la lista en la que se invoca,\n",
+    "* **remove()**, que elimina el primer elemento de una lista que coincide con la entrada, y\n",
+    "* **reverse()**, que invierte el orden de los elementos en la lista a la que se llama.\n",
+    "\n",
+    "Que va a trabajar en la lista con el área de diferentes partes de la casa: *areas*.\n",
+    "\n",
+    "**Actividad**\n",
+    "\n",
+    "* Use **append()** dos veces para agregar nuevamente el tamaño de la casa de la piscina y el garaje: **24.5** y **15.45**, respectivamente. Asegúrese de agregarlos en este orden.\n",
+    "* Imprimir *areas*\n",
+    "* Use el método **reverse()** para invertir el orden de los elementos en areas.\n",
+    "* Imprime *areas* una vez más.\n",
+    "\n",
+    "Respuesta:  \n",
+    "[11.25, 18.0, 20.0, 10.75, 9.5, 24.5, 15.45]  \n",
+    "[15.45, 24.5, 9.5, 10.75, 20.0, 18.0, 11.25]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Create list areas\n",
+    "areas = [11.25, 18.0, 20.0, 10.75, 9.50]\n",
+    "\n",
+    "# Use append twice to add poolhouse and garage size\n",
+    "\n",
+    "\n",
+    "\n",
+    "# Print out areas\n",
+    "\n",
+    "\n",
+    "# Reverse the orders of the elements in areas\n",
+    "\n",
+    "\n",
+    "# Print out areas\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Tuplas \n",
+    "\n",
+    "Si a una variable se le asigna una secuencia de valores separados por comas, el valor de esa variable será la tupla formada por todos los valores asignados. A esta operación se la denomina empaquetado de tuplas.\n",
+    "\n",
+    "```python\n",
+    "¿Cuál es la longitud de (89766, \"Alicia\", \"Hacker\", (9, \"Julio\", 1988))?\n",
+    "```\n",
+    "Respuesta:\n",
+    "4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Evalúe su respuesta\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "Crea una tupla con los meses del año, pide números al usuario, si el numero esta entre 1 y la longitud máxima de la tupla, muestra el contenido de esa posición sino muestra un mensaje de error.\n",
+    "\n",
+    "El programa termina cuando el usuario introduce un cero.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Desarrolle su respuesta\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "**Actividad**\n",
+    "    \n",
+    "</div>\n",
+    "\n",
+    "Crea una tupla con números 7,6,5,4,3,2,3,4,5,1,4,3, pide un numero por teclado e indica cuantas veces se repite.\n",
+    "\n",
+    "Respuesta ejemplo:  \n",
+    "Dame un numero: 2  \n",
+    "Numero de repeticiones:  1  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Dame un numero: 2\n",
+      "Numero de repeticiones:  1\n"
+     ]
+    }
+   ],
+   "source": [
+    "numeros = (7,6,5,4,3,2,3,4,5,1,4,3)\n",
+    " \n",
+    "numero = int(input(\"Dame un numero: \"))\n",
+    " \n",
+    "print(\"Numero de repeticiones: \",numeros.count(numero))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

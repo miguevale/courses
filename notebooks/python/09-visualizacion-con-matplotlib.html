@@ -1,0 +1,1184 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Visualización con matplotlib &mdash; documentación de Cursos - 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="Practica 09 - Visualización con matplotlib" href="../recursos/practicas/09-pr-visualizacion-con-matplotlib.html" />
+    <link rel="prev" title="Practica 08 - Pandas avanzado" href="../recursos/practicas/08-pr-pandas-avanzado.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cursos
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Cursos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/course-info.html">Información del curso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/repositorio.html">Repositorio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-01-introduccion">Sesión 01 - Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-02-manejo-de-variables-y-tipos">Sesión 02 - Manejo de variables y tipos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-03-estructuras-de-control">Sesión 03 - Estructuras de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-01">Laboratorio 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-04-listas-y-tuplas">Sesión 04 - Listas y tuplas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-05-diccionarios">Sesión 05 - Diccionarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-06-funciones">Sesión 06 - Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-02">Laboratorio 02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-07-pandas-basico">Sesión 07 - Pandas básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-08-pandas-avanzado">Sesión 08 - Pandas avanzado</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#sesion-09-visualizacion-con-matplotlib">Sesión 09 - Visualización con matplotlib</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Visualización con matplotlib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Pasos-para-crear-un-gráfico-con-matplotlib">Pasos para crear un gráfico con matplotlib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gráfico-de-líneas">Gráfico de líneas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gráfico-de-dispersión">Gráfico de dispersión</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gráfico-de-áreas">Gráfico de áreas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gráfico-de-barras-verticales">Gráfico de barras verticales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gráfico-de-barras-horizontales">Gráfico de barras horizontales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Histogramas">Histogramas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gráfico-de-torta">Gráfico de torta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gráfico-de-caja-y-bigotes">Gráfico de caja y bigotes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gráfico-de-violín">Gráfico de violín</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Gráfico-de-contorno">Gráfico de contorno</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Mapas-de-color">Mapas de color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Mapas-de-color-(2)">Mapas de color (2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Personalización-del-gráfico">Personalización del gráfico</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Múltiples-gráficos">Múltiples gráficos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Integración-con-Pandas">Integración con Pandas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Bibliografia">Bibliografia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../recursos/practicas/09-pr-visualizacion-con-matplotlib.html">Practica 09 - Visualización con matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduccion_a_la_ciencia_de_datos/index.html#laboratorio-03">Laboratorio 03</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cursos</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../introduccion_a_la_ciencia_de_datos/index.html">Introducción a la ciencia de datos con Python</a> &raquo;</li>
+        
+      <li>Visualización con matplotlib</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/notebooks/python/09-visualizacion-con-matplotlib.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Visualización-con-matplotlib">
+<h1>Visualización con matplotlib<a class="headerlink" href="#Visualización-con-matplotlib" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>90 min | Última modificación: Junio 29, 2020.</p>
+<p>En Python la biblioteca más extendida para gráficas 2D y 3D es matplotlib. Permite obtener gráficas de muy buena calidad, con una gran capacidad de control y una curva de aprendizaje moderada. Todos los aspectos de la figura pueden controlarse mediante código. Por más información consultar el sitio de la <a class="reference external" href="http://matplotlib.org/">biblioteca</a></p>
+<p>Permite crear y personalizar los tipos de gráficos más comunes, entre ellos: * Diagramas de barras</p>
+<ul class="simple">
+<li><p>Histograma</p></li>
+<li><p>Diagramas de sectores</p></li>
+<li><p>Diagramas de caja y bigotes</p></li>
+<li><p>Diagramas de violín</p></li>
+<li><p>Diagramas de dispersión o puntos</p></li>
+<li><p>Diagramas de lineas</p></li>
+<li><p>Diagramas de areas</p></li>
+<li><p>Diagramas de contorno</p></li>
+<li><p>Mapas de color</p></li>
+</ul>
+<p>Existen varios recursos externos para el aprendizaje de matpotlib. Algunos son listados <a class="reference external" href="https://matplotlib.org/resources/index.html">aquí</a></p>
+<p><a class="reference external" href="https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb">Aquí</a> hay un tutorial escrito en Jupyter sobre matplotlib que ilustra como resolver muchos problemas comunes en la elaboración de gráficos.</p>
+<p><strong>Métodos más utilizados de plotear con Matplotlib:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">figsize</span><span class="p">,</span> <span class="n">dpi</span><span class="p">,</span> <span class="n">facecolor</span><span class="p">,</span> <span class="n">edgecolor</span><span class="p">,</span> <span class="n">frameon</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>num = numeración de la figura, si num = None, las figuras se numeran automáticamente.</p></li>
+<li><p>figsize = w, h tuplas en pulgadas. Tamaño de la figura</p></li>
+<li><p>dpi = Resolución de la imagen en puntos por pulgada.</p></li>
+<li><p>facecolor = Color del rectángulo de la figura.</p></li>
+<li><p>edgecolor = Color del perímetro de la figura.</p></li>
+<li><p>frameon = Si es falso, elimina el marco de la figura.</p></li>
+</ul>
+<p>Para crear mas figuras en una misma ventana podemos utilizar el siguiente comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subplot</span><span class="p">(</span><span class="n">numRows</span><span class="p">,</span> <span class="n">numCols</span><span class="p">,</span> <span class="n">plotNum</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>numRows = Número de filas</p></li>
+<li><p>numCols = Número de columnas</p></li>
+<li><p>plotNum = Número de gráfica</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>plot(x, y, linestyle, linewidth, marker) –&gt; Permite incluir varias gráficas en una única figura.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>x = Abcisas.</p></li>
+<li><p>y = Ordenadas. Tanto x como y pueden ser abcisas tuplas, listas o arrays, pero ambas deben tener el mismo tamaño.</p></li>
+<li><p>linestyle = color y tipo de dibujar la gráfica. Por ejemplo ‘k- -‘</p></li>
+<li><p>linewidth = ancho de línea.</p></li>
+<li><p>marker = Marcador.</p></li>
+</ul>
+<div class="section" id="Pasos-para-crear-un-gráfico-con-matplotlib">
+<h2>Pasos para crear un gráfico con matplotlib<a class="headerlink" href="#Pasos-para-crear-un-gráfico-con-matplotlib" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para crear un gráfico con matplotlib es habitual seguir los siguientes pasos: 1. Importar el módulo <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>. 2. Definir la figura que contendrá el gráfico, que es la region (ventana o página) donde se dibujará y los ejes sobre los que se dibujarán los datos. Para ello se utiliza la función <code class="docutils literal notranslate"><span class="pre">subplots()</span></code>. 3. Dibujar los datos sobre los ejes. Para ello se utilizan distintas funciones dependiendo del tipo de gráfico que se quiera. 4. Personalizar el gráfico. Para ello existen multitud de
+funciones que permiten añadir un título, una leyenda, una rejilla, cambiar colores o personalizar los ejes. 5. Guardar el gráfico. Para ello se utiliza la función <code class="docutils literal notranslate"><span class="pre">savefig()</span></code>. 6. Mostrar el gráfico. Para ello se utiliza la función <code class="docutils literal notranslate"><span class="pre">show()</span></code>. 7. Limpiar para que pueda comenzar de nuevo <code class="docutils literal notranslate"><span class="pre">plt.clf()</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Importar el módulo pyplot con el alias plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Dibujar puntos</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Guardar el gráfico en formato png</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;diagrama-dispersion.png&#39;</span><span class="p">)</span>
+
+<span class="c1"># Mostrar el gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_4_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_4_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Gráfico-de-líneas">
+<h2>Gráfico de líneas<a class="headerlink" href="#Gráfico-de-líneas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">plot(x,</span> <span class="pre">y)</span></code>: Dibuja un polígono con los vértices dados por las coordenadas de la lista <code class="docutils literal notranslate"><span class="pre">x</span></code> en el eje X y las coordenadas de la lista <code class="docutils literal notranslate"><span class="pre">y</span></code> en el eje Y.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">54</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_7_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_7_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Gráfico-de-dispersión">
+<h2>Gráfico de dispersión<a class="headerlink" href="#Gráfico-de-dispersión" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un gráfico de dispersión es un gráfico que muestra la relación entre dos conjuntos de datos, como la relación entre edad y peso, por ejemplo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">scatter(x,</span> <span class="pre">y)</span></code>: Dibuja un diagrama de puntos con las coordenadas de la lista x en el eje X y las coordenadas de la lista y en el eje Y.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">88</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">98</span><span class="p">,</span><span class="mi">109</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="mi">83</span><span class="p">,</span><span class="mi">94</span><span class="p">,</span><span class="mi">84</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">464</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">54</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_10_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_10_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Gráfico-de-áreas">
+<h2>Gráfico de áreas<a class="headerlink" href="#Gráfico-de-áreas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">fill_between(x,</span> <span class="pre">y)</span></code>: Dibuja el area bajo el polígono con los vértices dados por las coordenadas de la lista x en el eje X y las coordenadas de la lista y en el eje Y.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">54</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_13_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_13_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Gráfico-de-barras-verticales">
+<h2>Gráfico de barras verticales<a class="headerlink" href="#Gráfico-de-barras-verticales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">bar(x,</span> <span class="pre">y)</span></code>: Dibuja un diagrama de barras verticales donde <code class="docutils literal notranslate"><span class="pre">x</span></code> es una lista con la posición de las barras en el eje X, <code class="docutils literal notranslate"><span class="pre">y</span></code> es una lista con la altura de las barras en el eje Y.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">54</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_16_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_16_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Gráfico-de-barras-horizontales">
+<h2>Gráfico de barras horizontales<a class="headerlink" href="#Gráfico-de-barras-horizontales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>barh(x, y): Dibuja un diagrama de barras horizontales donde <code class="docutils literal notranslate"><span class="pre">x</span></code> es una lista con la posición de las barras en el eje Y, <code class="docutils literal notranslate"><span class="pre">y</span></code> es una lista con la longitud de las barras en el eje X.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">54</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_19_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_19_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Histogramas">
+<h2>Histogramas<a class="headerlink" href="#Histogramas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un histograma es un gráfico que muestra la frecuencia de los datos utilizando barras, donde los números son agrupados en rangos. En otras palabras, la frecuencia de cada elemento en la listase mostrará utilizando histogramas. Los números agrupados en los rangos se llaman bins.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hist(x,</span> <span class="pre">bins)</span></code>: Dibuja un histograma con las frecuencias resultantes de agrupar los datos de la lista x en las clases definidas por la lista bins (sino se especifica el número, por defecto bins = 10).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">543</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span><span class="mi">63</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">63</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">324</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">544</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">223</span><span class="p">,</span><span class="mi">443</span><span class="p">,</span><span class="mi">444</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">432</span><span class="p">,</span><span class="mi">233</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">232</span><span class="p">,</span><span class="mi">243</span><span class="p">,</span><span class="mi">222</span><span class="p">,</span><span class="mi">221</span><span class="p">,</span><span class="mi">254</span><span class="p">,</span><span class="mi">222</span><span class="p">,</span><span class="mi">276</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">353</span><span class="p">,</span><span class="mi">354</span><span class="p">,</span><span class="mi">387</span><span class="p">,</span><span class="mi">364</span><span class="p">,</span><span class="mi">309</span><span class="p">]</span>
+<span class="n">num_bins</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">num_bins</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_22_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_22_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Gráfico-de-torta">
+<h2>Gráfico de torta<a class="headerlink" href="#Gráfico-de-torta" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">pie(x)</span></code>: Dibuja un diagrama de sectores con las frecuencias de la lista x</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">54</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;diagrama-sectores.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_25_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_25_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Gráfico-de-caja-y-bigotes">
+<h2>Gráfico de caja y bigotes<a class="headerlink" href="#Gráfico-de-caja-y-bigotes" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">boxplot(x)</span></code>: Dibuja un diagrama de caja y bigotes con los datos de la lista <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;diagrama-sectores.png&#39;</span><span class="p">)</span> <span class="c1"># Guarla imagen en el directorio actual</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_28_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_28_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Gráfico-de-violín">
+<h2>Gráfico de violín<a class="headerlink" href="#Gráfico-de-violín" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">violinplot(x)</span></code>: Dibuja un diagrama de violín con los datos de la lista <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">violinplot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;diagrama-sectores.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_31_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_31_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Gráfico-de-contorno">
+<h2>Gráfico de contorno<a class="headerlink" href="#Gráfico-de-contorno" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">contourf(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code>: Dibuja un diagrama de contorno con las curvas de nivel de la superficie dada por los puntos con las coordenadas de las listas <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> y <code class="docutils literal notranslate"><span class="pre">z</span></code> en los ejes <code class="docutils literal notranslate"><span class="pre">X</span></code>, <code class="docutils literal notranslate"><span class="pre">Y</span></code> y <code class="docutils literal notranslate"><span class="pre">Z</span></code> respectivamente.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_34_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_34_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Mapas-de-color">
+<h2>Mapas de color<a class="headerlink" href="#Mapas-de-color" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">imshow(x)</span></code>: Dibuja un mapa de color a partir de una matriz (array bidimensiona) <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_37_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_37_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Mapas-de-color-(2)">
+<h2>Mapas de color (2)<a class="headerlink" href="#Mapas-de-color-(2)" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">hist2d(x,</span> <span class="pre">y)</span></code>: Dibuja un mapa de color que simula un histograma bidimensional, donde los colores de los cuadrados dependen de las frecuencias de las clases de la muestra dada por las listas <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">cov</span><span class="o">=</span><span class="p">[[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">],[</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]],</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist2d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_40_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_40_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Personalización-del-gráfico">
+<h2>Personalización del gráfico<a class="headerlink" href="#Personalización-del-gráfico" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los gráficos creados con Matplotlib son personalizables y puede cambiarse el aspecto de casi todos sus elementos. Los elementos que suelen modificarse más a menudo son: * Colores</p>
+<ul class="simple">
+<li><p>Marcadores de puntos</p></li>
+<li><p>Estilo de líneas</p></li>
+<li><p>Títulos</p></li>
+<li><p>Ejes</p></li>
+<li><p>Leyenda</p></li>
+<li><p>Regilla</p></li>
+</ul>
+<div class="section" id="Colores">
+<h3>Colores<a class="headerlink" href="#Colores" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para cambiar el color de los objetos se utiliza el parámetro <code class="docutils literal notranslate"><span class="pre">color</span></code> = nombre-color, donde nombre-color es una cadena con el nombre del color de entre los colores <a class="reference external" href="https://matplotlib.org/3.2.1/gallery/color/named_colors.html">disponibles</a>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">dias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">temperaturas</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Madrid&#39;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;purple&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_45_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_45_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Marcadores">
+<h3>Marcadores<a class="headerlink" href="#Marcadores" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para cambiar la forma de los puntos marcadores se utiliza el parámetro <code class="docutils literal notranslate"><span class="pre">marker</span></code> = nombre-marcador donde nombre-marcador es una cadena con el nombre del marcador de entre los marcadores disponibles</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">dias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">temperaturas</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Madrid&#39;</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;^&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_48_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_48_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Líneas">
+<h3>Líneas<a class="headerlink" href="#Líneas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para cambiar el estilo de las líneas se utiliza el parámetro <code class="docutils literal notranslate"><span class="pre">linestyle</span></code> = nombre-estilo donde nombre-estilo es una cadena con el nombre del estilo de entre los estilos <a class="reference external" href="https://matplotlib.org/3.2.1/gallery/lines_bars_and_markers/linestyles.html">disponibles</a></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">dias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">temperaturas</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Madrid&#39;</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dotted&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_51_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_51_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Títulos">
+<h3>Títulos<a class="headerlink" href="#Títulos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">plt.set_title(titulo,</span> <span class="pre">loc=alineacion,</span> <span class="pre">fontdict=fuente)</span></code> : Añade un título con el contenido de la cadena titulo a <code class="docutils literal notranslate"><span class="pre">plt</span></code>. El parámetro loc indica la alineación del título, que puede ser ‘left’ (izquierda), ‘center’ (centro) o ‘right’ (derecha), y el parámetro fontdict indica mediante un diccionario las características de la fuente (la el tamaño fontisize, el grosor fontweight o el color color).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">dias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">temperaturas</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Madrid&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Evolución de la temperatura diaria&#39;</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">fontdict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_54_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_54_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Ejes">
+<h3>Ejes<a class="headerlink" href="#Ejes" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.xlabel</span></code>(titulo) : Añade un título con el contenido de la cadena titulo al eje x de plt. Se puede personalizar la alineación y la fuente con los mismos parámetros que para el título principal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.ylabel</span></code>(titulo) : Añade un título con el contenido de la cadena titulo al eje y de plt. Se puede personalizar la alineación y la fuente con los mismos parámetros que para el título principal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.set_xlim</span></code>([limite-inferior, limite-superior]) : Establece los límites que se muestran en el eje x de plt.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.set_ylim</span></code>([limite-inferior, limite-superior]) : Establece los límites que se muestran en el eje y de plt.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.xticks</span></code>(marcas) : Dibuja marcas en el eje x de plt en las posiciones indicadas en la lista marcas.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.set_yticks</span></code>(marcas) : Dibuja marcas en el eje y de plt en las posiciones indicadas en la lista marcas.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.xscale</span></code>(escala) : Establece la escala del eje x de ax, donde el parámetro escala puede ser ‘linear’ (lineal) o ‘log’ (logarítmica).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plt.yscale</span></code>(escala) : Establece la escala del eje y de ax, donde el parámetro escala puede ser ‘linear’ (lineal) o ‘log’ (logarítmica).</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">dias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">temperaturas</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Madrid&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Evolución de la temperatura diaria&#39;</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">fontdict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Días&quot;</span><span class="p">,</span> <span class="n">fontdict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fontsize&#39;</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;fontweight&#39;</span><span class="p">:</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperatura ºC&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span><span class="mi">35</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">35</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_57_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_57_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Leyenda">
+<h3>Leyenda<a class="headerlink" href="#Leyenda" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">plt.legend(leyendas,</span> <span class="pre">loc</span> <span class="pre">=</span> <span class="pre">posición)</span></code> : Dibuja un leyenda en <code class="docutils literal notranslate"><span class="pre">plt</span></code> con los nombres indicados en la lista leyendas. El parámetro loc indica la posición en la que se dibuja la leyenda y puede ser ‘upper left’ (arriba izquierda), ‘upper center’ (arriba centro), ‘upper right’ (arriba derecha), ‘center left’ (centro izquierda), ‘center’ (centro), ‘center right’ (centro derecha), ‘lower left’ (abajo izquierda), ‘lower center’ (abajo centro), ‘lower right’ (abajo derecha). Se puede omitir la lista
+leyendas si se indica la leyenda de cada serie en la función que la dibuja mediante el parámetro label.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">dias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">temperaturas</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Madrid&#39;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Madrid&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_60_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_60_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Regilla">
+<h3>Regilla<a class="headerlink" href="#Regilla" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">plt.grid(axis=ejes,</span> <span class="pre">color=color,</span> <span class="pre">linestyle=estilo)</span></code>: Dibuja una regilla en los ejes de ax. El parámetro axis indica los ejes sobre los que se dibuja la regilla y puede ser <code class="docutils literal notranslate"><span class="pre">'x'</span></code> (eje x), <code class="docutils literal notranslate"><span class="pre">'y'</span></code> (eje y) o <code class="docutils literal notranslate"><span class="pre">'both'</span></code> (ambos). Los parámetros color y linestyle establecen el color y el estilo de las líneas de la rejilla, y pueden tomar los mismos valores vistos en los apartados de colores y líneas.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">dias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">temperaturas</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Madrid&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_63_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_63_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Múltiples-gráficos">
+<h2>Múltiples gráficos<a class="headerlink" href="#Múltiples-gráficos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Es posible dibujar varios gráficos en distintos ejes en una misma figura organizados en forma de tabla. Para ello, cuando se inicializa la figura y los ejes, hay que pasarle a la función <code class="docutils literal notranslate"><span class="pre">subplots</span></code> el número de filas y columnas de la tabla que contendrá los gráficos. Con esto los distintos ejes se organizan en un array y se puede acceder a cada uno de ellos a través de sus índices. Si se quiere que los distintos ejes compartan los mismos límites para los ejes se pueden pasar los parámetros
+<code class="docutils literal notranslate"><span class="pre">sharex</span> <span class="pre">=</span> <span class="pre">True</span></code> para el eje x o <code class="docutils literal notranslate"><span class="pre">sharey</span> <span class="pre">=</span> <span class="pre">True</span></code> para el eje y.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sharey</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">sharex</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">dias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">temperaturas</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]}</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Madrid&#39;</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;tab:orange&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Madrid&#39;</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">dias</span><span class="p">,</span> <span class="n">temperaturas</span><span class="p">[</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;tab:orange&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_66_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_66_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Integración-con-Pandas">
+<h2>Integración con Pandas<a class="headerlink" href="#Integración-con-Pandas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Matplotlib se integra a la perfección con la librería Pandas, permitiendo dibujar gráficos a partir de los datos de las series y DataFrames de Pandas.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="n">tipo</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">columnax</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">columnay</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ejes</span><span class="p">):</span> <span class="n">Dibuja</span> <span class="n">un</span> <span class="n">diagrama</span> <span class="k">del</span> <span class="n">tipo</span>
+<span class="n">indicado</span> <span class="n">por</span> <span class="n">el</span> <span class="n">parámetro</span> <span class="n">kind</span> <span class="n">en</span> <span class="n">los</span> <span class="n">ejes</span> <span class="n">indicados</span> <span class="n">en</span> <span class="n">el</span> <span class="n">parámetro</span> <span class="n">ax</span><span class="p">,</span> <span class="n">representando</span> <span class="n">en</span> <span class="n">el</span> <span class="n">eje</span> <span class="n">x</span> <span class="n">la</span>
+<span class="n">columna</span> <span class="k">del</span> <span class="n">parámetro</span> <span class="n">x</span> <span class="n">y</span> <span class="n">en</span> <span class="n">el</span> <span class="n">eje</span> <span class="n">y</span> <span class="n">la</span> <span class="n">columna</span> <span class="k">del</span> <span class="n">parámetro</span> <span class="n">y</span><span class="o">.</span> <span class="n">El</span> <span class="n">parámetro</span> <span class="n">kind</span> <span class="n">puede</span> <span class="n">tomar</span>
+<span class="n">como</span> <span class="n">argumentos</span> <span class="s1">&#39;line&#39;</span> <span class="p">(</span><span class="n">lineas</span><span class="p">),</span> <span class="s1">&#39;scatter&#39;</span> <span class="p">(</span><span class="n">puntos</span><span class="p">),</span> <span class="s1">&#39;bar&#39;</span> <span class="p">(</span><span class="n">barras</span> <span class="n">verticales</span><span class="p">),</span> <span class="s1">&#39;barh&#39;</span> <span class="p">(</span><span class="n">barras</span>
+<span class="n">horizontales</span><span class="p">),</span> <span class="s1">&#39;hist&#39;</span> <span class="p">(</span><span class="n">histograma</span><span class="p">),</span> <span class="s1">&#39;box&#39;</span> <span class="p">(</span><span class="n">cajas</span><span class="p">),</span> <span class="s1">&#39;density&#39;</span> <span class="p">(</span><span class="n">densidad</span><span class="p">),</span> <span class="s1">&#39;area&#39;</span> <span class="p">(</span><span class="n">area</span><span class="p">)</span> <span class="n">o</span> <span class="s1">&#39;pie&#39;</span>
+<span class="p">(</span><span class="n">sectores</span><span class="p">)</span><span class="o">.</span> <span class="n">Es</span> <span class="n">posible</span> <span class="n">pasar</span> <span class="n">otros</span> <span class="n">parámetros</span> <span class="n">para</span> <span class="n">indicar</span> <span class="n">el</span> <span class="n">color</span><span class="p">,</span> <span class="n">el</span> <span class="n">marcador</span> <span class="n">o</span> <span class="n">el</span> <span class="n">estilo</span> <span class="n">de</span> <span class="n">línea</span> <span class="n">como</span>
+<span class="n">se</span> <span class="n">vió</span> <span class="n">en</span> <span class="n">los</span> <span class="n">apartados</span> <span class="n">anteriores</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Días&#39;</span><span class="p">:[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]})</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Días&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;Madrid&#39;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Días&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_69_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_69_0.png" />
+</div>
+</div>
+<p>Si no se indican los parámetros x e y se representa el índice de las filas en el eje x y una serie por cada columna del Dataframe. Las columnas no númericas se ignoran.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Días&#39;</span><span class="p">:[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span><span class="s1">&#39;Madrid&#39;</span><span class="p">:[</span><span class="mf">28.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mf">27.5</span><span class="p">,</span> <span class="mf">30.5</span><span class="p">],</span><span class="s1">&#39;Barcelona&#39;</span><span class="p">:[</span><span class="mf">24.5</span><span class="p">,</span> <span class="mf">25.5</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">,</span> <span class="mf">24.5</span><span class="p">,</span> <span class="mi">25</span><span class="p">]})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Días&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_python_09-visualizacion-con-matplotlib_71_0.png" src="../../_images/notebooks_python_09-visualizacion-con-matplotlib_71_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="Bibliografia">
+<h2>Bibliografia<a class="headerlink" href="#Bibliografia" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sanches, A., 2020. Manual de Python. <a class="reference external" href="http://aprendeconalf.es/python/manual/manual-python.pdf">Disponible</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../recursos/practicas/09-pr-visualizacion-con-matplotlib.html" class="btn btn-neutral float-right" title="Practica 09 - Visualización con matplotlib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../recursos/practicas/08-pr-pandas-avanzado.html" class="btn btn-neutral float-left" title="Practica 08 - Pandas avanzado" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Dubadier Najar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
